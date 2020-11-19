@@ -1,4 +1,5 @@
 const Login = require("../model/Login");
+const Register = require("../model/Register")
 const parseRequestBody = require("../utils/parseRequestBody");
 
 const getLoginAccnt = async (req, res) => {
@@ -19,27 +20,6 @@ const getLoginAccnt = async (req, res) => {
       });
     }
   };
-// const getLoginAccntById = async (req, res) => {
-//     try {
-//         const logins = await Login.find({
-//             _id: req.params.id
-//         });
-
-//         if (!logins || logins.length === 0) {
-//             return res.status(400).json({
-//                 error: "Log in Account not found!",
-//             });
-//         }
-
-//         res.status(200).json({
-//             logins: logins,
-//         });
-//     } catch (e) {
-//         return res.status(400).json({
-//             error: e,
-//         });
-//     }
-// };
 
 const updateLoginAccntById = async (req, res) => {
     const updates = parseRequestBody(req.body);
@@ -60,7 +40,7 @@ const updateLoginAccntById = async (req, res) => {
 
 const getRegisteredAccnt = async (req, res) => {
     try {
-      const register = await Login.find();
+      const register = await Register.find();
       if (!register) {
         return res.status(400).json({
           error: "Error in getting the registered account!",
@@ -115,7 +95,7 @@ const addAccnt = async (req, res) => {
             });
         }
 
-        res.status(200).redirect('/home');
+        res.status(200).redirect('/');
     } catch (e) {
         res.status(400).json({
             error: e,
@@ -128,6 +108,5 @@ module.exports = {
     getRegisteredAccntById,
     addAccnt,
     getLoginAccnt,
-    // getLoginAccntById,
     updateLoginAccntById,
 };
