@@ -3,14 +3,13 @@ const router = express.Router();
 
 const{
     getLoginAccnt,
-    getLoginAccntById,
     updateLoginAccntById,
     getRegisteredAccnt,
     getRegisteredAccntById,
-    addAccnt,
+    addAccnt
 } = require('../controllers/loginController');
 
-//router for login
+
 router.get('/', getLoginAccnt);
 router.post('/login', getLoginAccnt);
  

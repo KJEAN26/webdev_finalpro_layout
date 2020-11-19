@@ -15,7 +15,6 @@ body{
 }
 
 .card {
-    /* background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); */
     width: 22rem;
     height: 26rem;
     top: 20px;
@@ -41,4 +40,29 @@ body{
     background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     width: 7rem;
     /* font-size: 22px; */
+  }
+
+
+  @media only screen and (min-width: 1550px) and (max-width: 1920px) {
+    .rainy-ashville-gradient .card {
+      max-width: 1470px;
+    }
+  }
+  
+  @media only screen and (min-width: 1300px) and (max-width: 1499px) {
+    .rainy-ashville-gradient .card {
+      max-width: 1260px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .rainy-ashville-gradient .card {
+      height: 680px;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .rainy-ashville-gradient .card {
+      height: 580px;
+    }
   }
