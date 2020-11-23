@@ -76,11 +76,8 @@ const getRegisteredAccnt = async (req, res) => {
         error: "Error in getting the registered account!",
       });
     }
-<<<<<<< HEAD
     // res.render('register', {
 
-=======
->>>>>>> 18d1efcc61acde14b98a6a8e162cc41e16ca5ef2
     res.render('pages/register', {
       data: register
     });
