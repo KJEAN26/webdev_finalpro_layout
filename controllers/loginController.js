@@ -1,12 +1,12 @@
-const Login = require("../model/Login");
-const Register = require("../model/Register")
+
+const Register = require("../model/userModel")
 const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
 
 
 const getLoginAccnt = async (req, res) => {
   try {
-    const login = await Login.find();
+    const login = await Register.find();
     if (!login) {
       return res.status(400).json({
         error: "Error in getting the log in account!",
@@ -45,33 +45,36 @@ const getLoginAccnt = async (req, res) => {
 // };
 
 
-const updateLoginAccntById = async (req, res) => {
-  const updates = parseRequestBody(req.body);
-  console.log(updates)
+
+
+//login 
+const userDoLogin = async (req, res) => {
+  // console.log(req.body);
+  const email = req.body.email;
+  const password = req.body.password;
   try {
-    const login = await Login.updateOne({
-      _id: req.params.id
-    }, {
-      $set: updates
-    });
-    console.log(req.params.id)
-    if (!login) return res.status(400).send("Error in updating Login account by id");
-    res.redirect('/login_info')
+    const logInUser = await Register.findOne({ email: email });
+    if (!logInUser) return res.send("Email doesnt match")
+    console.log(logInUser);
+    if (logInUser.password != password) return res.send("Password doesn`t match");
+    res.send(`Welcome ${logInUser.firstName}!`);
   } catch (error) {
-    res.status(500).send(error);
+    res.status(400).json({
+      error: error,
+    });
   }
+
 }
 
 const getRegisteredAccnt = async (req, res) => {
   try {
-    const register = await Login.find();
+    const register = await Register.find();
     if (!register) {
       return res.status(400).json({
         error: "Error in getting the registered account!",
       });
     }
-
-    res.render('pages/register', {
+    res.render('register', {
       data: register
     });
   } catch (e) {
@@ -118,14 +121,16 @@ const addAccnt = async (req, res) => {
         error: "Error in adding new Account!",
       });
     }
+    console.log(result);
 
-    res.status(200).redirect('/home');
+    res.status(200).redirect('/index');
   } catch (e) {
     res.status(400).json({
       error: e,
     });
   }
 };
+
 
 // const login=(req,res)=>{
 //   loginSchema.findOne({ email: req.body.email },
@@ -156,7 +161,6 @@ module.exports = {
   getRegisteredAccntById,
   addAccnt,
   getLoginAccnt,
-  // getLoginAccntById,
-  updateLoginAccntById,
+  userDoLogin
   // login,
 };
