@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/static', express.static(path.join(__dirname, 'source')))
 app.set('view engine', 'ejs');
 // app.use(cookieParser('secret'));
-
+database.connect();
 
 const User = require('./model/userModel');
 //test
