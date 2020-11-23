@@ -14,7 +14,7 @@ const getLoginAccnt = async (req, res) => {
     }
 
     res.render('pages/login', {
-      data: login
+      data: login, title: "Login"
     });
   } catch (e) {
     res.status(400).json({
@@ -58,6 +58,7 @@ const userDoLogin = async (req, res) => {
     console.log(logInUser);
     if (logInUser.password != password) return res.send("Password doesn`t match");
     res.send(`Welcome ${logInUser.firstName}!`);
+    res.render('')
   } catch (error) {
     res.status(400).json({
       error: error,
@@ -75,7 +76,7 @@ const getRegisteredAccnt = async (req, res) => {
       });
     }
     res.render('pages/register', {
-      data: register
+      data: register, title: "Register"
     });
   } catch (e) {
     res.status(400).json({
