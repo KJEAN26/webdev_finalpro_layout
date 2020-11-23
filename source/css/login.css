@@ -16,8 +16,13 @@ body{
 
 .card {
     width: 22rem;
+<<<<<<< HEAD
     height: 27rem !important;
     top: 25px;
+=======
+    height: 27.5rem;
+    top: 20px;
+>>>>>>> 10bda37b9956bbc6f17e453bdda3ff635b99ef7c
     opacity: 70%;
     /* border: none !important; */
   }
