@@ -1,4 +1,3 @@
-
 const Register = require("../model/userModel")
 const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
@@ -53,9 +52,15 @@ const userDoLogin = async (req, res) => {
     const logInUser = await Register.findOne({ email: email });
     if (!logInUser) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
     console.log(logInUser);
+<<<<<<< HEAD
     if (logInUser.password != password) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
     // res.send(`Welcome ${logInUser.firstName}!`);
     res.render('pages/home', {title: "Home"});
+=======
+    if (logInUser.password != password) return res.send("Password doesn`t match");
+    // res.send(`Welcome ${logInUser.firstName}!`);
+    res.render('pages/home');
+>>>>>>> 426d9e1faabb914d7c04d6f11b8d69480e9de4ae
   } catch (error) {
     res.status(400).json({
       error: error,

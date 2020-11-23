@@ -13,7 +13,11 @@ app.set('view engine', 'ejs');
 // app.use(cookieParser('secret'));
 database.connect();
 
+<<<<<<< HEAD
 
+=======
+app.use("/home", directRouter);
+>>>>>>> 426d9e1faabb914d7c04d6f11b8d69480e9de4ae
 app.use("/",loginRouter);
 
 const directRouter = require("./router/indexRouter");
