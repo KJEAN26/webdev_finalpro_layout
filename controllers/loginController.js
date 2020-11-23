@@ -74,7 +74,7 @@ const getRegisteredAccnt = async (req, res) => {
         error: "Error in getting the registered account!",
       });
     }
-    res.render('register', {
+    res.render('pages/register', {
       data: register
     });
   } catch (e) {
@@ -123,7 +123,7 @@ const addAccnt = async (req, res) => {
     }
     console.log(result);
 
-    res.status(200).redirect('/index');
+    res.status(200).render('pages/home');
   } catch (e) {
     res.status(400).json({
       error: e,
