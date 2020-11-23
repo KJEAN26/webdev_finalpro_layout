@@ -1,23 +1,38 @@
 body{
- background-image: url("../img/bg.jpg");
+ /* background-image: url("../img/bg.jpg"); */
+ background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url("../img/bg.jpg");
  background-repeat: no-repeat;
  background-size: cover;  
  height: 100vh;
 }
 
-.rainy-ashville-gradient {
+/* .rainy-ashville-gradient {
     background: -moz-linear-gradient(120deg, rgba(166,193,238,0.4), rgba(251,194,235,0.4) 100%);
     background: -webkit-linear-gradient(120deg, rgba(166,193,238,0.4), rgba(251,194,235,0.4) 100%);
     background: -webkit-gradient(linear, 120deg, from(rgba(166,193,238,0.4)), to(rgba(251,194,235,0.4)));
     background: -o-linear-gradient(120deg, rgba(166,193,238,0.4), rgba(251,194,235,0.4) 100%); 
     background: linear-gradient(to 120deg, rgba(166,193,238,0.4), rgba(251,194,235,0.4) 100%); 
+<<<<<<< HEAD
     height: 655px;
+} */
+=======
+    height: 100vh;
 }
+>>>>>>> 4d20f0443388ece7644e4febcb465e0595c0b1bb
 
 .card {
     width: 22rem;
+<<<<<<< HEAD
     /* height: 26rem; */
+=======
+<<<<<<< HEAD
+    height: 27rem !important;
+    top: 25px;
+=======
+    height: 27.5rem;
+>>>>>>> bf954586233dee5559f14ca7f45a61c528ee4e63
     top: 20px;
+>>>>>>> 10bda37b9956bbc6f17e453bdda3ff635b99ef7c
     opacity: 70%;
     /* border: none !important; */
   }
@@ -39,32 +54,35 @@ body{
   .btn {
     background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
     width: 7rem;
+    border-radius: 1.5rem;
     /* font-size: 22px; */
+<<<<<<< HEAD
   }
 
 
   @media only screen and (min-width: 1550px) and (max-width: 1920px) {
-    .rainy-ashville-gradient .card {
+    .rainy-ashville-gradient{
       max-width: 1470px;
-      height: 1100px;
+      height: 1500px;
     }
   }
   
   @media only screen and (min-width: 1300px) and (max-width: 1499px) {
-    .rainy-ashville-gradient .card {
+    .rainy-ashville-gradient{
       max-width: 1260px;
-      height: 1000px;
     }
   }
   
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .rainy-ashville-gradient .card {
+    .rainy-ashville-gradient {
       height: 680px;
     }
   }
   
   @media only screen and (max-width: 767px) {
-    .rainy-ashville-gradient .card {
+    .rainy-ashville-gradient {
       height: 580px;
     }
+=======
+>>>>>>> 4d20f0443388ece7644e4febcb465e0595c0b1bb
   }

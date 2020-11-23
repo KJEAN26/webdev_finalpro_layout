@@ -1,6 +1,6 @@
 
 module.exports={
     gotoHome (req,res){
-        res.render('home');
+        res.render('pages/home');
     }
 };
