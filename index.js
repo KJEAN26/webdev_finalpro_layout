@@ -12,15 +12,6 @@ app.set('view engine', 'ejs');
 // app.use(cookieParser('secret'));
 database.connect();
 
-const User = require('./model/userModel');
-//test
-app.get('/getUsers',(req, res)=>{
-    User.find({}, (error, result)=>{
-        if(error) return res.send(error);
-        res.json(result);
-    });
-})
-
-app.use("/home", directRouter);
+// app.use("/home", directRouter);
 app.use("/",loginRouter);
 app.listen(5000, console.log('Server running in port 5000'));
