@@ -12,6 +12,6 @@ app.set('view engine', 'ejs');
 // app.use(cookieParser('secret'));
 database.connect();
 
-// app.use("/home", directRouter);
+app.use("/home", directRouter);
 app.use("/",loginRouter);
 app.listen(5000, console.log('Server running in port 5000'));
