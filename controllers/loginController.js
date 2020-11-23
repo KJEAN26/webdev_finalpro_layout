@@ -14,7 +14,8 @@ const getLoginAccnt = async (req, res) => {
     }
 
     res.render('pages/login', {
-      data: login
+      data: login,
+      message: undefined
     });
   } catch (e) {
     res.status(400).json({
@@ -54,10 +55,11 @@ const userDoLogin = async (req, res) => {
   const password = req.body.password;
   try {
     const logInUser = await Register.findOne({ email: email });
-    if (!logInUser) return res.send("Email doesnt match")
+    if (!logInUser) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
     console.log(logInUser);
-    if (logInUser.password != password) return res.send("Password doesn`t match");
-    res.send(`Welcome ${logInUser.firstName}!`);
+    if (logInUser.password != password) return res.render('pages/login',{message:"PASSWORD DOESN'T MATCH"})
+    // res.send(`Welcome ${logInUser.firstName}!`);
+    res.render('pages/home')
   } catch (error) {
     res.status(400).json({
       error: error,
@@ -74,12 +76,9 @@ const getRegisteredAccnt = async (req, res) => {
         error: "Error in getting the registered account!",
       });
     }
-<<<<<<< HEAD
-    res.render('register', {
-=======
+    // res.render('register', {
 
     res.render('pages/register', {
->>>>>>> 4d20f0443388ece7644e4febcb465e0595c0b1bb
       data: register
     });
   } catch (e) {
@@ -128,7 +127,7 @@ const addAccnt = async (req, res) => {
     }
     console.log(result);
 
-    res.status(200).redirect('/index');
+    res.status(200).render('pages/home');
   } catch (e) {
     res.status(400).json({
       error: e,

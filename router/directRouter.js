@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 router.get('/home', (req, res)=>{
-    res.send("ni gana!");
+  res.render('pages/home')
 })
 router.get('/',directController.gotoHome)
 
