@@ -1,18 +1,17 @@
-const Login = require("../model/Login");
-const Register = require("../model/Register")
+
+const Register = require("../model/userModel")
 const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
 
 
 const getLoginAccnt = async (req, res) => {
   try {
-    const login = await Login.find();
+    const login = await Register.find();
     if (!login) {
       return res.status(400).json({
         error: "Error in getting the log in account!",
       });
     }
-<<<<<<< HEAD
 
     res.render('login', {
       data: login
@@ -44,54 +43,37 @@ const getLoginAccnt = async (req, res) => {
 //         });
 //     }
 // };
-=======
-  };
->>>>>>> 9ffbb85f323f671b573462d098d2bd5fd74ff05b
 
 
-const updateLoginAccntById = async (req, res) => {
-  const updates = parseRequestBody(req.body);
-  console.log(updates)
+
+
+//login 
+const userDoLogin = async (req, res) => {
+  // console.log(req.body);
+  const email = req.body.email;
+  const password = req.body.password;
   try {
-    const login = await Login.updateOne({
-      _id: req.params.id
-    }, {
-      $set: updates
-    });
-    console.log(req.params.id)
-    if (!login) return res.status(400).send("Error in updating Login account by id");
-    res.redirect('/login_info')
+    const logInUser = await Register.findOne({ email: email });
+    if (!logInUser) return res.send("Email doesnt match")
+    console.log(logInUser);
+    if (logInUser.password != password) return res.send("Password doesn`t match");
+    res.send(`Welcome ${logInUser.firstName}!`);
   } catch (error) {
-    res.status(500).send(error);
+    res.status(400).json({
+      error: error,
+    });
   }
+
 }
 
 const getRegisteredAccnt = async (req, res) => {
-<<<<<<< HEAD
   try {
-    const register = await Login.find();
+    const register = await Register.find();
     if (!register) {
       return res.status(400).json({
         error: "Error in getting the registered account!",
-=======
-    try {
-      const register = await Register.find();
-      if (!register) {
-        return res.status(400).json({
-          error: "Error in getting the registered account!",
-        });
-      }
-  
-      res.render('register',{
-        data:register
-      });
-    } catch (e) {   
-      res.status(400).json({
-        error: e,
->>>>>>> 9ffbb85f323f671b573462d098d2bd5fd74ff05b
       });
     }
-
     res.render('register', {
       data: register
     });
@@ -124,7 +106,6 @@ const getRegisteredAccntById = async (req, res) => {
 };
 
 const addAccnt = async (req, res) => {
-<<<<<<< HEAD
   try {
     const register = {
       lastName: req.body.lastName,
@@ -139,38 +120,17 @@ const addAccnt = async (req, res) => {
       return res.status(400).json({
         error: "Error in adding new Account!",
       });
-=======
-    try {
-        const register = {
-            lastName: req.body.lastName,
-            firstName: req.body.firstName,
-            email: req.body.email,
-            password: req.body.password,
-        }
-        const newRegister = new Register(register);
-        const result = await newRegister.save();
-
-        if (!result) {
-            return res.status(400).json({
-                error: "Error in adding new Account!",
-            });
-        }
-
-        res.status(200).redirect('/');
-    } catch (e) {
-        res.status(400).json({
-            error: e,
-        });
->>>>>>> 9ffbb85f323f671b573462d098d2bd5fd74ff05b
     }
+    console.log(result);
 
-    res.status(200).redirect('/home');
+    res.status(200).redirect('/index');
   } catch (e) {
     res.status(400).json({
       error: e,
     });
   }
 };
+
 
 // const login=(req,res)=>{
 //   loginSchema.findOne({ email: req.body.email },
@@ -197,19 +157,10 @@ const addAccnt = async (req, res) => {
 // }
 
 module.exports = {
-<<<<<<< HEAD
   getRegisteredAccnt,
   getRegisteredAccntById,
   addAccnt,
   getLoginAccnt,
-  // getLoginAccntById,
-  updateLoginAccntById,
+  userDoLogin
   // login,
-=======
-    getRegisteredAccnt,
-    getRegisteredAccntById,
-    addAccnt,
-    getLoginAccnt,
-    updateLoginAccntById,
->>>>>>> 9ffbb85f323f671b573462d098d2bd5fd74ff05b
 };

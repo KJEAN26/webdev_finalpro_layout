@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose');
 
 const connectToDb = () =>{
-    mongoose.connect('mongodb://localhost:27017/final-db',{
+    mongoose.connect('mongodb://localhost:27017/recipe',{
         useNewUrlParser:true,
         useUnifiedTopology: true,
         useCreateIndex:true
