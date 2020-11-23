@@ -58,7 +58,7 @@ const userDoLogin = async (req, res) => {
     console.log(logInUser);
     if (logInUser.password != password) return res.send("Password doesn`t match");
     res.send(`Welcome ${logInUser.firstName}!`);
-    res.render('')
+    res.render('pages/home');
   } catch (error) {
     res.status(400).json({
       error: error,
