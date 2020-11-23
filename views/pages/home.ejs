@@ -2,28 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Food Craze</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Bigelow Rules' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Marcellus SC' rel='stylesheet'>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
+    <%- include('../partials/head'); %>
 </head>
 
 <body>
@@ -38,7 +17,7 @@
                     <!-- Breaking News -->
                     <div class="col-12 col-sm-6">
                         <div class="breaking-news">
-                            <a href="../about.html" class="text-left text-decoration-none font-italic"
+                            <a href="/about" class="text-left text-decoration-none font-italic"
                                 style="font-size: 18px">Welcome
                                 my fellow Food Cravers!</a>
                         </div>
@@ -73,24 +52,23 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" style="font-family: Marcellus SC; font-size: 23px">
                 <li class="nav-item active">
-                    <a class="nav-link" href="../html/home.html">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                         Posts
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="../html/appetizers.html">Appetizers</a>
-                        <a class="dropdown-item" href="../html/main_course.html">Main Course</a>
-                        <a class="dropdown-item" href="../html/desserts.html">Desserts</a>
-                        <a class="dropdown-item" href="../html/drinks.html">Drinks</a>
+                        <a class="dropdown-item" href="/appetizers">Appetizers</a>
+                        <a class="dropdown-item" href="/main_course">Main Course</a>
+                        <a class="dropdown-item" href="/desserts">Desserts</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../html/features.html">Features</a>
+                    <a class="nav-link" href="/features">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../html/about.html">About</a>
+                    <a class="nav-link" href="/about">About</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -135,7 +113,7 @@
                 <div class="col-lg-6 order-lg-2">
                     <div class="pt-recipe-item large-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="../html/features.html">
+                            <a href="/features">
                                 <img src="static/img/foods-topofCebu.jpg">
                                 <i class="fa fa-plus"></i>
                         </div>
@@ -148,7 +126,7 @@
                 <div class="col-lg-3 col-md-6 order-lg-1">
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="../html/main_keto-lasagna.html">
+                            <a href="/main_keto-lasagna">
                                 <img src="static/img/main_keto-lasagna.jpg" alt="Low Carb Keto Lasagna" height="311">
                                 <i class="fa fa-plus"></i>
                         </div>
@@ -159,7 +137,7 @@
                     </div>
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="../html/app_cheese-sticks.html">
+                            <a href="/app_cheese-sticks">
                                 <img src="static/img/app_cheese-sticks.jpg" alt="Cheese Sticks" height="311" width="280">
                                 <i class="fa fa-plus"></i>
                         </div>
@@ -173,7 +151,7 @@
                 <div class="col-lg-3 col-md-6 order-lg-3">
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="../html/dess_lava-cake.html">
+                            <a href="/dess_lava-cake">
                                 <img src="static/img/dess_nutella-lava.jpg" alt="Nutella Lava Cake" height="311">
                                 <i class="fa fa-plus"></i>
                         </div>
@@ -184,7 +162,7 @@
                     </div>
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="../html/main_nuggets.html">
+                            <a href="/main_nuggets">
                                 <img src="static/img/main_chicken-nuggets.jpg" alt="Parmesan Chicken Nuggets"
                                     height="311">
                                 <i class="fa fa-plus"></i>
@@ -211,7 +189,7 @@
                         <div class="top-cta-content">
                             <h3>Appetizing Appetizers</h3>
                             <h6>Satisfy your cravings with these snacks</h6>
-                            <a href="../html/appetizers.html" class="btn btn-success">Discover All Recipes</a>
+                            <a href="/appetizers" class="btn btn-success">Discover All Recipes</a>
                         </div>
                     </div>
                 </div>
@@ -223,7 +201,7 @@
                         <div class="top-cta-content">
                             <h3>Main Dish</h3>
                             <h6>Crunchy, Juicy &amp; Savory Fave</h6>
-                            <a href="../html/main_course.html" class="btn btn-success">Discover All Recipes</a>
+                            <a href="/main_course" class="btn btn-success">Discover All Recipes</a>
                         </div>
                     </div>
                 </div>
@@ -247,7 +225,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="../html/app_onion-rings.html" class="text-decoration-none"><img
+                        <a href="/app_onion-rings" class="text-decoration-none"><img
                                 src="static/img/app_onions-rings.jpg" alt="Onion Rings" class="image">
                             <h3 class="text-center font-weight-bold">Onion Rings</h3>
                         </a>
@@ -262,7 +240,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="../html/main_chi-estofado.html" class="text-decoration-none"><img
+                        <a href="/main_chi-estofado" class="text-decoration-none"><img
                                 src="static/img/main_chi-estofado.jpg" alt="Chicken Estofado" class="image">
                             <h3 class="text-center font-weight-bold">Chicken Estofado with Banana</h3>
                         </a>
@@ -277,7 +255,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="../html/dess_toffee.html" class="text-decoration-none"><img
+                        <a href="/dess_toffee" class="text-decoration-none"><img
                                 src="static/img/dess_toffee-pudding.jpg" alt="Toffee Pudding" class="image">
                             <h3 class="text-center font-weight-bold">Toffee Pudding</h3>
                         </a>
@@ -292,7 +270,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="../html/main_rice.html" class="text-decoration-none"><img
+                        <a href="/main_rice" class="text-decoration-none"><img
                                 src="static/img/main_enchilada-rice-casserole.jpg" alt="Enchilada Rice Casserole"
                                 class="image">
                             <h3 class="text-center font-weight-bold">Enchilada Rice Casserole</h3>
@@ -308,7 +286,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="../html/dess_mug-cake.html" class="text-decoration-none"><img
+                        <a href="/dess_mug-cake" class="text-decoration-none"><img
                                 src="static/img/dess_nutella-mug-cake.jpg" alt="Nutella Mug Cake" class="image">
                             <h3 class="text-center font-weight-bold">Nutella Mug Cake</h3>
                         </a>
@@ -323,7 +301,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="../html/app_chedd-cauli.html" class="text-decoration-none"><img
+                        <a href="/app_chedd-cauli" class="text-decoration-none"><img
                                 src="static/img/app_chedd-cauli.png" alt="Cheddar Cauliflower Popcorn" class="image">
                             <h3 class="text-center font-weight-bold">Cheddar Cauliflower Popcorn</h3>
                         </a>
@@ -367,7 +345,7 @@
                 <div class="col-lg-5">
                     <div class="fs-left">
                         <div class="logo">
-                            <a href="../index.html">
+                            <a href="/home">
                                 <img src="static/img/logo18.png" alt="">
                             </a>
                         </div>

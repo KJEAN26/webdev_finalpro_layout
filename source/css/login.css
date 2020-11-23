@@ -17,15 +17,10 @@ body{
 
 .card {
     width: 22rem;
-<<<<<<< HEAD
     height: 27.5rem;
     top: 20px;
-=======
-    height: 27rem !important;
-    top: 40px !important;
->>>>>>> 18d1efcc61acde14b98a6a8e162cc41e16ca5ef2
     opacity: 70%;
-     border: none !important;
+     /* border: none !important; */
 }
    
   
@@ -49,32 +44,4 @@ body{
     width: 7rem;
     border-radius: 1.5rem;
     /* font-size: 22px; */
-<<<<<<< HEAD
-=======
-  }
-
-  @media only screen and (min-width: 1550px) and (max-width: 1920px) {
-    .rainy-ashville-gradient{
-      max-width: 1470px;
-      height: 1500px;
-    }
-  }
-  
-  @media only screen and (min-width: 1300px) and (max-width: 1499px) {
-    .rainy-ashville-gradient{
-      max-width: 1260px;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .rainy-ashville-gradient {
-      height: 680px;
-    }
-  }
-  
-  @media only screen and (max-width: 767px) {
-    .rainy-ashville-gradient {
-      height: 580px;
-    }
->>>>>>> 18d1efcc61acde14b98a6a8e162cc41e16ca5ef2
   }

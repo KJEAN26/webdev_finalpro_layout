@@ -4,7 +4,8 @@ const path = require("path");
 const bodyParser = require('body-parser');
 const database = require("./services/database");
 const loginRouter = require ("./router/login");
-const directRouter = require("./router/directRouter");
+// const directRouter = require("./router/indexRouter");
+const { title } = require("process");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use('/static', express.static(path.join(__dirname, 'source')))
@@ -12,20 +13,10 @@ app.set('view engine', 'ejs');
 // app.use(cookieParser('secret'));
 database.connect();
 
-<<<<<<< HEAD
 
-database.connect();
-=======
-const User = require('./model/userModel');
-//test
-app.get('/getUsers',(req, res)=>{
-    User.find({}, (error, result)=>{
-        if(error) return res.send(error);
-        res.json(result);
-    });
-})
->>>>>>> 18d1efcc61acde14b98a6a8e162cc41e16ca5ef2
-
-// app.use("/home", directRouter);
 app.use("/",loginRouter);
+
+const directRouter = require("./router/indexRouter");
+app.use(directRouter);
+
 app.listen(5000, console.log('Server running in port 5000'));

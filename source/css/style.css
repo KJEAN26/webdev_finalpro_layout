@@ -4,8 +4,8 @@ html {
 
 body{
     background: whitesmoke;
-    margin:0;
-    font-family: 'Atma';
+    margin: 0;
+    /* font-family: 'Atma'; */
     font-size: 20px;  
     color:black;
 }
@@ -19,7 +19,7 @@ h2{
   text-align: center;
   font-size: 50px;
   color: white;
-  font-family:'Marcellus SC';
+  font-family: 'Marcellus SC';
 }
 
 h3{
@@ -30,6 +30,7 @@ h3{
 
 h4{
   text-align: left;
+  font-family: 'Atma'; 
   font-size: 20px;
   color: black;
 }
@@ -39,6 +40,7 @@ h5{
   font-size: 18px;
 }
 p{
+  font-family: 'Atma'; 
   font-size: 22px;  
   color: black;
 }
