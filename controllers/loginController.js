@@ -57,7 +57,7 @@ const userDoLogin = async (req, res) => {
     if (!logInUser) return res.send("Email doesnt match")
     console.log(logInUser);
     if (logInUser.password != password) return res.send("Password doesn`t match");
-    res.send(`Welcome ${logInUser.firstName}!`);
+    res.render('pages/home');
   } catch (error) {
     res.status(400).json({
       error: error,
@@ -74,7 +74,7 @@ const getRegisteredAccnt = async (req, res) => {
         error: "Error in getting the registered account!",
       });
     }
-    res.render('register', {
+    res.render('pages/register', {
       data: register
     });
   } catch (e) {
@@ -123,7 +123,7 @@ const addAccnt = async (req, res) => {
     }
     console.log(result);
 
-    res.status(200).redirect('/index');
+    res.status(200).render('pages/login');
   } catch (e) {
     res.status(400).json({
       error: e,
