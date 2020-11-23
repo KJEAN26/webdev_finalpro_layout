@@ -54,7 +54,7 @@ const userDoLogin = async (req, res) => {
   const password = req.body.password;
   try {
     const logInUser = await Register.findOne({ email: email });
-    if (!logInUser) return res.send("Email doesnt match")
+    if (!logInUser) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
     console.log(logInUser);
     if (logInUser.password != password) return res.send("Password doesn`t match");
     res.send(`Welcome ${logInUser.firstName}!`);
@@ -75,6 +75,8 @@ const getRegisteredAccnt = async (req, res) => {
         error: "Error in getting the registered account!",
       });
     }
+    // res.render('register', {
+
     res.render('pages/register', {
       data: register, title: "Register"
     });
