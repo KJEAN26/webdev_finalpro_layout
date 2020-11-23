@@ -13,7 +13,7 @@ const getLoginAccnt = async (req, res) => {
       });
     }
 
-    res.render('login', {
+    res.render('pages/login', {
       data: login
     });
   } catch (e) {
@@ -74,7 +74,12 @@ const getRegisteredAccnt = async (req, res) => {
         error: "Error in getting the registered account!",
       });
     }
+<<<<<<< HEAD
     res.render('register', {
+=======
+
+    res.render('pages/register', {
+>>>>>>> 4d20f0443388ece7644e4febcb465e0595c0b1bb
       data: register
     });
   } catch (e) {

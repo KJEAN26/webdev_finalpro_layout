@@ -1,7 +1,6 @@
- module.exports={
- 
-goToHome (req,res){
-res.render('index')
- }
 
- }
+module.exports={
+    gotoHome (req,res){
+        res.render('pages/home');
+    }
+};
