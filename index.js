@@ -12,7 +12,6 @@ app.set('view engine', 'ejs');
 // app.use(cookieParser('secret'));
 
 
-<<<<<<< HEAD
 const User = require('./model/userModel');
 //test
 app.get('/getUsers',(req, res)=>{
@@ -21,9 +20,6 @@ app.get('/getUsers',(req, res)=>{
         res.json(result);
     });
 })
-=======
-database.connect();
->>>>>>> 4d20f0443388ece7644e4febcb465e0595c0b1bb
 
 app.use("/home", directRouter);
 app.use("/",loginRouter);
