@@ -12,9 +12,8 @@ const getLoginAccnt = async (req, res) => {
         error: "Error in getting the log in account!",
       });
     }
-<<<<<<< HEAD
 
-    res.render('login', {
+    res.render('pages/login', {
       data: login
     });
   } catch (e) {
@@ -44,9 +43,6 @@ const getLoginAccnt = async (req, res) => {
 //         });
 //     }
 // };
-=======
-  };
->>>>>>> 9ffbb85f323f671b573462d098d2bd5fd74ff05b
 
 
 const updateLoginAccntById = async (req, res) => {
@@ -67,32 +63,15 @@ const updateLoginAccntById = async (req, res) => {
 }
 
 const getRegisteredAccnt = async (req, res) => {
-<<<<<<< HEAD
   try {
     const register = await Login.find();
     if (!register) {
       return res.status(400).json({
         error: "Error in getting the registered account!",
-=======
-    try {
-      const register = await Register.find();
-      if (!register) {
-        return res.status(400).json({
-          error: "Error in getting the registered account!",
-        });
-      }
-  
-      res.render('register',{
-        data:register
-      });
-    } catch (e) {   
-      res.status(400).json({
-        error: e,
->>>>>>> 9ffbb85f323f671b573462d098d2bd5fd74ff05b
       });
     }
 
-    res.render('register', {
+    res.render('pages/register', {
       data: register
     });
   } catch (e) {
@@ -124,7 +103,6 @@ const getRegisteredAccntById = async (req, res) => {
 };
 
 const addAccnt = async (req, res) => {
-<<<<<<< HEAD
   try {
     const register = {
       lastName: req.body.lastName,
@@ -139,29 +117,6 @@ const addAccnt = async (req, res) => {
       return res.status(400).json({
         error: "Error in adding new Account!",
       });
-=======
-    try {
-        const register = {
-            lastName: req.body.lastName,
-            firstName: req.body.firstName,
-            email: req.body.email,
-            password: req.body.password,
-        }
-        const newRegister = new Register(register);
-        const result = await newRegister.save();
-
-        if (!result) {
-            return res.status(400).json({
-                error: "Error in adding new Account!",
-            });
-        }
-
-        res.status(200).redirect('/');
-    } catch (e) {
-        res.status(400).json({
-            error: e,
-        });
->>>>>>> 9ffbb85f323f671b573462d098d2bd5fd74ff05b
     }
 
     res.status(200).redirect('/home');
@@ -197,7 +152,6 @@ const addAccnt = async (req, res) => {
 // }
 
 module.exports = {
-<<<<<<< HEAD
   getRegisteredAccnt,
   getRegisteredAccntById,
   addAccnt,
@@ -205,11 +159,4 @@ module.exports = {
   // getLoginAccntById,
   updateLoginAccntById,
   // login,
-=======
-    getRegisteredAccnt,
-    getRegisteredAccntById,
-    addAccnt,
-    getLoginAccnt,
-    updateLoginAccntById,
->>>>>>> 9ffbb85f323f671b573462d098d2bd5fd74ff05b
 };
