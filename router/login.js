@@ -3,21 +3,21 @@ const router = express.Router();
 
 const{
     getLoginAccnt,
-    // updateLoginAccntById,
     getRegisteredAccnt,
     getRegisteredAccntById,
     addAccnt,
     userDoLogin
+    // updateLoginAccntById,
+
 } = require('../controllers/loginController');
 
 
 router.get('/', getLoginAccnt);
 router.post('/login', userDoLogin);
- 
-// router.post('/update/:id', updateLoginAccntById);
 router.get('/register', getRegisteredAccnt);
 router.get('/register/:id', getRegisteredAccntById);
 router.post('/add', addAccnt);
+// router.post('/update/:id', updateLoginAccntById);
 
 
 

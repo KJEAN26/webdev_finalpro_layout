@@ -1,4 +1,3 @@
-
 const Register = require("../model/userModel")
 const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
@@ -14,8 +13,12 @@ const getLoginAccnt = async (req, res) => {
     }
 
     res.render('pages/login', {
+<<<<<<< HEAD
       data: login, title: "Login",
       message:undefined
+=======
+      data: login, title: "Login", message: undefined
+>>>>>>> 5181c619c466e8c17ac27acc54f99083a5fe3358
     });
   } catch (e) {
     res.status(400).json({
@@ -45,9 +48,6 @@ const getLoginAccnt = async (req, res) => {
 //     }
 // };
 
-
-
-
 //login 
 const userDoLogin = async (req, res) => {
   // console.log(req.body);
@@ -57,9 +57,15 @@ const userDoLogin = async (req, res) => {
     const logInUser = await Register.findOne({ email: email });
     if (!logInUser) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
     console.log(logInUser);
+<<<<<<< HEAD
     if (logInUser.password != password) return res.send("Password doesn`t match");
     // res.send(`Welcome ${logInUser.firstName}!`);
     res.render('pages/home');
+=======
+    if (logInUser.password != password) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
+    // res.send(`Welcome ${logInUser.firstName}!`);
+    res.render('pages/home', {title: "Home"});
+>>>>>>> 5181c619c466e8c17ac27acc54f99083a5fe3358
   } catch (error) {
     res.status(400).json({
       error: error,
@@ -76,8 +82,6 @@ const getRegisteredAccnt = async (req, res) => {
         error: "Error in getting the registered account!",
       });
     }
-    // res.render('register', {
-
     res.render('pages/register', {
       data: register, title: "Register"
     });
