@@ -1,9 +1,9 @@
-const recipies = require('./../recipeMock')
-
+const recipes = require('./../recipeMock')
 const Recipe = require('./../model/RecipeModel')
+
 module.exports={
     gotoHome (req,res){
-        res.render('pages/home', {title: "Home"});
+        res.render('pages/home', {title: "Home",data:recipes});
     },
 
     gotoCategory (req, res) {
@@ -20,7 +20,7 @@ module.exports={
         //      }
         //     );
         // })
-        const data = recipies.filter(recipe => recipe.category == req.params.category)
+        const data = recipes.filter(recipe => recipe.category == req.params.category)
         res.render('pages/category', 
                 {
                 title: req.params.category,
@@ -30,13 +30,6 @@ module.exports={
 
         
     },
-    // gotoMain (req, res) {
-    //     res.render('pages/main_course', {title: "Main Course", data: "Main Course"});
-    // },
-
-    // gotoDesserts (req, res) {
-    //     res.render('pages/desserts', {title: "Desserts", data: "Desserts"});
-    // },
 
     gotoFeatures (req, res) {
         res.render('pages/features', {title: "Features"});
@@ -57,14 +50,12 @@ module.exports={
     //             data: result[0]
     //         })
     //     })
-    const data =  recipies.find(recipe => recipe._id == req.params.id)
+    const data =  recipes.find(recipe => recipe._id == req.params.id)
     console.log(data)
     res.render('pages/show',{
             title: 'Show',
             data: data
-        })
-        
-        
+        })      
     },
     async  store(req,res) {
         console.log(req.body)
@@ -72,6 +63,15 @@ module.exports={
             name : req.body.name,
             category : req.body.category,
             videoUrl : req.body.videoUrl,
+            image : req.body.image,
+            reviews : req.body.reviews,
+            prepTime : req.body.prepTime,
+            cookTime : req.body.cookTime,
+            yield : req.body.yield,
+            ingredientHeader : req.body.ingredientHeader,
+            ingredients : req.body.ingredients,
+            nutritionFacts : req.body.nutritionFacts,
+            notes : req.body.notes,
             tags : req.body.tags,
             instructions : req.body.instructions,
             description : req.body.description
@@ -86,7 +86,7 @@ module.exports={
     },
     createForm(req,res){
         res.render('pages/create',{
-            title: "Create New Recipe"
+            title : "Create New Recipe"
         })
     }
 

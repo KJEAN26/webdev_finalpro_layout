@@ -1,5 +1,4 @@
 const Register = require("../model/userModel")
-const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
 
 

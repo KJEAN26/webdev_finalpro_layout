@@ -16,7 +16,7 @@ module.exports =  [
         reviews : '4.9 from 25 reviews',
         prepTime : '30mins',
         cookTime : '50mins',
-        yield : 'Serves 4',
+        yield : '4',
         ingredientHeader: ['For the batter'],
         ingredients: [
             '2 lbs. pre-cleaned pork large intestines',
@@ -63,7 +63,7 @@ module.exports =  [
         reviews : '4.5 from 25 reviews',
         prepTime : '12 mins',
         cookTime : '5 mins',
-        yield : 'Serves 2',
+        yield : '2',
         ingredientHeader: [''],
         ingredients: [
             '1 head of cauliflower',
@@ -108,7 +108,7 @@ module.exports =  [
         reviews : '4.8 from 25 reviews',
         prepTime : '5mins',
         cookTime : '15mins',
-        yield : 'Serves 2',
+        yield : '2',
         ingredientHeader: [''],
         ingredients: [
             '1 1/4 cup Nutella',
@@ -152,7 +152,7 @@ module.exports =  [
         reviews : '4.8 from 25 reviews',
         prepTime : '5mins',
         cookTime : '20mins',
-        yield : 'Serves 15',
+        yield : '15',
         ingredientHeader: ['For the batter'],
         ingredients: [
             '1 c. (2 sticks) butter',
@@ -204,7 +204,7 @@ module.exports =  [
         reviews : '4.9 from 25 reviews',
         prepTime : '12mins',
         cookTime : '5mins',
-        yield : 'Serves 2',
+        yield : '2',
         ingredientHeader: [''],
         ingredients: [
            '1 tbsp olive oil',
@@ -240,7 +240,7 @@ module.exports =  [
         ]
     },
     {
-        _sid : 6,
+        _id : 6,
         category : 'main_course',
         categoryText : "Main Course",
         tags : [
@@ -256,7 +256,7 @@ module.exports =  [
         reviews : '4.9 from 25 reviews',
         prepTime : '1 hour 20 minutes',
         cookTime : '30 minutes',
-        yield : 'Serves 6',
+        yield : '6',
         ingredientHeader: ['Lasagna sheets', 'Meat sauce', 'Cheese topping'],
         ingredients: [
             '8 eggs, beaten',
