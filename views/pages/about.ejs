@@ -1,161 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <%- include('../partials/head'); %>
-  </head>
+<head>
+  <%- include('../partials/head'); %>
+</head>
 
-  <body>
+<body>
 
 
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
+  <!-- ##### Header Area Start ##### -->
+  <header class="header-area">
+    <%- include('../partials/header'); %>
 
-      <!-- Top Header Area -->
-      <div class="top-header-area">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center justify-content-between">
-            <!-- Breaking News -->
-            <div class="col-12 col-sm-6">
-              <div class="breaking-news">
-                <a href="/about" class="text-left text-decoration-none font-italic" style="font-size: 18px">Welcome
-                  my fellow Food Cravers!</a>
-              </div>
-            </div>
-
-            <!-- Top Social Info -->
-            <div class="col-12 col-sm-6">
-              <div class="top-social-info text-right">
-                <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-                <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
-                <a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a>
-                <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+    <!-- About Me Section Begin -->
+    <section class="about-me spad">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="about">
+              <img src="static/img/bg1.png" alt="">
+              <div class="about-title">
+                <span>December 10, 2019</span>
+                <h2 class="text-capitalize">I’m Evangeline G. Decorion, <br />a student & a food enthusiast.</h2>
+                <p>Welcome my fellow Food Cravers!</p>
+                <p>How are you today? Hope you are more crave than ever. First, I would like to ask a favor to hit
+                  thew button and subscribe to my blog and stay updated for more recipes that will surely make you
+                  crave for more</p>
+                <p>Now, about me. I am an aspiring baker, trying to learn how to perfectly bake pastries and
+                  discovering more about my passion to food.</p>
+                <p>Join me as I discover lots and lots of recipes all over the world. Don't hesitate to reach me out
+                  if you have any inquiries.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- ##### Breadcumb Area Start ##### -->
-      <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(static/img/bg1.png);">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-12">
-              <div class="breadcumb-text text-center">
-                <h2>About Me</h2>
+    </section>
+    <hr class="style_1">
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="fs-left">
+              <div class="logo">
+                <a href="/home">
+                  <img src="static/img/logo18.png" alt="">
+                </a>
               </div>
+              <p>Craving for food? Well, this blog is right for you. I present to you a wide range of
+                food selections
+                from appetizing appetizers to mouthwatering desserts. Check out some of these
+                yummies and don't forget
+                to subscribe.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <form action="#" class="subscribe-form">
+              <h3>Subscribe to our newsletter</h3>
+              <input type="email" placeholder="Your e-mail">
+              <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+              <a href="#"><i class="fab fa-pinterest"></i><span>Pinterest</span></a>
+              <a href="#"><i class="fab fa-facebook"></i><span>Facebook</span></a>
+              <a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+              <a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="copyright-text">
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script> All rights reserved |
             </div>
           </div>
         </div>
       </div>
-      <!-- ##### Breadcumb Area End ##### -->
-      <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: #a14d12;;">
-        <a class="navbar-brand px-4" href="#">
-          <img src="static/img/log.png" width="100" height="60" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto" style="font-family: Marcellus SC; font-size: 23px">
-            <li class="nav-item active">
-              <a class="nav-link" href="/about">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                Posts
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="/appetizers">Appetizers</a>
-                <a class="dropdown-item" href="/main_course">Main Course</a>
-                <a class="dropdown-item" href="/desserts">Desserts</a>
-                <a class="dropdown-item" href="/drinks">Drinks</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/features">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
-            </li>
-          </ul>
-          <form class="form-inline mr-4 my-2 my-sm-0">
-            <input class="form-control mr-sm-0" type="search" placeholder="Search recipes" aria-label="Search"></i>
-          </form>
-        </div>
-      </nav>
-      <!-- About Me Section Begin -->
-      <section class="about-me spad">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="about">
-                <img src="static/img/bg1.png" alt="">
-                <div class="about-title">
-                  <span>December 10, 2019</span>
-                  <h2 class="text-capitalize">I’m Evangeline G. Decorion, <br />a student & a food enthusiast.</h2>
-                  <p>Welcome my fellow Food Cravers!</p>
-                  <p>How are you today? Hope you are more crave than ever. First, I would like to ask a favor to hit
-                    thew button and subscribe to my blog and stay updated for more recipes that will surely make you
-                    crave for more</p>
-                  <p>Now, about me. I am an aspiring baker, trying to learn how to perfectly bake pastries and
-                    discovering more about my passion to food.</p>
-                  <p>Join me as I discover lots and lots of recipes all over the world. Don't hesitate to reach me out
-                    if you have any inquiries.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <hr class="style_1">
-      <!-- Footer Section Begin -->
-      <footer class="footer-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5">
-              <div class="fs-left">
-                <div class="logo">
-                  <a href="/index">
-                    <img src="static/img/logo18.png" alt="">
-                  </a>
-                </div>
-                <p>Craving for food? Well, this blog is right for you. I present to you a wide range of
-                  food selections
-                  from appetizing appetizers to mouthwatering desserts. Check out some of these
-                  yummies and don't forget
-                  to subscribe.</p>
-              </div>
-            </div>
-            <div class="col-lg-6 offset-lg-1">
-              <form action="#" class="subscribe-form">
-                <h3>Subscribe to our newsletter</h3>
-                <input type="email" placeholder="Your e-mail">
-                <button type="submit">Subscribe</button>
-              </form>
-              <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-                <a href="#"><i class="fab fa-pinterest"></i><span>Pinterest</span></a>
-                <a href="#"><i class="fab fa-facebook"></i><span>Facebook</span></a>
-                <a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                <a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="copyright-text">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script> All rights reserved |
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <!-- Footer Section End -->
-  </body>
+    </footer>
+    <!-- Footer Section End -->
+    <script src="/static/js/active.js"></script>
+</body>
 
 </html>

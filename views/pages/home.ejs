@@ -6,96 +6,9 @@
 </head>
 
 <body>
-    <!-- Search Wrapper -->
-    <div class="search-wrapper">
-        <!-- Close Btn -->
-        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <form action="#" method="post">
-                        <input type="search" name="search" placeholder="Type any keywords...">
-                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
-
-        <!-- Top Header Area -->
-        <div class="top-header-area">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center justify-content-between">
-                    <!-- Breaking News -->
-                    <div class="col-12 col-sm-6">
-                        <div class="breaking-news">
-                            <a href="/about" class="text-left text-decoration-none font-italic"
-                                style="font-size: 18px">Welcome
-                                my fellow Food Cravers!</a>
-                        </div>
-                    </div>
-
-                    <!-- Top Social Info -->
-                    <div class="col-12 col-sm-6">
-                        <div class="top-social-info text-right">
-                            <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container mt-5 mb-4">
-            <img src="static/img/logo18.png" class="img-fluid mx-auto d-block" alt="" width="800px;">
-        </div>
+    <header>
+        <%- include('../partials/homeHeader'); %>
     </header>
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="background-color: #D3D3D3;">
-        <a class="navbar-brand px-4" href="#">
-            <img src="static/img/logo.png" width="100" height="60" alt="" class="rounded">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto" style="font-family: Marcellus SC; font-size: 23px">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Posts
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/appetizers">Appetizers</a>
-                        <a class="dropdown-item" href="/main_course">Main Course</a>
-                        <a class="dropdown-item" href="/desserts">Desserts</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/features">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
-                </li>
-            </ul>
-            <!-- Newsletter Form -->
-            <div class="search-btn">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
-                <button type="button" class="btn btn-outline-light mr-sm-4"><i class="fas fa-search"></i></button>
-            </form> -->
-        </div>
-    </nav>
 
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
@@ -156,14 +69,9 @@
                     </div>
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-<<<<<<< HEAD
                             <a href="/app_cheese-sticks">
-                                <img src="static/img/app_cheese-sticks.jpg" alt="Cheese Sticks" height="311" width="280">
-=======
-                            <a href="../html/app_cheese-sticks.html">
                                 <img src="static/img/app_cheese-sticks.jpg" alt="Cheese Sticks" height="311"
                                     width="280">
->>>>>>> 426d9e1faabb914d7c04d6f11b8d69480e9de4ae
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">

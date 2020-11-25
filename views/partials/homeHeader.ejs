@@ -14,53 +14,43 @@
         </div>
     </div>
 </div>
-<!-- Top Header Area -->
-<div class="top-header-area">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-between">
-            <!-- Breaking News -->
-            <div class="col-12 col-sm-6">
-                <div class="breaking-news">
-                    <a href="/about" class="text-left text-decoration-none font-italic" style="font-size: 18px">Welcome
-                        my fellow Food Cravers!</a>
-                </div>
-            </div>
+<!-- ##### Header Area Start ##### -->
+<header class="header-area">
 
-            <!-- Top Social Info -->
-            <div class="col-12 col-sm-6">
-                <div class="top-social-info text-right">
-                    <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+    <!-- Top Header Area -->
+    <div class="top-header-area">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-between">
+                <!-- Breaking News -->
+                <div class="col-12 col-sm-6">
+                    <div class="breaking-news">
+                        <a href="/about" class="text-left text-decoration-none font-italic"
+                            style="font-size: 18px">Welcome
+                            my fellow Food Cravers!</a>
+                    </div>
+                </div>
+
+                <!-- Top Social Info -->
+                <div class="col-12 col-sm-6">
+                    <div class="top-social-info text-right">
+                        <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- ##### Breadcumb Area Start ##### -->
-<div class="breadcumb-area bg-img bg-overlay" style="background-image: url(/static/img/bg3.jpg);">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="breadcumb-text text-center">
-                    <% if(typeof data.categoryText === 'undefined') {%>
-                        <h2> <%= data[0].categoryText %> </h2>
-                    <%}else{%>
-                        <h2> <%= data.categoryText %> </h2>
-                    <%}%>
-                </div>
-            </div>
-        </div>
+    <div class="container mt-5 mb-4">
+        <img src="static/img/logo18.png" class="img-fluid mx-auto d-block" alt="" width="800px;">
     </div>
-</div>
-<!-- ##### Breadcumb Area End ##### -->
-<nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: #a14d12;;">
+</header>
+<nav class="navbar navbar-expand-sm navbar-light sticky-top" style="background-color: #D3D3D3;">
     <a class="navbar-brand px-4" href="#">
-        <img src="/static/img/logo.png" width="100" height="60" alt="">
+        <img src="static/img/logo.png" width="100" height="60" alt="" class="rounded">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
