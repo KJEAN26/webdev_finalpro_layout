@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  
+
     <div class="mask rainy-ashville-gradient align-items-center">
         <div class="container text-center">
             <div class="row d-flex justify-content-center">
@@ -20,6 +20,12 @@
                                         required>
                                     <input type="text" class="form-control mt-2" name="lastName" placeholder="Last Name"
                                         required>
+                                    <div>
+                                        <select id="role" class="form-control mt-2">
+                                            <option value="admin">Admin</option>
+                                            <option value="employee">User</option>
+                                        </select>
+                                    </div>
                                     <input type="email" class="form-control mt-2" name="email" placeholder="Email"
                                         required>
                                     <input type="password" class="form-control mt-2" name="password"
@@ -29,7 +35,7 @@
                                 </div>
                             </form>
                             <p>Already have an account?</p>
-                            <a href="/">Login</a>
+                            <a href="/login">Login</a>
                         </div>
                     </div>
                 </div>

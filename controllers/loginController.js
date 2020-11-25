@@ -14,7 +14,8 @@ const getLoginAccnt = async (req, res) => {
     }
 
     res.render('pages/login', {
-      data: login, title: "Login"
+      data: login, title: "Login",
+      message:undefined
     });
   } catch (e) {
     res.status(400).json({
@@ -57,7 +58,7 @@ const userDoLogin = async (req, res) => {
     if (!logInUser) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
     console.log(logInUser);
     if (logInUser.password != password) return res.send("Password doesn`t match");
-    res.send(`Welcome ${logInUser.firstName}!`);
+    // res.send(`Welcome ${logInUser.firstName}!`);
     res.render('pages/home');
   } catch (error) {
     res.status(400).json({
