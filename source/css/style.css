@@ -2,12 +2,21 @@ html {
   scroll-behavior: smooth;
 }
 
+<<<<<<< HEAD
 body {
   background: whitesmoke;
   margin: 0;
   font-family: 'Atma';
   font-size: 20px;
   color: black;
+=======
+body{
+    background: whitesmoke;
+    margin: 0;
+    /* font-family: 'Atma'; */
+    font-size: 20px;  
+    color:black;
+>>>>>>> b203e8f0da1f8d82b90bd3a764e68c6221ceff8e
 }
 
 h1 {
@@ -30,6 +39,7 @@ h3 {
 
 h4 {
   text-align: left;
+  font-family: 'Atma'; 
   font-size: 20px;
   color: black;
 }
@@ -38,9 +48,15 @@ h5 {
   text-align: left;
   font-size: 18px;
 }
+<<<<<<< HEAD
 
 p {
   font-size: 22px;
+=======
+p{
+  font-family: 'Atma'; 
+  font-size: 22px;  
+>>>>>>> b203e8f0da1f8d82b90bd3a764e68c6221ceff8e
   color: black;
 }
 

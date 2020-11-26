@@ -1,0 +1,251 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <%- include('../partials/header'); %>
+
+        <!-- Single Recipe Section Begin -->
+        <section class="single-page-recipe spad">
+            <div class="recipe-top">
+                <div class="container-fluid">
+                    <div class="recipe-title">
+                        <span>
+                            <% for(let i = 0 ; i < data.tags.length; i++){%>
+                            <%= data.tags[i] %>
+                            <%}%>      
+                        </span>
+                    
+                        <h2 class="display-4 font-weight-bold"><%- data.name %></h2>
+                            <ul class="tags">
+                                <li>Appetizer</li>
+                                <li>Asian</li>
+                                <li>Fried</li>
+                            </ul>
+                    </div>
+                    <div class="sizer rounded mx-auto d-block">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="<%= data.videoUrl %>" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="ingredients-item">
+                            <div class="intro-item">
+                                <img src="<%= data.image %>" alt="Crispy Bagbagis">
+                                <h2 class="" style="font-size: 28px;"><%- data.name %></h2>
+                                <div class="rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <div class="reviews"><%- data.reviews %></div>
+                                <div class="recipe-time">
+                                    <ul>
+                                        <li>Prep time: <span><%- data.prepTime %></span></li>
+                                        <li>Cook time: <span><%- data.cookTime %></span></li>
+                                        <br>      
+                                        <li>Yield: <span><%- data.yield %></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="ingredient-list">
+                                <div class="recipe-btn font-weight-light text">
+                                    <a href="#">Print Recipe</a>
+                                    <a href="#" class="black-btn">Pin Recipe</a>
+                                </div>
+                                <div class="list-item">
+                                    <h4>Ingredients</h4>
+                                    <div class="salad-list">
+                                        <h6><%- data.ingredientHeader %></h6>
+                                        <ul>
+                                            <% for(let i = 0 ; i < data.ingredients.length;i++){%>
+                                            <li>
+                                                <%= data.ingredients[i] %>
+                                            </li>
+                                            <%}%>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nutrition-fact">
+                            <div class="nutri-title">
+                                <h4>Nutrition Facts</h4>
+                                <span>Serves<%- data.yield %> </span>
+                               
+                                    </div>
+                                    <ul>
+                                        <% for(let i = 0 ; i < data.nutritionFacts.length;i++){%>
+                                        <li>
+                                            <%= data.nutritionFacts[i] %>
+                                        </li>
+                                        <%}%>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="recipe-right">
+                                    <div class="recipe-desc">
+                                        <h3>Description</h3>
+                                        <% for(let i = 0 ; i < data.description.length; i++){%>
+                                        <p>
+                                            <%= data.description[i] %>
+                                        </p>
+                                        <%}%>
+                            </div>
+                            <div class="instruction-list">
+                                <h3>Instructions</h3>
+                                <ul>
+                                    <% for(let i = 0 ; i < data.instructions.length;i++){%>
+                                        <li>
+                                            <span>0<%= i + 1 %>.</span>
+                                            <%= data.instructions[i] %>
+                                        </li>
+                                        <%}%>
+                                </ul>
+                            </div>
+                            <div class="notes">
+                                <h3>Notes</h3>
+                                <div class="notes-item">
+                                    <span>i</span>
+                                    <% for(let i = 0 ; i < data.notes.length; i++){%>
+                                        <p>
+                                            <%= data.notes[i] %>
+                                        </p>
+                                        <%}%>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+      
+        <!-- Single Recipe Section End -->
+        <hr class="style_1">
+        <div class="row m-5">
+            <div class="col-12">
+                <div class="contact-form-area">
+                    <div class="section-heading">
+                        <h3 class="">Leave a comment</h3>
+                    </div>
+                    <form action="#" method="post">
+                        <div class="row m-5">
+                            <div class="col-12 col-lg-6">
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <input type="email" class="form-control" id="email" placeholder="E-mail">
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" class="form-control" id="message" cols="30" rows="10"
+                                    placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn delicious-btn mt-30 ml-3" type="submit">Post Comments</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- ##### Other Recipes Area Start ##### -->
+        <div class="follow-us-instagram">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="font-weight-light" style="font-size: 25px;">Other Recipes</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Instagram Feeds -->
+            <div class="insta-feeds d-flex flex-wrap">
+                <!-- Single Insta Feeds -->
+                <div class="single-insta-feeds">
+                    <img src="/static/img/app_mashed-potato.png" alt="">
+                    <!-- Icon -->
+                    <div class="plus-icon">
+                        <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Single Insta Feeds -->
+                <div class="single-insta-feeds">
+                    <img src="/static/img/app_french-fries.jpg" alt="">
+                    <!-- Icon -->
+                    <div class="plus-icon">
+                        <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Single Insta Feeds -->
+                <div class="single-insta-feeds">
+                    <img src="/static/img/app_fried-siomai.jpg" alt="">
+                    <!-- Icon -->
+                    <div class="plus-icon">
+                        <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Single Insta Feeds -->
+                <div class="single-insta-feeds">
+                    <img src="/static/img/app_onion-rings.jpg" alt="">
+                    <!-- Icon -->
+                    <div class="plus-icon">
+                        <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Single Insta Feeds -->
+                <div class="single-insta-feeds">
+                    <img src="/static/img/app_cauli-bites.jpg" alt="">
+                    <!-- Icon -->
+                    <div class="plus-icon">
+                        <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Single Insta Feeds -->
+                <div class="single-insta-feeds">
+                    <img src="/static/img/app_cheese-sticks.jpg" alt="">
+                    <!-- Icon -->
+                    <div class="plus-icon">
+                        <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Single Insta Feeds -->
+                <div class="single-insta-feeds">
+                    <img src="/static/img/app_sweet-potato-tots.jpg" alt="">
+                    <!-- Icon -->
+                    <div class="plus-icon">
+                        <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ##### Other Recipes Area End ##### -->
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+        <script src="/static/js/active.js"></script>
+</body>
+
+</>

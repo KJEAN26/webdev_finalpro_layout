@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head'); %>
+</head>
+
+<body>
+
+  <!-- ##### Header Area Start ##### -->
+  <header class="header-area">
+    <%- include('../partials/header'); %>
+    <br>
+    <div class="container-fluid mt-5 px-5">
+      <div class="row mx-5">
+        <% for(let i = 0 ; i < data.length; i++){ %>
+        <div class="col-sm-4">
+          <div class="recipe-item">
+            <a href="/recipes/appetizers/<%= data[i]._id %>"><img src="<%= data[i].image %>" alt="Onion Rings" class="image"></a>
+            <div class="ri-text">
+              <div class="cat-name"><%= data[i].categoryText %></div>
+              <a href="/recipes/<%= data[i].category %>/<%= data[i]._id %>" class="text-decoration-none">
+                <h4><%=data[i].name %></h4>
+              </a>
+              <% for(let j = 0 ; j < data[i].description.length; j++){ %>
+                  <p> <%= data[i].description[j] %></p>
+                <% } %>
+            </div>
+          </div>
+        </div>
+       <%  } %>
+      </div>
+      <!-- Recipe Section End -->
+      <hr class="style_1">
+      <!-- Feature Recipe Section End -->
+      <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+      <script src="/static/js/active.js"></script>
+</body>
+
+</html>
