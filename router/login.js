@@ -7,17 +7,21 @@ const{
     getRegisteredAccnt,
     getRegisteredAccntById,
     addAccnt,
-    userDoLogin
+    userDoLogin,
+    getExtrapage,
+    getHomepage,
 } = require('../controllers/loginController');
 
 
 router.get('/', getLoginAccnt);
 router.post('/login', userDoLogin);
  
-// router.post('/update/:id', updateLoginAccntById);
+// router.post('/update/:id', updateLoginAccntById);getloginpage
 router.get('/register', getRegisteredAccnt);
 router.get('/register/:id', getRegisteredAccntById);
 router.post('/add', addAccnt);
+router.get('/extra', getExtrapage);
+router.get('/home', getHomepage);
 
 
 

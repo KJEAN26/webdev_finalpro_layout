@@ -1,8 +1,9 @@
 const Register = require("../model/userModel")
-const parseRequestBody = require("../utils/parseRequestBody");
+// const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
 
 
+//this controller is equavalent to this router router.get('/', getLoginAccnt);
 const getLoginAccnt = async (req, res) => {
   try {
     const login = await Register.find();
@@ -133,7 +134,13 @@ const addAccnt = async (req, res) => {
   }
 };
 
+const getExtrapage = async (req,res) =>{
+  res.render('pages/extra');
+}
 
+const getHomepage = async (req,res) =>{
+  res.render('pages/home')
+}
 // const login=(req,res)=>{
 //   loginSchema.findOne({ email: req.body.email },
 //     (error, user) => {
@@ -163,6 +170,8 @@ module.exports = {
   getRegisteredAccntById,
   addAccnt,
   getLoginAccnt,
-  userDoLogin
+  userDoLogin,
+  getExtrapage,
+  getHomepage,
   // login,
 };

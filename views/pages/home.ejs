@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
@@ -23,12 +24,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
-
+    <style>
+    </style>
 </head>
 
-<body>
-    <!-- Search Wrapper -->
+<body class="hero-anime">
     <div class="search-wrapper">
         <!-- Close Btn -->
         <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
@@ -44,82 +44,87 @@
             </div>
         </div>
     </div>
-    <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
+    
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+                        <a class="navbar-brand"><img src="static/img/logo.png" style="height: 3rem;"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-        <!-- Top Header Area -->
-        <div class="top-header-area">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center justify-content-between">
-                    <!-- Breaking News -->
-                    <div class="col-12 col-sm-6">
-                        <div class="breaking-news">
-                            <a href="../about.html" class="text-left text-decoration-none font-italic"
-                                style="font-size: 18px">Welcome
-                                my fellow Food Cravers!</a>
-                        </div>
-                    </div>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-3 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="true" aria-expanded="false">Post</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Appetizers</a>
+                                        <a class="dropdown-item" href="#">Main Course</a>
+                                        <a class="dropdown-item" href="#">Desserts</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="/extra">Features</a>
+                                </li>
 
-                    <!-- Top Social Info -->
-                    <div class="col-12 col-sm-6">
-                        <div class="top-social-info text-right">
-                            <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 mt-2">
+                                    <form action="">
+                                        <div class="search-btn">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </div>
+                                    </form>
+                                </li>
+                                
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                            class="fas fa-user fa-fw"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                        <a class="dropdown-item" href="#">Settings</a>
+                                        <a class="dropdown-item" href="#">Activity Log</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="/">Logout</a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
+
+                    </nav>
                 </div>
             </div>
         </div>
-        <div class="container mt-5 mb-4">
-            <img src="static/img/logo18.png" class="img-fluid mx-auto d-block" alt="" width="800px;">
-        </div>
-    </header>
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="background-color: #D3D3D3;">
-        <a class="navbar-brand px-4" href="#">
-            <img src="static/img/logo.png" width="100" height="60" alt="" class="rounded">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto" style="font-family: Marcellus SC; font-size: 23px">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../html/home.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Posts
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="../html/appetizers.html">Appetizers</a>
-                        <a class="dropdown-item" href="../html/main_course.html">Main Course</a>
-                        <a class="dropdown-item" href="../html/desserts.html">Desserts</a>
-                        <a class="dropdown-item" href="../html/drinks.html">Drinks</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/features.html">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/about.html">About</a>
-                </li>
-            </ul>
-            <!-- Newsletter Form -->
-            <div class="search-btn">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
-            <!-- <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
-                <button type="button" class="btn btn-outline-light mr-sm-4"><i class="fas fa-search"></i></button>
-            </form> -->
-        </div>
-    </nav>
+    </div>
 
+
+
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" id="search" placeholder="Type any keywords...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -146,7 +151,7 @@
         </a>
     </div>
 
-    <hr class="style_1">
+    <hr class="style_1"> -->
 
     <!-- Page Top Recipe Section Begin -->
     <section class="page-top-recipe">
@@ -380,7 +385,7 @@
         </div>
     </section>
     <!-- ##### CTA Area End ##### -->
-    <br><br>
+    <!-- <br><br> -->
     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
@@ -426,6 +431,7 @@
         </div>
     </footer>
     <!-- Footer Section End -->
+    <script src="/static/js/example.js"></script>
     <script src="/static/js/active.js"></script>
 </body>
 
