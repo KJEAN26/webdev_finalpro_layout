@@ -9,46 +9,6 @@
     <header>
         <%- include('../partials/homeHeader'); %>
     </header>
-<<<<<<< HEAD
-    <nav class="navbar navbar-expand-sm navbar-light sticky-top" style="background-color: #D3D3D3;">
-        <a class="navbar-brand px-4" href="#">
-            <img src="static/img/logo.png" width="100" height="60" alt="" class="rounded">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto" style="font-family: Marcellus SC; font-size: 23px">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Posts
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="../html/appetizers.html">Appetizers</a>
-                        <a class="dropdown-item" href="../html/main_course.html">Main Course</a>
-                        <a class="dropdown-item" href="../html/desserts.html">Desserts</a>
-                        <a class="dropdown-item" href="../html/drinks.html">Drinks</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/features.html">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../html/about.html">About</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0" action="/search">
-                <input class="form-control mr-sm-0" type="search" name="search" placeholder="Search" aria-label="Search">
-                <button type="button" class="btn btn-outline-light mr-sm-4"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-    </nav>
-=======
->>>>>>> 5181c619c466e8c17ac27acc54f99083a5fe3358
 
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
@@ -182,6 +142,15 @@
         </div>
     </section>
     <!-- ##### Top Category Area End ##### -->
+    <div class="container">
+        <% if (logInUser.accountType == "admin") { %>
+            <button>admin</button>
+   
+        <% } else { %>
+            <button>client</button>
+        <% } %> 
+        
+    </div>
 
     <hr class="style_1">
 

@@ -44,7 +44,7 @@
                 <div class="row h-100 align-items-center">
                     <div class="col-12">
                         <div class="breadcumb-text text-center">
-                            <h2>Create New Recipe</h2>
+                            <h2>Update Recipe</h2>
                         </div>
                     </div>
                 </div>
@@ -92,12 +92,12 @@
        
         <div class="container my-5 py-5" style="height: 100vh;">
 
-                <form action="/recipes/create" method="POST">
+                <form action="/pages/update" method="POST">
                     <div class="row">
-                        <div class="col-md">
+                        <div class="col-md-3">
                             <div class="form-control bg-transparent border-0">
-                                <label for="name">Name</label>
-                                <input type="text" class="form-control" name="name">
+                                <label for="name" >Name</label>
+                                <input type="text" class="form-control" name="name"  >
                             </div>
                             <div class="form-control bg-transparent border-0 mt-5">
                                 <label for="category">Category</label>
@@ -132,20 +132,15 @@
                         </div>
                     </div>
                 
-        
+                    
                     <div class="text-right">
                         <button type="reset" class="btn btn-danger mt-4 mr-3 px-5">Cancel</button>
-                        <button  class="btn btn-primary mt-4 mr-3 px-5">Submit</button>
+                        <button  class="btn btn-primary mt-4 mr-3 px-5">Save Updated Recipe</button>
                     </div>
-                   
-                </form>
-           
-                
-                    
+                </form> 
               
         </div>
     
-        
         <!-- Footer Section Begin -->
         <footer class="footer-section">
             <div class="container">

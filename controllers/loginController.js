@@ -13,12 +13,9 @@ const getLoginAccnt = async (req, res) => {
     }
 
     res.render('pages/login', {
-<<<<<<< HEAD
-      data: login, title: "Login",
-      message:undefined
-=======
-      data: login, title: "Login", message: undefined
->>>>>>> 5181c619c466e8c17ac27acc54f99083a5fe3358
+      data: login,
+      title: "Login",
+      message: undefined
     });
   } catch (e) {
     res.status(400).json({
@@ -55,17 +52,14 @@ const userDoLogin = async (req, res) => {
   const password = req.body.password;
   try {
     const logInUser = await Register.findOne({ email: email });
-    if (!logInUser) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
+    if (!logInUser) return res.render('pages/login', {title: "test", message: "EMAIL DOESN'T MATCH",  })
     console.log(logInUser);
-<<<<<<< HEAD
-    if (logInUser.password != password) return res.send("Password doesn`t match");
+    if (logInUser.password != password) return res.render('pages/login', {title: "test", message: "PASSWORD DOESN'T MATCH",  })
     // res.send(`Welcome ${logInUser.firstName}!`);
-    res.render('pages/home');
-=======
-    if (logInUser.password != password) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
-    // res.send(`Welcome ${logInUser.firstName}!`);
-    res.render('pages/home', {title: "Home"});
->>>>>>> 5181c619c466e8c17ac27acc54f99083a5fe3358
+    
+    res.render('pages/home',{
+      logInUser : logInUser
+    });
   } catch (error) {
     res.status(400).json({
       error: error,
@@ -120,6 +114,7 @@ const addAccnt = async (req, res) => {
       firstName: req.body.firstName,
       email: req.body.email,
       password: req.body.password,
+      accountType : 'client'
     }
     const newRegister = new Register(register);
     const result = await newRegister.save();
@@ -131,7 +126,9 @@ const addAccnt = async (req, res) => {
     }
     console.log(result);
 
-    res.status(200).render('pages/home');
+    res.status(200).render('pages/login', {
+      title: "test"
+    });
   } catch (e) {
     res.status(400).json({
       error: e,
