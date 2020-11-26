@@ -35,7 +35,7 @@ const RecipeSchema = mongoose.Schema({
     },
     yield : {
         required :true,
-        type: String,
+        type: Number,
     },
     ingredientHeader : {
         required: true,

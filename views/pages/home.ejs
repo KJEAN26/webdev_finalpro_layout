@@ -55,28 +55,29 @@
                         </div>
                     </div>
                 </div>
+                <% var appetizers = data.filter(recipe => recipe.category == "appetizers") %>
+                <% var desserts = data.filter(recipe => recipe.category == "desserts") %>
+                <% var main_course = data.filter(recipe => recipe.category == "main_course") %>
                 <div class="col-lg-3 col-md-6 order-lg-1">
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="/main_keto-lasagna">
+                            <a href="/recipes/<%= main_course[0].category%>/<%= main_course[0]._id %>">
                                 <img src="static/img/main_keto-lasagna.jpg" alt="Low Carb Keto Lasagna" height="311">
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">
-                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma">Low Carb Keto
-                                Lasagna</h3>
+                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma"><%= main_course[0].name %></h3>
                         </div>
                     </div>
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="/app_cheese-sticks">
+                            <a href="/recipes/<%= appetizers[0].category%>/<%= appetizers[0]._id%>">
                                 <img src="static/img/app_cheese-sticks.jpg" alt="Cheese Sticks" height="311"
                                     width="280">
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">
-                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma">Bacon-wrapped
-                                Mozzarella Sticks
+                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma"><%= appetizers[0].name %>
                             </h3>
                         </div>
                     </div>
@@ -84,25 +85,23 @@
                 <div class="col-lg-3 col-md-6 order-lg-3">
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="/dess_lava-cake">
+                            <a href="/recipes/<%= desserts[0].category%>/<%= desserts[0]._id %>">
                                 <img src="static/img/dess_nutella-lava.jpg" alt="Nutella Lava Cake" height="311">
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">
-                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma">Nutella Lava Cake
-                            </h3>
+                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma"><%= desserts[0].name%></h3>
                         </div>
                     </div>
                     <div class="pt-recipe-item">
                         <div class="pt-recipe-img set-bg">
-                            <a href="/main_nuggets">
+                            <a href="/recipes/<%= main_course[1].category%>/<%= main_course[1]._id%>">
                                 <img src="static/img/main_chicken-nuggets.jpg" alt="Parmesan Chicken Nuggets"
                                     height="311">
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">
-                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma">Parmesan Chicken
-                                Nuggets</h3>
+                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma"><%= main_course[1].name %></h3>
                         </div>
                     </div>
                 </div>
@@ -122,7 +121,7 @@
                         <div class="top-cta-content">
                             <h3>Appetizing Appetizers</h3>
                             <h6>Satisfy your cravings with these snacks</h6>
-                            <a href="/appetizers" class="btn btn-success">Discover All Recipes</a>
+                            <a href="/recipes/appetizers" class="btn btn-success">Discover All Recipes</a>
                         </div>
                     </div>
                 </div>
@@ -134,7 +133,7 @@
                         <div class="top-cta-content">
                             <h3>Main Dish</h3>
                             <h6>Crunchy, Juicy &amp; Savory Fave</h6>
-                            <a href="/main_course" class="btn btn-success">Discover All Recipes</a>
+                            <a href="/recipes/main_course" class="btn btn-success">Discover All Recipes</a>
                         </div>
                     </div>
                 </div>
@@ -167,8 +166,8 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="/app_onion-rings" class="text-decoration-none"><img
-                                src="static/img/app_onions-rings.jpg" alt="Onion Rings" class="image">
+                        <a href="/recipes/appetizers" class="text-decoration-none"><img
+                                src="static/img/app_onion-rings.jpg" alt="Onion Rings" class="image">
                             <h3 class="text-center font-weight-bold">Onion Rings</h3>
                         </a>
                         <div class="ratings text-center">
@@ -182,7 +181,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="/main_chi-estofado" class="text-decoration-none"><img
+                        <a href="/recipes/main_course" class="text-decoration-none"><img
                                 src="static/img/main_chi-estofado.jpg" alt="Chicken Estofado" class="image">
                             <h3 class="text-center font-weight-bold">Chicken Estofado with Banana</h3>
                         </a>
@@ -197,7 +196,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="/dess_toffee" class="text-decoration-none"><img
+                        <a href="/recipes/desserts" class="text-decoration-none"><img
                                 src="static/img/dess_toffee-pudding.jpg" alt="Toffee Pudding" class="image">
                             <h3 class="text-center font-weight-bold">Toffee Pudding</h3>
                         </a>
@@ -212,7 +211,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="/main_rice" class="text-decoration-none"><img
+                        <a href="/recipes/main_course" class="text-decoration-none"><img
                                 src="static/img/main_enchilada-rice-casserole.jpg" alt="Enchilada Rice Casserole"
                                 class="image">
                             <h3 class="text-center font-weight-bold">Enchilada Rice Casserole</h3>
@@ -228,7 +227,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="/dess_mug-cake" class="text-decoration-none"><img
+                        <a href="/recipes/desserts" class="text-decoration-none"><img
                                 src="static/img/dess_nutella-mug-cake.jpg" alt="Nutella Mug Cake" class="image">
                             <h3 class="text-center font-weight-bold">Nutella Mug Cake</h3>
                         </a>
@@ -243,7 +242,7 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="recipe-item">
-                        <a href="/app_chedd-cauli" class="text-decoration-none"><img
+                        <a href="/recipes/appetizers" class="text-decoration-none"><img
                                 src="static/img/app_chedd-cauli.png" alt="Cheddar Cauliflower Popcorn" class="image">
                             <h3 class="text-center font-weight-bold">Cheddar Cauliflower Popcorn</h3>
                         </a>
@@ -272,7 +271,7 @@
                             dessert
                             options. Filled with
                             luscious mousses, creamy caramels and comforting chocolatey treats.</p>
-                        <a href="#" class="btn btn-success p-3" style="font-size: 19px">Discover all the recipes</a>
+                        <a href="/recipes/desserts" class="btn btn-success p-3" style="font-size: 19px">Discover all the recipes</a>
                     </div>
                 </div>
             </div>

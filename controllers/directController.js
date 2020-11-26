@@ -1,9 +1,9 @@
-const recipies = require('./../recipeMock')
+const recipes = require('./../recipeMock')
+const Recipe = require('./../model/RecipeModel')
 
-const Recipe = require('../model/RecipeModel')
-module.exports = {
-    gotoHome(req, res) {
-        res.render('pages/home', { title: "Home",logInUser:"test" });
+module.exports={
+    gotoHome (req,res){
+        res.render('pages/home', {title: "Home",data:recipes});
     },
 
     gotoCategory(req, res) {
@@ -30,13 +30,6 @@ module.exports = {
 
 
     },
-    // gotoMain (req, res) {
-    //     res.render('pages/main_course', {title: "Main Course", data: "Main Course"});
-    // },
-
-    // gotoDesserts (req, res) {
-    //     res.render('pages/desserts', {title: "Desserts", data: "Desserts"});
-    // },
 
     gotoFeatures(req, res) {
         res.render('pages/features', { title: "Features" });
@@ -80,12 +73,21 @@ module.exports = {
     async store(req, res) {
         console.log(req.body)
         const recipe = {
-            name: req.body.name,
-            category: req.body.category,
-            videoUrl: req.body.videoUrl,
-            tags: req.body.tags,
-            instructions: req.body.instructions,
-            description: req.body.description
+            name : req.body.name,
+            category : req.body.category,
+            videoUrl : req.body.videoUrl,
+            image : req.body.image,
+            reviews : req.body.reviews,
+            prepTime : req.body.prepTime,
+            cookTime : req.body.cookTime,
+            yield : req.body.yield,
+            ingredientHeader : req.body.ingredientHeader,
+            ingredients : req.body.ingredients,
+            nutritionFacts : req.body.nutritionFacts,
+            notes : req.body.notes,
+            tags : req.body.tags,
+            instructions : req.body.instructions,
+            description : req.body.description
         }
 
         new Recipe(recipe).save().then((recipe) => {
