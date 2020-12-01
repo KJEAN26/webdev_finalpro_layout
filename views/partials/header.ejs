@@ -20,12 +20,11 @@
     </div>
 </div>
 
-<div class="navigation-wrap" style="background-color: coral;">
+<div class="navigation-wrap">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-md">
-
                     <a href="#" target="_blank"><img src="/static/img/logo.png" style="height: 3rem;"></a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -34,18 +33,18 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto py-4 py-md-0">
-                            <li class="nav-item ml-5 pl-4 pl-md-0 ml-0 ml-md-4">
+                    <div class="collapse navbar-collapse ml-5" id="navbarSupportedContent">
+                        <ul class="navbar-nav py-4 py-md-0">
+                            <li class="nav-item pl-4 pl-md-0 ml-md-4">
                                 <a class="nav-link" href="/home">Home</a>
                             </li>
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                                     aria-haspopup="true" aria-expanded="false">Post</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Appetizers</a>
-                                    <a class="dropdown-item" href="#">Main Course</a>
-                                    <a class="dropdown-item" href="#">Desserts</a>
+                                    <a class="dropdown-item" href="/recipes/appetizers">Appetizers</a>
+                                    <a class="dropdown-item" href="/recipes/main_course">Main Course</a>
+                                    <a class="dropdown-item" href="/recipes/desserts">Desserts</a>
                                 </div>
                             </li>
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
@@ -54,7 +53,19 @@
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                 <a class="nav-link" href="/about">About</a>
                             </li>
-                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                            <form class="form-inline my-sm-0"  style="margin-left: 15rem;">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" placeholder="Search for..."
+                                        aria-label="Search" aria-describedby="basic-addon2"
+                                        style="border-color: black;">
+                                    <div class="input-group-append">
+
+                                        <button class="btn btn-dark" type="button"><i
+                                                class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <li class="nav-item pl-4 pl-md-0 ml-3">
                                 <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                         class="fas fa-user fa-fw"></i></a>
@@ -67,21 +78,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <form class="form-inline ml-3 mr-0 mr-sm-3 my-2 my-sm-0">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Search for..."
-                                        aria-label="Search" aria-describedby="basic-addon2"
-                                        style="border-color: black;">
-                                    <div class="input-group-append">
-
-                                        <button class="btn btn-dark" type="button"><i
-                                                class="fas fa-search"></i></button>
-                                    </div>
-                                </div>
-                            </form>
                         </ul>
                     </div>
-
                 </nav>
             </div>
         </div>

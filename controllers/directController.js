@@ -1,6 +1,5 @@
 const recipes = require('./../recipeMock')
 const Recipe = require('./../model/RecipeModel')
-const Register = require("../model/userModel")
 
 module.exports={
     gotoHome (req,res){

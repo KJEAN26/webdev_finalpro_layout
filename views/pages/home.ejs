@@ -9,7 +9,7 @@
     <header>
         <%- include('../partials/header'); %>
     </header>
-
+    <br><br><br>
     <div id="demo" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
             <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -36,7 +36,7 @@
         </a>
     </div>
 
-    <hr class="style_1"> -->
+    <hr class="style_1">
 
     <!-- Page Top Recipe Section Begin -->
     <section class="page-top-recipe">
@@ -66,7 +66,8 @@
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">
-                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma"><%= main_course[0].name %></h3>
+                            <h3 class="font-weight-bold" style="font-size: 22px; font-family: Atma">
+                                <%= main_course[0].name %></h3>
                         </div>
                     </div>
                     <div class="pt-recipe-item">
@@ -77,7 +78,8 @@
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">
-                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma"><%= appetizers[0].name %>
+                            <h3 class="font-weight-bold" style="font-size: 22px; font-family: Atma">
+                                <%= appetizers[0].name %>
                             </h3>
                         </div>
                     </div>
@@ -90,7 +92,8 @@
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">
-                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma"><%= desserts[0].name%></h3>
+                            <h3 class="font-weight-bold" style="font-size: 22px; font-family: Atma">
+                                <%= desserts[0].name%></h3>
                         </div>
                     </div>
                     <div class="pt-recipe-item">
@@ -101,7 +104,8 @@
                                 <i class="fa fa-plus"></i>
                         </div>
                         <div class="pt-recipe-text">
-                            <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma"><%= main_course[1].name %></h3>
+                            <h3 class="font-weight-bold" style="font-size: 22px; font-family: Atma">
+                                <%= main_course[1].name %></h3>
                         </div>
                     </div>
                 </div>
@@ -119,7 +123,7 @@
                         <img src="static/img/app_bagbagis.jpg" alt="Bagbagis">
                         <!-- Content -->
                         <div class="top-cta-content">
-                            <h3>Appetizing Appetizers</h3>
+                            <h3>Appetizers</h3>
                             <h6>Satisfy your cravings with these snacks</h6>
                             <a href="/recipes/appetizers" class="btn btn-success">Discover All Recipes</a>
                         </div>
@@ -141,7 +145,7 @@
         </div>
     </section>
     <!-- ##### Top Category Area End ##### -->
-    
+
 
     <hr class="style_1">
 
@@ -259,65 +263,22 @@
                     <!-- Cta Content -->
                     <div class="cta-content text-center">
                         <h2>Delectable Desserts</h2>
-                        <p style="font-size: 23px">When the sweet tooth comes a-knockin', dish up one these luscious
+                        <p style="font-size: 24px">When the sweet tooth comes a-knockin', dish up one these luscious
                             dessert
                             options. Filled with
                             luscious mousses, creamy caramels and comforting chocolatey treats.</p>
-                        <a href="/recipes/desserts" class="btn btn-success p-3" style="font-size: 19px">Discover all the recipes</a>
+                        <a href="/recipes/desserts" class="btn btn-success p-3" style="font-size: 19px">Discover all the
+                            recipes</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- ##### CTA Area End ##### -->
-    <!-- <br><br> -->
-    <!-- Footer Section Begin -->
+
     <footer class="footer-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="fs-left">
-                        <div class="logo">
-                            <a href="/home">
-                                <img src="static/img/logo18.png" alt="">
-                            </a>
-                        </div>
-                        <p>Craving for food? Well, this blog is right for you. I present to you a wide range of food
-                            selections
-                            from appetizing appetizers to mouthwatering desserts. Check out some of these yummies and
-                            don't forget
-                            to subscribe.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 offset-lg-1">
-                    <form action="#" class="subscribe-form">
-                        <h3>Subscribe to our newsletter</h3>
-                        <input type="email" placeholder="Your e-mail">
-                        <button type="submit">Subscribe</button>
-                    </form>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-                        <a href="#"><i class="fab fa-pinterest"></i><span>Pinterest</span></a>
-                        <a href="#"><i class="fab fa-facebook"></i><span>Facebook</span></a>
-                        <a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                        <a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="copyright-text">
-                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        Copyright &copy;
-                        <script>document.write(new Date().getFullYear());</script> All rights reserved |</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <%- include('../partials/footer');%>
     </footer>
-    <!-- Footer Section End -->
-    <script src="/static/js/example.js"></script>
-    <script src="/static/js/active.js"></script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 const Register = require("../model/userModel")
 const recipes = require('./../recipeMock')
 const jwt = require("jsonwebtoken");
-const { keys } = require("./../recipeMock");
+// const { keys } = require("./../recipeMock");
 
 //this controller is equavalent to this router router.get('/', getLoginAccnt);
 const getLoginAccnt = async (req, res) => {

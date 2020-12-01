@@ -9,168 +9,101 @@
 
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
-
-        <!-- Top Header Area -->
-        <div class="top-header-area">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center justify-content-between">
-                    <!-- Breaking News -->
-                    <div class="col-12 col-sm-6">
-                        <div class="breaking-news">
-                            <a href="/about" class="text-left text-decoration-none font-italic"
-                                style="font-size: 18px">Welcome
-                                my fellow Food Cravers!</a>
-                        </div>
-                    </div>
-
-                    <!-- Top Social Info -->
-                    <div class="col-12 col-sm-6">
-                        <div class="top-social-info text-right">
-                            <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                        </div>
+        <%- include('../partials/header'); %>
+    </header>
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(/static/img/bg3.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-text text-center">
+                        <h2>Create New Recipe</h2>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
 
-        <!-- ##### Breadcumb Area Start ##### -->
-        <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(/static/img/bg3.jpg);">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-12">
-                        <div class="breadcumb-text text-center">
-                            <h2>Create New Recipe</h2>
-                        </div>
+    <div class="container my-5 py-5" style="height: 100vh;">
+        <form action="/recipes/create" method="POST">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-control bg-transparent border-0">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" placeholder="name">
+                    </div>
+                    <div class="form-control bg-transparent border-0 mt-5">
+                        <label for="categoryText">Category Text</label>
+                        <input type="text" class="form-control" name="categoryText" placeholder="Input Category">
+                    </div>
+                    <div class="form-control bg-transparent border-0 mt-5">
+                        <label for="category">Category</label>
+
+                        <select name="category" class="form-control" id="category">
+                            <option value="desserts">Dessert</option>
+                            <option value="appetizers">Appetizers</option>
+                            <option value="main_course">Main Course</option>
+                        </select>
+                    </div>
+                    <div class="form-control bg-transparent border-0 mt-5">
+                        <label for="videoUrl">Video URl</label>
+                        <input type="text" class="form-control" name="videoUrl" placeholder="Input video url">
+                    </div>
+                    <div class="form-control bg-transparent border-0 mt-5 mb-5">
+                        <label for="image">Image</label>
+                        <input type="text" class="form-control btn-sm" name="image">
+                    </div>
+                    <div class="form-control bg-transparent border-0">
+                        <label for="prepTime">Preparation Time</label>
+                        <input type="text" class="form-control" name="prepTime" placeholder="Input time ">
+                    </div>
+                    <div class="form-control bg-transparent border-0 mt-5">
+                        <label for="cookTime">Cooking Time</label>
+                        <input type="text" class="form-control" name="cookTime" placeholder="Input time">
+                    </div>
+                    <div class="form-control bg-transparent border-0 mt-5">
+                        <label for="yield">Yield</label>
+                        <input type="text" class="form-control" name="yield" placeholder="Input number of servings">
+                    </div>
+                    <div class="form-control bg-transparent border-0 mt-5 mb-3" id="descList">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div><br>
+                    <div class="form-control bg-transparent border-0 mb-4 mt-5" id="notesList">
+                        <label for="notes">Notes</label>
+                        <textarea class="form-control" id="notes" rows="3"></textarea>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-        <!-- ##### Breadcumb Area End ##### -->
-        <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: #a14d12;;">
-            <a class="navbar-brand px-4" href="#">
-                <img src="/static/img/logo.png" width="100" height="60" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto" style="font-family: Marcellus SC; font-size: 23px">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                            Posts
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="/recipes/appetizers">Appetizers</a>
-                            <a class="dropdown-item" href="/recipes/main_course">Main Course</a>
-                            <a class="dropdown-item" href="/recipes/desserts">Desserts</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/features">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about">About</a>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-0" type="search" placeholder="Search" aria-label="Search">
-                    <button type="button" class="btn btn-outline-light mr-sm-4"><i class="fas fa-search"></i></button>
-                </form>
-            </div>
-        </nav>
-
-        <div class="container my-5 py-5" style="height: 100vh;">
-
-            <form action="/recipes/create" method="POST">
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="form-control bg-transparent border-0">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="name">
-                        </div>
-                        <div class="form-control bg-transparent border-0 mt-5">
-                            <label for="categoryText">Category Text</label>
-                            <input type="text" class="form-control" name="categoryText" placeholder="Input Category">
-                        </div>
-                        <div class="form-control bg-transparent border-0 mt-5">
-                            <label for="category">Category</label>
-
-                            <select name="category" class="form-control" id="category">
-                                <option value="desserts">Dessert</option>
-                                <option value="appetizers">Appetizers</option>
-                                <option value="main_course">Main Course</option>
-                            </select>
-                        </div>
-                        <div class="form-control bg-transparent border-0 mt-5">
-                            <label for="videoUrl">Video URl</label>
-                            <input type="text" class="form-control" name="videoUrl" placeholder="Input video url">
-                        </div>
-                        <div class="form-control bg-transparent border-0 mt-5 mb-5">
-                            <label for="image">Image</label>
-                            <input type="text" class="form-control btn-sm" name="image">
-                        </div>
-                        <div class="form-control bg-transparent border-0">
-                            <label for="prepTime">Preparation Time</label>
-                            <input type="text" class="form-control" name="prepTime" placeholder="Input time ">
-                        </div>
-                        <div class="form-control bg-transparent border-0 mt-5">
-                            <label for="cookTime">Cooking Time</label>
-                            <input type="text" class="form-control" name="cookTime" placeholder="Input time">
-                        </div>
-                        <div class="form-control bg-transparent border-0 mt-5">
-                            <label for="yield">Yield</label>
-                            <input type="text" class="form-control" name="yield" placeholder="Input number of servings">
-                        </div>
-                        <div class="form-control bg-transparent border-0 mt-5 mb-3" id="descList">
-                            <label for="description">Description</label>
-                            <textarea class="form-control" id="description" rows="3"></textarea>
-                        </div><br>
-                        <div class="form-control bg-transparent border-0 mb-4 mt-5" id="notesList">
-                            <label for="notes">Notes</label>
-                            <textarea class="form-control" id="notes" rows="3"></textarea>
-                        </div>
+                <div class="col-md-2">
+                    <div class="form-control bg-transparent border-0 mt-2 " id="tagList">
+                        <label for="tags"></label> <button type="button" class="btn btn-sm btn-primary"
+                            id="addBtnTag">Add Tags <i class="fa fa-plus"></i></button>
                     </div>
+                </div>
 
-                    <div class="col-md-2">
-                        <div class="form-control bg-transparent border-0 mt-2 " id="tagList">
-                            <label for="tags"></label> <button type="button" class="btn btn-sm btn-primary"
-                                id="addBtnTag">Add Tags <i class="fa fa-plus"></i></button>
-                        </div>
+                <div class="col-md-2">
+                    <div class="form-control bg-transparent border-0 " id="ingList">
+                        <label for="ingredients"></label> <button type="button" class="btn btn-sm btn-primary"
+                            id="addBtnIng">Add Ingredients <i class="fa fa-plus"></i></button>
                     </div>
+                </div>
 
-                    <div class="col-md-2">
-                        <div class="form-control bg-transparent border-0 " id="ingList">
-                            <label for="ingredients"></label> <button type="button" class="btn btn-sm btn-primary"
-                                id="addBtnIng">Add Ingredients <i class="fa fa-plus"></i></button>
-                        </div>
+                <div class="col-md-2">
+                    <div class="form-control bg-transparent border-0 " id="insList">
+                        <label for="instructions"></label> <button type="button" class="btn btn-sm btn-primary"
+                            id="addBtnIns">Add Instructions <i class="fa fa-plus"></i></button>
                     </div>
+                </div>
 
-                    <div class="col-md-2">
-                        <div class="form-control bg-transparent border-0 " id="insList">
-                            <label for="instructions"></label> <button type="button" class="btn btn-sm btn-primary"
-                                id="addBtnIns">Add Instructions <i class="fa fa-plus"></i></button>
-                        </div>
+                <div class="col-md-2">
+                    <div class="form-control bg-transparent border-0" id="nutriList">
+                        <label for="nutritionFacts"></label> <button type="button" class="btn btn-sm btn-primary"
+                            id="addBtnNutri" style="width:10rem">Add Nutrition Facts <i class="fa fa-plus"></i></button>
                     </div>
-
-                    <div class="col-md-2">
-                        <div class="form-control bg-transparent border-0" id="nutriList">
-                            <label for="nutritionFacts"></label> <button type="button" class="btn btn-sm btn-primary"
-                                id="addBtnNutri" style="width:10rem">Add Nutrition Facts <i
-                                    class="fa fa-plus"></i></button>
-                        </div>
-                    </div>
-                    <!-- <div class="form-control bg-transparent border-0 mt-5 mb-3" id="ingList">
+                </div>
+                <!-- <div class="form-control bg-transparent border-0 mt-5 mb-3" id="ingList">
                             <label for="ingredients">Ingredients</label>
                             <textarea class="form-control" id="ingredients" rows="3"></textarea>
                         </div><br>
@@ -179,13 +112,13 @@
                             <textarea class="form-control" id="instructions" rows="3"></textarea>
                         </div> -->
 
-                    <div class="col-md-3">
-                        <!-- <div class="form-control bg-transparent border-0 " id="descList">
+                <!-- <div class="col-md-3"> -->
+                <!-- <div class="form-control bg-transparent border-0 " id="descList">
                             <label for="description">Description</label> <button type="button"
                                 class="btn btn-sm btn-primary" id="addBtnDesc">Add Description <i
                                     class="fa fa-plus"></i></button>
                         </div> -->
-                        <!-- <div class="form-control bg-transparent border-0 mb-4" id="descList">
+                <!-- <div class="form-control bg-transparent border-0 mb-4" id="descList">
                             <label for="description">Description</label>
                             <textarea class="form-control" id="description" rows="3"></textarea>
                         </div><br>
@@ -198,45 +131,48 @@
                             <textarea class="form-control" id="notes" rows="3"></textarea>
                         </div>
                     </div> -->
-                    </div><br>
-                    <div class="text-center mt-5">
-                        <button type="reset" class="btn btn-danger mt-5 mr-3 px-5">Cancel</button>
-                        <button class="btn btn-primary mt-5 mr-3 px-5">Submit</button>
-                    </div>
-            </form>
-        </div><br>
+            </div><br>
+            <div class="text-center mt-5">
+                <button type="reset" class="btn btn-danger mt-5 mr-3 px-5">Cancel</button>
+                <button class="btn btn-primary mt-5 mr-3 px-5">Submit</button>
+            </div>
+        </form>
+    </div><br>
+    <footer class="footer-section" style="margin-top:50%;">
+        <%- include('../partials/footer'); %>
+    </footer>
 
-        <footer style="margin-top:50%;">
-            <%- include('../partials/footer'); %>
-        </footer>
+    <script>
+        var count = 0
+        $('#addBtnTag').click(function () {
+            if (count < 3) $('#tagList').append(`<input type=" text" class="form-control my-3" name="tags[]"
+            id="tags">`)
+            count++
+        })
+
+        $('#addBtnIng').click(function () {
+            if (count < 20) $('#ingList').append(`<input type="text" class="form-control my-3" name="ingredients[]">`)
+            count++
+        })
+        $('#addBtnIns').click(function () {
+            if (count < 15) $('#insList').append(`<input type="text" class="form-control my-3"
+                    name="instructions[]">`)
+            count++
+        })
+        // $('#addBtnDesc').click(function () {
+        // $('#descList').append(`<input type="text" class="form-control my-3" name="description[]">`)
+        // })
+        $('#addBtnNutri').click(function () {
+            if (count < 6) $('#nutriList').append(`<input type="text" class="form-control my-3"
+                        name="nutritionFacts[]">`)
+            count++
+        })
+                        // $('#addBtnNotes').click(function () {
+                        // $('#notesList').append(`<input type="text" class="form-control my-3" name="notes[]">`)
+                        // })
+
+
+    </script>
 </body>
 
-<script>
-    var count = 0
-    $('#addBtnTag').click(function () {
-        if (count < 3) $('#tagList').append(`<input type="text" class="form-control my-3" name="tags[]" id="tags">`)
-        count++
-    })
-
-    $('#addBtnIng').click(function () {
-        if (count < 20) $('#ingList').append(`<input type="text" class="form-control my-3" name="ingredients[]">`)
-        count++
-    })
-    $('#addBtnIns').click(function () {
-        if (count < 15) $('#insList').append(`<input type="text" class="form-control my-3" name="instructions[]">`)
-        count++
-    })
-    // $('#addBtnDesc').click(function () {
-    //     $('#descList').append(`<input type="text" class="form-control my-3" name="description[]">`)
-    // })
-    $('#addBtnNutri').click(function () {
-        if (count < 6) $('#nutriList').append(`<input type="text" class="form-control my-3" name="nutritionFacts[]">`)
-        count++
-    })
-    // $('#addBtnNotes').click(function () {
-    //     $('#notesList').append(`<input type="text" class="form-control my-3" name="notes[]">`)
-    // })
-
-
-
-</script>
+</html>
