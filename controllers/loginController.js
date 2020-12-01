@@ -1,8 +1,5 @@
 const Register = require("../model/userModel")
-<<<<<<< HEAD
 // const parseRequestBody = require("../utils/parseRequestBody");
-=======
->>>>>>> b203e8f0da1f8d82b90bd3a764e68c6221ceff8e
 const bycrypt = require("bcrypt");
 const recipes = require('./../recipeMock')
 const jwt = require("jsonwebtoken");
