@@ -4,13 +4,9 @@ const Register = require("../model/userModel")
 
 module.exports={
     gotoHome (req,res){
-<<<<<<< HEAD
         // console.log(recipes);
         res.render('pages/home', {title: "Home",
         data:recipes});
-=======
-        res.render('pages/home', {title: "Home", data: recipes, logInUser: Register});
->>>>>>> 230af3f0aabb952868e987cd7890e79482e4a2d2
     },
 
     async gotoCategory  (req, res) {
@@ -27,17 +23,10 @@ module.exports={
         //      }
         //     );
         // })
-<<<<<<< HEAD
         const data = recipes.filter(recipe => recipe.category == req.params.category)
        
         res.render('pages/category', 
                 {
-=======
-        const data = await Recipe.find({category : req.params.category})
-        console.log(data)
-        res.render('pages/category',
-            {
->>>>>>> 230af3f0aabb952868e987cd7890e79482e4a2d2
                 title: req.params.category,
                 data: data,
             }
