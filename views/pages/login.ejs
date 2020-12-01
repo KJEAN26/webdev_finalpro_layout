@@ -13,8 +13,8 @@
                 <div class="card mw-100 mt-5">
                     <div class="card-body mx-auto d-block">
                         <div class="col-md-12">
-                            <% if (message != undefined) { %>
-                            <p style="color:red"><%= message %> </p>  
+                            <% if (typeof message != 'undefined') { %>
+                            <p style="color:red;"><%= message %> </p>  
                             <% } %>
                             <form method="POST" action="/login">
                                 <h2 class="login-heading mt-2 mb-5">Login</h2>
@@ -35,10 +35,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-       
+    </div> 
 </body>
 
 </html>

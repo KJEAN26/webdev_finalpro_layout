@@ -3,12 +3,13 @@ const app = express();
 const bodyParser = require('body-parser');
 const database = require("./services/database");
 const loginRouter = require ("./router/login");
+app.use(require("cookie-parser")())
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use('/static', express.static('source'))
 app.set('view engine', 'ejs');
 database.connect();
-
+require("dotenv").config();
 app.use("/",loginRouter);
 
 const directRouter = require("./router/indexRouter");
