@@ -1,9 +1,12 @@
 const Register = require("../model/userModel")
 // const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
+<<<<<<< HEAD
+=======
 const recipes = require('./../recipeMock')
 const jwt = require("jsonwebtoken");
 const { keys } = require("./../recipeMock");
+>>>>>>> 230af3f0aabb952868e987cd7890e79482e4a2d2
 
 //this controller is equavalent to this router router.get('/', getLoginAccnt);
 const getLoginAccnt = async (req, res) => {
@@ -60,6 +63,9 @@ const userDoLogin = async (req, res) => {
     console.log(logInUser);
     if (logInUser.password != password) return res.render('pages/login', {title: "test", message: "PASSWORD DOESN'T MATCH",  })
     // res.send(`Welcome ${logInUser.firstName}!`);
+<<<<<<< HEAD
+    res.redirect('/home');
+=======
     console.log(logInUser)
     const access_token = jwt.sign({
       lastName : logInUser.lastName,
@@ -74,6 +80,7 @@ const userDoLogin = async (req, res) => {
       logInUser : logInUser,
       data:recipes
     });
+>>>>>>> 230af3f0aabb952868e987cd7890e79482e4a2d2
   } catch (error) {
     res.status(400).json({
       error: error,
@@ -155,9 +162,6 @@ const getExtrapage = async (req,res) =>{
   res.render('pages/extra');
 }
 
-const getHomepage = async (req,res) =>{
-  res.render('pages/home')
-}
 // const login=(req,res)=>{
 //   loginSchema.findOne({ email: req.body.email },
 //     (error, user) => {
@@ -189,6 +193,5 @@ module.exports = {
   getLoginAccnt,
   userDoLogin,
   getExtrapage,
-  getHomepage,
   // login,
 };

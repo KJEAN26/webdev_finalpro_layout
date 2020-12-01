@@ -1,61 +1,94 @@
-<!-- Search Wrapper -->
-<div class="search-wrapper">
-    <!-- Close Btn -->
-    <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+<!--try header insert here-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Log out</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to log out?
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-danger" href='/'>Yes</a>
+                <a class="btn btn-primary" data-dismiss="modal">No</a>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div class="navigation-wrap" style="background-color: coral;">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <form action="#" method="post">
-                    <input type="search" name="search" placeholder="Type any keywords...">
-                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Top Header Area -->
-<div class="top-header-area">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-between">
-            <!-- Breaking News -->
-            <div class="col-12 col-sm-6">
-                <div class="breaking-news">
-                    <a href="/about" class="text-left text-decoration-none font-italic" style="font-size: 18px">Welcome
-                        my fellow Food Cravers!</a>
-                </div>
-            </div>
+                <nav class="navbar navbar-expand-md">
 
-            <!-- Top Social Info -->
-            <div class="col-12 col-sm-6">
-                <div class="top-social-info text-right">
-                    <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                    <a href="#" target="_blank"><img src="/static/img/logo.png" style="height: 3rem;"></a>
 
-<!-- ##### Breadcumb Area Start ##### -->
-<div class="breadcumb-area bg-img bg-overlay" style="background-image: url(/static/img/bg3.jpg);">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center">
-            <div class="col-12">
-                <div class="breadcumb-text text-center">
-                    <% if(typeof data.categoryText === 'undefined') {%>
-                        <h2> <%= data[0].categoryText %> </h2>
-                    <%}else{%>
-                        <h2> <%= data.categoryText %> </h2>
-                    <%}%>
-                </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto py-4 py-md-0">
+                            <li class="nav-item ml-5 pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="/home">Home</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Post</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Appetizers</a>
+                                    <a class="dropdown-item" href="#">Main Course</a>
+                                    <a class="dropdown-item" href="#">Desserts</a>
+                                </div>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="#">Features</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
+                                        class="fas fa-user fa-fw"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                    <a class="dropdown-item" href="#">Activity Log</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal">
+                                        Logout
+                                    </a>
+                                </div>
+                            </li>
+                            <form class="form-inline ml-3 mr-0 mr-sm-3 my-2 my-sm-0">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" placeholder="Search for..."
+                                        aria-label="Search" aria-describedby="basic-addon2"
+                                        style="border-color: black;" >
+                                    <div class="input-group-append">
+
+                                        <button class="btn btn-dark" type="button"><i
+                                                class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </ul>
+                    </div>
+
+                </nav>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+</div>
+=======
 </div>
 <!-- ##### Breadcumb Area End ##### -->
 <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: #a14d12;;">
@@ -94,3 +127,4 @@
         </div>
     </div>
 </nav>
+>>>>>>> 230af3f0aabb952868e987cd7890e79482e4a2d2
