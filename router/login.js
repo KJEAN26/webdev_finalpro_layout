@@ -18,8 +18,6 @@ router.get('/register', getRegisteredAccnt);
 router.get('/register/:id', getRegisteredAccntById);
 router.post('/add', addAccnt);
 router.get('/extra', getExtrapage);
-router.get('/home', getHomepage);
-
 
 
 
