@@ -1,9 +1,14 @@
 const Register = require("../model/userModel")
+<<<<<<< HEAD
+// const parseRequestBody = require("../utils/parseRequestBody");
+=======
+>>>>>>> b203e8f0da1f8d82b90bd3a764e68c6221ceff8e
 const bycrypt = require("bcrypt");
 const recipes = require('./../recipeMock')
 const jwt = require("jsonwebtoken");
 const { keys } = require("./../recipeMock");
 
+//this controller is equavalent to this router router.get('/', getLoginAccnt);
 const getLoginAccnt = async (req, res) => {
   try {
     const login = await Register.find();
@@ -149,7 +154,13 @@ const addAccnt = async (req, res) => {
   }
 };
 
+const getExtrapage = async (req,res) =>{
+  res.render('pages/extra');
+}
 
+const getHomepage = async (req,res) =>{
+  res.render('pages/home')
+}
 // const login=(req,res)=>{
 //   loginSchema.findOne({ email: req.body.email },
 //     (error, user) => {
@@ -179,6 +190,8 @@ module.exports = {
   getRegisteredAccntById,
   addAccnt,
   getLoginAccnt,
-  userDoLogin
+  userDoLogin,
+  getExtrapage,
+  getHomepage,
   // login,
 };
