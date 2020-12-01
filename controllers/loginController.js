@@ -1,6 +1,8 @@
 const Register = require("../model/userModel")
 const bycrypt = require("bcrypt");
-
+const recipes = require('./../recipeMock')
+const jwt = require("jsonwebtoken");
+const { keys } = require("./../recipeMock");
 
 const getLoginAccnt = async (req, res) => {
   try {
@@ -12,7 +14,9 @@ const getLoginAccnt = async (req, res) => {
     }
 
     res.render('pages/login', {
-      data: login, title: "Login", message: undefined
+      data: login,
+      title: "Login",
+      message: undefined
     });
   } catch (e) {
     res.status(400).json({
@@ -47,17 +51,32 @@ const userDoLogin = async (req, res) => {
   // console.log(req.body);
   const email = req.body.email;
   const password = req.body.password;
+
   try {
     const logInUser = await Register.findOne({ email: email });
-    if (!logInUser) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
+    if (!logInUser) return res.render('pages/login', {title: "test", message: "EMAIL DOESN'T MATCH",  })
     console.log(logInUser);
-    if (logInUser.password != password) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
+    if (logInUser.password != password) return res.render('pages/login', {title: "test", message: "PASSWORD DOESN'T MATCH",  })
     // res.send(`Welcome ${logInUser.firstName}!`);
-    res.render('pages/home', {title: "Home"});
+    console.log(logInUser)
+    const access_token = jwt.sign({
+      lastName : logInUser.lastName,
+      firstName : logInUser.firstName,
+      email : logInUser.email,
+      password : logInUser.password
+    }, process.env.ACCESS_TOKEN);
+    res.cookie('jwt', access_token, {
+      httpOnly : true
+    })
+    res.render('pages/home',{
+      logInUser : logInUser,
+      data:recipes
+    });
   } catch (error) {
     res.status(400).json({
       error: error,
     });
+    console.log(error);
   }
 
 }
@@ -108,6 +127,7 @@ const addAccnt = async (req, res) => {
       firstName: req.body.firstName,
       email: req.body.email,
       password: req.body.password,
+      accountType : 'client'
     }
     const newRegister = new Register(register);
     const result = await newRegister.save();
@@ -119,7 +139,9 @@ const addAccnt = async (req, res) => {
     }
     console.log(result);
 
-    res.status(200).render('pages/home');
+    res.status(200).render('pages/login', {
+      title: "test"
+    });
   } catch (e) {
     res.status(400).json({
       error: e,

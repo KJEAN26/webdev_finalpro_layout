@@ -92,21 +92,21 @@
 
         <div class="container my-5 py-5" style="height: 100vh;">
 
-            <form action="/recipes/create" method="POST">
+            <form action="/update/<%= data.recipe._id %>  " method="POST">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-control bg-transparent border-0">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="name">
+                        <input type="text" class="form-control" name="name" placeholder="name" value="<%=data.recipe.name%> ">
                         </div>
                         <div class="form-control bg-transparent border-0 mt-5">
                             <label for="categoryText">Category Text</label>
                             <input type="text" class="form-control" name="categoryText" placeholder="Input Category">
                         </div>
                         <div class="form-control bg-transparent border-0 mt-5">
-                            <label for="category">Category</label>
+                            <label for="category" >Category</label>
 
-                            <select name="category" class="form-control" id="category">
+                            <select name="category" class="form-control" id="category" value="<%= data.recipe.category  %> ">
                                 <option value="desserts">Dessert</option>
                                 <option value="appetizers">Appetizers</option>
                                 <option value="main_course">Main Course</option>
@@ -114,59 +114,59 @@
                         </div>
                         <div class="form-control bg-transparent border-0 mt-5">
                             <label for="videoUrl">Video URl</label>
-                            <input type="text" class="form-control" name="videoUrl" placeholder="Input video url">
+                            <input type="text" class="form-control" name="videoUrl" placeholder="Input video url" value="<%= data.recipe.videoUrl  %> ">
                         </div>
                         <div class="form-control bg-transparent border-0 mt-5 mb-5">
                             <label for="image">Image</label>
-                            <input type="text" class="form-control btn-sm" name="image">
+                            <input type="text" class="form-control btn-sm" name="image" value="<%= data.recipe.image  %> ">
                         </div>
                         <div class="form-control bg-transparent border-0">
                             <label for="prepTime">Preparation Time</label>
-                            <input type="text" class="form-control" name="prepTime" placeholder="Input time ">
+                            <input type="text" class="form-control" name="prepTime" placeholder="Input time " value="<%= data.recipe.prepTime  %> ">
                         </div>
                         <div class="form-control bg-transparent border-0 mt-5">
                             <label for="cookTime">Cooking Time</label>
-                            <input type="text" class="form-control" name="cookTime" placeholder="Input time">
+                            <input type="text" class="form-control" name="cookTime" placeholder="Input time" value="<%= data.recipe.cookTime  %> ">
                         </div>
                         <div class="form-control bg-transparent border-0 mt-5">
                             <label for="yield">Yield</label>
-                            <input type="text" class="form-control" name="yield" placeholder="Input number of servings">
+                            <input type="text" class="form-control" name="yield" placeholder="Input number of servings" value="<%= data.recipe.yield  %> ">
                         </div>
                         <div class="form-control bg-transparent border-0 mt-5 mb-3" id="descList">
-                            <label for="description">Description</label>
-                            <textarea class="form-control" id="description" rows="3"></textarea>
+                            <label for="description" >Description</label>
+                            <textarea class="form-control"   value="<%= data.recipe.description  %> " id="description" rows="3"></textarea>
                         </div><br>
                         <div class="form-control bg-transparent border-0 mb-4 mt-5" id="notesList">
                             <label for="notes">Notes</label>
-                            <textarea class="form-control" id="notes" rows="3"></textarea>
+                            <textarea class="form-control" id="notes" rows="3" value="<%= data.recipe.notes  %> "></textarea>
                         </div>
                     </div>
 
                     <div class="col-md-2">
-                        <div class="form-control bg-transparent border-0 mt-2 " id="tagList">
+                        <div class="form-control bg-transparent border-0 mt-2 " id="tagList" value="<%=data.recipe.tags  %> ">
                             <label for="tags"></label> <button type="button" class="btn btn-sm btn-primary"
                                 id="addBtnTag">Add Tags <i class="fa fa-plus"></i></button>
                         </div>
                     </div>
 
                     <div class="col-md-2">
-                        <div class="form-control bg-transparent border-0 " id="ingList">
+                        <div class="form-control bg-transparent border-0 " id="ingList" value="<%=data.recipe.ingredients  %> ">
                             <label for="ingredients"></label> <button type="button" class="btn btn-sm btn-primary"
-                                id="addBtnIng">Add Ingredients <i class="fa fa-plus"></i></button>
+                                id="addBtnIng" >Add Ingredients  <i class="fa fa-plus"></i></button>
                         </div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="form-control bg-transparent border-0 " id="insList">
                             <label for="instructions"></label> <button type="button" class="btn btn-sm btn-primary"
-                                id="addBtnIns">Add Instructions <i class="fa fa-plus"></i></button>
+                                id="addBtnIns" value="<%=data.recipe.istructions  %> ">Add Instructions <i class="fa fa-plus"></i></button>
                         </div>
                     </div>
 
                     <div class="col-md-2">
                         <div class="form-control bg-transparent border-0" id="nutriList">
                             <label for="nutritionFacts"></label> <button type="button" class="btn btn-sm btn-primary"
-                                id="addBtnNutri" style="width:10rem">Add Nutrition Facts <i
+                                id="addBtnNutri"  value="<%=data.recipe.nutritionFacts  %> "style="width:10rem">Add Nutrition Facts <i
                                     class="fa fa-plus"></i></button>
                         </div>
                     </div>
@@ -199,9 +199,12 @@
                         </div>
                     </div> -->
                     </div><br>
-                    <div class="text-center mt-5">
+                    <div class="text-center mt-5" >
                         <button type="reset" class="btn btn-danger mt-5 mr-3 px-5">Cancel</button>
-                        <button class="btn btn-primary mt-5 mr-3 px-5">Submit</button>
+                       
+                        <button class="btn btn-primary mt-5 mr-3 px-5" type="submit"  >Submit</button>
+                      
+                        
                     </div>
             </form>
         </div><br>
