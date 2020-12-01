@@ -6,7 +6,7 @@ const RegisterSchema = Schema({
     lastName: {type: String, required: true},
     email: {type: String, required:true},
     password: {type: String, required:true},
-    accountType :{ type:String,required:true}
+    accountType :{ type:String, enum:["admin","client"],default: "client"}
 })
 
 const Register = mongoose.model("Register", RegisterSchema);

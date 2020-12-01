@@ -4,7 +4,8 @@ const connectToDb = () =>{
     mongoose.connect('mongodb://localhost:27017/recipe',{
         useNewUrlParser:true,
         useUnifiedTopology: true,
-        useCreateIndex:true
+        useCreateIndex:true,
+        useFindAndModify: false,
     })
     .then(()=>{
         console.log("Connected");

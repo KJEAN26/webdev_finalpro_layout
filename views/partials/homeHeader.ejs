@@ -1,4 +1,4 @@
-<!-- Search Wrapper -->
+Search Wrapper
 <div class="search-wrapper">
     <!-- Close Btn -->
     <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
@@ -71,9 +71,14 @@
                     <a class="dropdown-item" href="/recipes/desserts">Desserts</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/features">Features</a>
-            </li>
+            <div class="container">
+                <% if (logInUser.accountType == "admin") { %>
+                  
+                <% }%>
+            </div>
+
+             
+            
             <li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
             </li>

@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
+
+    <head>
+        <%- include('../partials/head'); %>
+    </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
     <link rel="stylesheet" href="static/css/home.css">
     <link rel="stylesheet" href="static/css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -111,16 +114,23 @@
                         <span class="menu-collapsed">Orders</span>
                     </div>
                 </a> -->
-                <a href="/inventory" class="bg-dark list-group-item list-group-item-action">
+                <a href="/home" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fa fa-tasks fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Inventory</span>
+                        <span class="menu-collapsed">Home</span>
                     </div>
                 </a>
+               
                 <a href="/table" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fas fa-clipboard-list fa-fw mr-3"></span>
                         <span class="menu-collapsed"> Recipes</span>
+                    </div>
+                </a>
+                <a href="/inventory" class="bg-dark list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-tasks fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Inventory</span>
                     </div>
                 </a>
                 <a href="#"
@@ -138,12 +148,12 @@
         <div class="col p-4" >
             <h1 class="display-4">Dashboard</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item active"></li>
             </ol>
             <div class="container">
                 <div class="row ">
                     <form method="POST" action='/create/recipes' class="mt-5">
-                       <button type="button" class="btn btn-primary">ADD</button>
+                        <a href="/create/recipes" class="btn btn-primary ">ADD</a>
                     </form>
                 </div>
             <div class="row">
@@ -164,9 +174,9 @@
                             <td><%=data[i].name%></td>
                             <td><%=data[i].category%></td>
                             <td>
-                                <form action="/delete/<%= data[i]._id %>" method="post">
-                                    <input type="submit" value="Delete" name="" id="delete" class="btn">
-                                    <a href="/update/<%= data[i]._id %>" class="btn ">Update</a>
+                                <form action="/delete/<%= data[i]._id%> " method="POST">
+                                    <input type="submit" value="Delete" name="" id="delete" class="btn btn-danger">
+                                    <a href="/update/recipes/<%= data[i]._id %> " class="btn btn-info ">Update</a>
                                 </form>
                             </td>
                         </tr>

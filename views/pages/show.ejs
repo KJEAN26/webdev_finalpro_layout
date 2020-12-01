@@ -16,25 +16,21 @@
             <div class="recipe-top">
                 <div class="container-fluid">
                     <div class="recipe-title">
-                        <span>
-                            <% for(let i = 0 ; i < data.tags.length; i++){%>
-                            <%= data.tags[i] %>
-                            <%}%>      
-                        </span>
-                    
                         <h2 class="display-4 font-weight-bold"><%- data.name %></h2>
                             <ul class="tags">
-                                <li>Appetizer</li>
-                                <li>Asian</li>
-                                <li>Fried</li>
+                                <% for(let i = 0 ; i < data.tags.length; i++){%>
+                                <li>
+                                    <%= data.tags[i] %>
+                                </li>
+                                <%}%>  
                             </ul>
                     </div>
                     <div class="sizer rounded mx-auto d-block">
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="<%= data.videoUrl %>" allowfullscreen></iframe>
-                        </div>
                     </div>
                 </div>
+            </div>
             </div>
             <div class="container">
                 <div class="row">
@@ -55,7 +51,7 @@
                                     <ul>
                                         <li>Prep time: <span><%- data.prepTime %></span></li>
                                         <li>Cook time: <span><%- data.cookTime %></span></li>
-                                        <br>      
+                                        <br>
                                         <li>Yield: <span><%- data.yield %></span></li>
                                     </ul>
                                 </div>
@@ -68,7 +64,6 @@
                                 <div class="list-item">
                                     <h4>Ingredients</h4>
                                     <div class="salad-list">
-                                        <h6><%- data.ingredientHeader %></h6>
                                         <ul>
                                             <% for(let i = 0 ; i < data.ingredients.length;i++){%>
                                             <li>
@@ -84,7 +79,7 @@
                             <div class="nutri-title">
                                 <h4>Nutrition Facts</h4>
                                 <span>Serves<%- data.yield %> </span>
-                               
+
                                     </div>
                                     <ul>
                                         <% for(let i = 0 ; i < data.nutritionFacts.length;i++){%>
@@ -99,16 +94,12 @@
                                 <div class="recipe-right">
                                     <div class="recipe-desc">
                                         <h3>Description</h3>
-                                        <% for(let i = 0 ; i < data.description.length; i++){%>
-                                        <p>
-                                            <%= data.description[i] %>
-                                        </p>
-                                        <%}%>
-                            </div>
-                            <div class="instruction-list">
-                                <h3>Instructions</h3>
-                                <ul>
-                                    <% for(let i = 0 ; i < data.instructions.length;i++){%>
+                                       <p><%= data.description %></p>
+                                </div>
+                                <div class="instruction-list">
+                                    <h3>Instructions</h3>
+                                    <ul>
+                                        <% for(let i = 0 ; i < data.instructions.length;i++){%>
                                         <li>
                                             <span>0<%= i + 1 %>.</span>
                                             <%= data.instructions[i] %>
@@ -120,11 +111,9 @@
                                 <h3>Notes</h3>
                                 <div class="notes-item">
                                     <span>i</span>
-                                    <% for(let i = 0 ; i < data.notes.length; i++){%>
                                         <p>
-                                            <%= data.notes[i] %>
+                                            <%= data.notes %>
                                         </p>
-                                        <%}%>
                                 </div>
                             </div>
                         </div>
@@ -244,8 +233,8 @@
         <!-- ##### Other Recipes Area End ##### -->
         <footer>
             <%- include('../partials/footer'); %>
-        </footer>
-        <script src="/static/js/active.js"></script>
+                                        </footer>
+                                        <script src="/static/js/active.js"></script>
 </body>
 
 </>
