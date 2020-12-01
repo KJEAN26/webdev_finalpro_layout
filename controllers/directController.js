@@ -1,12 +1,12 @@
-<<<<<<< HEAD
-=======
 const recipes = require('./../recipeMock')
 const Recipe = require('./../model/RecipeModel')
+const Register = require("../model/userModel")
 
->>>>>>> b203e8f0da1f8d82b90bd3a764e68c6221ceff8e
 module.exports={
     gotoHome (req,res){
-        res.render('pages/home', {title: "Home",data:recipes});
+        // console.log(recipes);
+        res.render('pages/home', {title: "Home",
+        data:recipes});
     },
 
     gotoCategory (req, res) {
@@ -24,6 +24,7 @@ module.exports={
         //     );
         // })
         const data = recipes.filter(recipe => recipe.category == req.params.category)
+       
         res.render('pages/category', 
                 {
                 title: req.params.category,

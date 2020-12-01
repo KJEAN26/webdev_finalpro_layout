@@ -1,10 +1,6 @@
 const Register = require("../model/userModel")
-<<<<<<< HEAD
 // const parseRequestBody = require("../utils/parseRequestBody");
-=======
->>>>>>> b203e8f0da1f8d82b90bd3a764e68c6221ceff8e
 const bycrypt = require("bcrypt");
-
 
 //this controller is equavalent to this router router.get('/', getLoginAccnt);
 const getLoginAccnt = async (req, res) => {
@@ -58,7 +54,7 @@ const userDoLogin = async (req, res) => {
     console.log(logInUser);
     if (logInUser.password != password) return res.render('pages/login',{message:"EMAIL DOESN'T MATCH"})
     // res.send(`Welcome ${logInUser.firstName}!`);
-    res.render('pages/home', {title: "Home"});
+    res.redirect('/home');
   } catch (error) {
     res.status(400).json({
       error: error,
@@ -136,9 +132,6 @@ const getExtrapage = async (req,res) =>{
   res.render('pages/extra');
 }
 
-const getHomepage = async (req,res) =>{
-  res.render('pages/home')
-}
 // const login=(req,res)=>{
 //   loginSchema.findOne({ email: req.body.email },
 //     (error, user) => {
@@ -170,6 +163,5 @@ module.exports = {
   getLoginAccnt,
   userDoLogin,
   getExtrapage,
-  getHomepage,
   // login,
 };
