@@ -524,11 +524,12 @@ hr.style_1 {
 .footer-section {
   background: whitesmoke;
   padding-top: 70px;
+  margin-bottom: 0;
 }
-
+/* 
 .footer-section .fs-left {
   margin-bottom: 31px;
-}
+} */
 
 .footer-section .fs-left .logo a {
   display: inline-block;
@@ -1921,6 +1922,8 @@ body.dark .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 1000;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+
 }
 
 .navbar {

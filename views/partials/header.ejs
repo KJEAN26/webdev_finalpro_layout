@@ -20,7 +20,7 @@
     </div>
 </div>
 
-<div class="navigation-wrap" style="background-color: coral;">
+<div class="navigation-wrap">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -59,9 +59,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                         class="fas fa-user fa-fw"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                    <a class="dropdown-item" href="#">Activity Log</a>
-                                    <div class="dropdown-divider"></div>
+                                    <!-- <div class="dropdown-divider"></div> -->
                                     <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal">
                                         Logout
                                     </a>
@@ -70,7 +68,7 @@
                             <form class="form-inline ml-3 mr-0 mr-sm-3 my-2 my-sm-0">
                                 <div class="input-group">
                                     <input class="form-control" type="text" placeholder="Search for..."
-                                        aria-label="Search" aria-describedby="basic-addon2"
+                                        aria-label="Search" aria-describedby="basic-addon2" id="search"
                                         style="border-color: black;">
                                     <div class="input-group-append">
 
@@ -81,13 +79,37 @@
                             </form>
                         </ul>
                     </div>
-
                 </nav>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 </div>
-=======
-</div>
->>>>>>> cc8dc79167353fa88cbfb74201a421c49e20bff1
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(async () => {
+        let recipes = [];
+        await $.ajax({
+            type: "get",
+            url: "http://localhost:5000/get/all/recipe",
+            success: (res) => {
+                let recipes = res.res;
+                console.log(recipes);
+                $("#search").keyup(() => {
+                    let test = $("#search").val();
+                    recipes.forEach(recipe => {
+                        let name = recipe.name.toLowerCase(); 
+                        if (name.includes(test.toLowerCase())) {
+                            console.log(recipe);
+                            // name.style.display= recipes; 
+                        }
+                    })
+                })
+            },
+            error: (error) => {
+                console.log(error);
+            }
+        });
+
+    })
+</script>

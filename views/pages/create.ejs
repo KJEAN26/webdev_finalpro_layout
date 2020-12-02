@@ -104,15 +104,12 @@
                         </div>
                     </div>
                 </div><br>
-                <div class="text-center mt-5">
-                    <button type="reset" class="btn btn-danger mt-5 mr-3 px-5">Cancel</button>
-                    <button class="btn btn-primary mt-5 mr-3 px-5">Submit</button>
+                <div class="text-center">
+                    <button type="reset" class="btn btn-danger mt-5 mr-3 px-5 mb-5">Cancel</button>
+                    <button class="btn btn-primary mt-5 mr-3 px-5 mb-5">Submit</button>
                 </div>
             </form>
         </div>
-        <footer style="margin-top: 50%; margin-bottom: 0;">
-            <%- include('../partials/footer');%>
-        </footer>
 </body>
 
 <script>
@@ -130,15 +127,9 @@
         if (count < 15) $('#insList').append(`<input type="text" class="form-control my-3" name="instructions[]">`)
         count++
     })
-    // $('#addBtnDesc').click(function () {
-    //     $('#descList').append(`<input type="text" class="form-control my-3" name="description[]">`)
-    // })
     $('#addBtnNutri').click(function () {
         if (count < 6) $('#nutriList').append(`<input type="text" class="form-control my-3" name="nutritionFacts[]">`)
         count++
     })
-    // $('#addBtnNotes').click(function () {
-    //     $('#notesList').append(`<input type="text" class="form-control my-3" name="notes[]">`)
-    // })
 
 </script>

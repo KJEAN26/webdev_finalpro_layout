@@ -17,4 +17,5 @@ router.get('/extra', authorization ,directController.gotoExtra)
 router.get('/table',directController.gotoTable)
 router.get('/inventory',directController.gotoInventory)
 router.post('/delete/:id',directController.deleteRecipe)    
+router.get('/get/all/recipe', directController.getAllRecipe)
 module.exports = router;

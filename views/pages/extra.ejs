@@ -47,73 +47,17 @@
                             <span id="collapse-text" class="menu-collapsed">Collapse</span>
                         </div>
                     </a>
-
-
                 </ul><!-- List Group END-->
             </div><!-- sidebar-container END -->
             <!-- MAIN -->
-            <div class="col p-4">
+            <div class="col p-4 mt-5">
                 <h1 class="display-4">Dashboard</h1>
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active">Dashboard</li>
                 </ol>
                 <div class="row">
                 </div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card bg-c-blue mb-4">
-                            <!-- <img class="card-img-top" src="../src/images/register-bg.png" alt="Card image cap">    -->
-                            <div class="card-body order-card">
-                                <h3>66</h3>
-                                <h2 class="text-right"><i class="fas fa-sitemap f-right"></i></h2>
-                                <h4 class="card-text mb-2" href="#">Total Recipes</h4>
-                            </div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="/products">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card bg-c-yellow mb-4">
-                            <div class="card-body order-card">
-                                <h3>50</h3>
-                                <h2 class="text-right"><i class="fas fa-cart-plus f-right"></i></h2>
-                                <h4 class="card-text mb-2">Total Orders</h4>
-                            </div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="/orders">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card bg-c-green mb-4">
-                            <div class="card-body order-card">
-                                <h3>232</h3>
-                                <h2 class="text-right"><i class="fas fa-coins f-right"></i></h2>
-                                <h4 class="card-text mb-2">Total Sales</h4>
-                            </div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="/sales-report">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card bg-c-pink mb-4">
-                            <div class="card-body order-card">
-                                <h3>120</h3>
-                                <h2 class="text-right"><i class="fas fa-boxes f-right"></i></h2>
-                                <h4 class="card-text">Total Stocks</h4>
-                            </div>
-                            <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="/stock-report">View Details</a>
-                                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <div class="row">
                     <div class="col-xl-6">
                         <div class="card mb-4">
@@ -136,6 +80,9 @@
                 </div><!-- Main Col END -->
             </div><!-- body-row END -->
         </div>
+        <footer>
+            <%- include('../partials/footer');%>
+        </footer>
         <script src="/static/js/dashboard.js"></script>
         <script src="/static/js/sales-rep.js"></script>
         <script src="/static/js/stock-rep.js"></script>
