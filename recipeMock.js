@@ -62,7 +62,7 @@ module.exports =  [
             'Cholesterol : 2%',
             'Calories: 345kcal'
         ],
-        description : 'The secret ingredient will blow. your. mind. Start those New Year\'s resolutions with this delish cheddar cauliflower popcorn. Try this Cheddar Cauliflower Popcorn Recipe and let me know what you think.', 
+        description : 'The secret ingredient will blow. your. mind. Start those New Year\'s resolutions with this delish cheddar cauliflower popcorn. Try this Cheddar Cauliflower Popcorn Recipe and let me know what you think.',
         instructions : [
             ' Preheat oven to 400 degrees F.',
             ' Chop head of cauliflower into small pieces.',
@@ -142,8 +142,7 @@ module.exports =  [
             'Cholesterol : 2%',
             'Calories: 345kcal'
         ],
-        description : 
-           'After 28 intense, sugar-filled rounds of testing, I believe I finally perfected the chocolate chip cookie. They are chewy, fudgy, filled with two types of chocolate, and rival the size of any bakeries. They are a work of art. Taking inspiration from Grandma\'s nearly perfect cookie, these have plenty of butter and a bit of love. I\'m certain you\'ll need no other chocolate chip cookie recipe ever again. Try this Recipe and let me know what you think.',
+        description : 'After 28 intense, sugar-filled rounds of testing, I believe I finally perfected the chocolate chip cookie. They are chewy, fudgy, filled with two types of chocolate, and rival the size of any bakeries. They are a work of art. Taking inspiration from Grandma/\'s nearly perfect cookie, these have plenty of butter and a bit of love. I/\'m certain you/\'ll need no other chocolate chip cookie recipe ever again. Try this Recipe and let me know what you think.',
         instructions : [
             'Preheat oven to 325° and line 2 large baking sheets with parchment. In a small saucepan over medium heat, melt butter. Bring it to a boil and let boil one minute.',
             'Place sugars in a large bowl (or in the bowl of a stand mixer fitted with the paddle attachment), then pour hot butter over sugars. Beat with a hand mixer until combined, 1 minute. Add egg, egg yolk, and vanilla and beat until light and creamy, 2 minutes.',
@@ -186,7 +185,6 @@ module.exports =  [
             'Calories: 345kcal'
         ],
         description : 'Bacon Wrapped Cheese Sticks are the perfect Keto appetizer recipe for all of your upcoming parties! Low carb, delicious and easy to make low carb appetizer! Try this Cheese Sticks Recipe and let me know what you think.',
-        
         instructions : [
             'Fry the garlic in the oil. Discard the garlic. Fry the pancetta.',
             'Cook the spaghetti noodles.',
@@ -255,6 +253,6 @@ module.exports =  [
             'Spread the cheese mixture on top of the pasta, and finish with the extra parmesan cheese.',
             'Bake in the oven for about 30 minutes or until the lasagna has a nicely browned surface. Serve with a green salad and your favorite dressing.'
         ],
-        notes : 'You can substitute thinly sliced zucchini for the low-carb lasagna sheets. If you don\'t want the crunchy texture you can place the slices on a baking sheet and sprinkle salt on them. This will draw liquid from the zucchini and make it softer. Instead of ground beef you can use ground pork or poultry. It gives the dish a different but equally great flavor. The ground beef mixture actually tastes better if you make it a day or two ahead of time. You can store it in the fridge for 3-4 days and in the freezer for up to 4 months. Take out from the freezer a day ahead and let thaw in the fridge. The lasagna sheets need to cool completely before placing them in the fridge or freezer.'
+        notes : 'You can substitute thinly sliced zucchini for the low-carb lasagna sheets. If you don/\'t want the crunchy texture you can place the slices on a baking sheet and sprinkle salt on them. This will draw liquid from the zucchini and make it softer. Instead of ground beef you can use ground pork or poultry. It gives the dish a different but equally great flavor. The ground beef mixture actually tastes better if you make it a day or two ahead of time. You can store it in the fridge for 3-4 days and in the freezer for up to 4 months. Take out from the freezer a day ahead and let thaw in the fridge. The lasagna sheets need to cool completely before placing them in the fridge or freezer.'
     }
 ]

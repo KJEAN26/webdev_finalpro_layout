@@ -13,12 +13,10 @@ const{
 
 router.get('/', getLoginAccnt);
 router.post('/login', userDoLogin);
- 
 // router.post('/update/:id', updateLoginAccntById);getloginpage
 router.get('/register', getRegisteredAccnt);
 router.get('/register/:id', getRegisteredAccntById);
 router.post('/add', addAccnt);
-
 
 
 

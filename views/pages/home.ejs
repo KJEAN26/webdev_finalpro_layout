@@ -6,140 +6,138 @@
 </head>
 
 <body>
-    <header class="header-area">
+    <header>
         <%- include('../partials/header'); %>
-
-        <!--carousel code starts here-->
-        <div id="demo" class="carousel slide" data-ride="carousel">
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="static/img/car_bg1.jpg" class="d-block w-100" alt="Cover">
-                </div>
-                <div class="carousel-item">
-                    <img src="static/img/car_bg2.jpg" class="d-block w-100" alt="Cover2">
-
-                </div>
-                <div class="carousel-item">
-                    <img src="static/img/car_bg3.jpg" class="d-block w-100" alt="Cover3">
-                </div>
+    </header>
+    <br><br><br>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/img/car_bg1.jpg" class="d-block w-100" alt="Cover">
             </div>
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+            <div class="carousel-item">
+                <img src="static/img/car_bg2.jpg" class="d-block w-100" alt="Cover2">
+
+            </div>
+            <div class="carousel-item">
+                <img src="static/img/car_bg3.jpg" class="d-block w-100" alt="Cover3">
+            </div>
         </div>
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
 
-        <hr class="style_1">
+    <hr class="style_1">
 
-        <!-- Page Top Recipe Section Begin -->
-        <section class="page-top-recipe">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="pt-recipe-item large-item">
-                            <div class="pt-recipe-img set-bg">
-                                <a href="/features">
-                                    <img src="static/img/foods-topofCebu.jpg">
-                                    <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <span class="d-sm-inline-block pb-2">Nothing beats a "Dining with a view"!</span>
-                                <h3>Top of Cebu Restaurant's sumptuous dishes.</h3>
-                            </div>
+    <!-- Page Top Recipe Section Begin -->
+    <section class="page-top-recipe">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="pt-recipe-item large-item">
+                        <div class="pt-recipe-img set-bg">
+                            <a href="/recipes/main_course">
+                                <img src="static/img/foods-topofCebu.jpg">
+                                <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="pt-recipe-text">
+                            <span class="d-sm-inline-block pb-2">Nothing beats a "Dining with a view"!</span>
+                            <h3>Top of Cebu Restaurant's sumptuous dishes.</h3>
                         </div>
                     </div>
-                    <% var appetizers = data.filter(recipe => recipe.category == "appetizers") %>
-                    <% var desserts = data.filter(recipe => recipe.category == "desserts") %>
-                    <% var main_course = data.filter(recipe => recipe.category == "main_course") %>
-                    <div class="col-lg-3 col-md-6 order-lg-1">
-                        <div class="pt-recipe-item">
-                            <div class="pt-recipe-img set-bg">
-                                <a href="/recipes/<%= main_course[0].category%>/<%= main_course[0]._id %>">
-                                    <img src="static/img/main_keto-lasagna.jpg" alt="Low Carb Keto Lasagna"
-                                        height="311">
-                                    <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma">
-                                    <%= main_course[0].name %></h3>
-                            </div>
+                </div>
+                <% var appetizers = data.filter(recipe => recipe.category == "appetizers") %>
+                <% var desserts = data.filter(recipe => recipe.category == "desserts") %>
+                <% var main_course = data.filter(recipe => recipe.category == "main_course") %>
+                <div class="col-lg-3 col-md-6 order-lg-1">
+                    <div class="pt-recipe-item">
+                        <div class="pt-recipe-img set-bg">
+                            <a href="/recipes/<%= main_course[0].category%>">
+                                <img src="static/img/main_keto-lasagna.jpg" alt="Low Carb Keto Lasagna" height="311">
+                                <i class="fa fa-plus"></i>
                         </div>
-                        <div class="pt-recipe-item">
-                            <div class="pt-recipe-img set-bg">
-                                <a href="/recipes/<%= appetizers[0].category%>/<%= appetizers[0]._id%>">
-                                    <img src="static/img/app_cheese-sticks.jpg" alt="Cheese Sticks" height="311"
-                                        width="280">
-                                    <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma">
-                                    <%= appetizers[0].name %>
-                                </h3>
-                            </div>
+                        <div class="pt-recipe-text">
+                            <h3 class="font-weight-bold" style="font-size: 22px; font-family: Atma">
+                                <%= main_course[0].name %></h3>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 order-lg-3">
-                        <div class="pt-recipe-item">
-                            <div class="pt-recipe-img set-bg">
-                                <a href="/recipes/<%= desserts[0].category%>/<%= desserts[0]._id %>">
-                                    <img src="static/img/dess_nutella-lava.jpg" alt="Nutella Lava Cake" height="311">
-                                    <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma">
-                                    <%= desserts[0].name%></h3>
-                            </div>
+                    <div class="pt-recipe-item">
+                        <div class="pt-recipe-img set-bg">
+                            <a href="/recipes/<%= appetizers[0].category%>">
+                                <img src="static/img/app_cheese-sticks.jpg" alt="Cheese Sticks" height="311"
+                                    width="280">
+                                <i class="fa fa-plus"></i>
                         </div>
-                        <div class="pt-recipe-item">
-                            <div class="pt-recipe-img set-bg">
-                                <a href="/recipes/<%= main_course[1].category%>/<%= main_course[1]._id%>">
-                                    <img src="static/img/main_chicken-nuggets.jpg" alt="Parmesan Chicken Nuggets"
-                                        height="311">
-                                    <i class="fa fa-plus"></i>
-                            </div>
-                            <div class="pt-recipe-text">
-                                <h3 class="font-weight-bold" style="font-size: 20px; font-family: Atma">
-                                    <%= main_course[1].name %></h3>
-                            </div>
+                        <div class="pt-recipe-text">
+                            <h3 class="font-weight-bold" style="font-size: 22px; font-family: Atma">
+                                <%= appetizers[0].name %>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 order-lg-3">
+                    <div class="pt-recipe-item">
+                        <div class="pt-recipe-img set-bg">
+                            <a href="/recipes/<%= desserts[0].category%>">
+                                <img src="static/img/dess_nutella-lava.jpg" alt="Nutella Lava Cake" height="311">
+                                <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="pt-recipe-text">
+                            <h3 class="font-weight-bold" style="font-size: 22px; font-family: Atma">
+                                <%= desserts[0].name%></h3>
+                        </div>
+                    </div>
+                    <div class="pt-recipe-item">
+                        <div class="pt-recipe-img set-bg">
+                            <a href="/recipes/<%= main_course[1].category%>/<%= main_course[1]._id%>"></a>
+                                <img src="static/img/main_chicken-nuggets.jpg" alt="Parmesan Chicken Nuggets"
+                                    height="311">
+                                <i class="fa fa-plus"></i>
+                        </div>
+                        <div class="pt-recipe-text">
+                            <h3 class="font-weight-bold" style="font-size: 22px; font-family: Atma">
+                                <%= main_course[1].name %></h3>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Page Top Recipe Section End -->
-        <!-- ##### Top Category Area Start ##### -->
-        <section class="top-category-area section-padding-80-0">
-            <div class="container">
-                <div class="row">
-                    <!-- Top Category Area -->
-                    <div class="col-12 col-lg-6">
-                        <div class="single-top-category">
-                            <img src="static/img/app_bagbagis.jpg" alt="Bagbagis">
-                            <!-- Content -->
-                            <div class="top-cta-content">
-                                <h3>Appetizing Appetizers</h3>
-                                <h6>Satisfy your cravings with these snacks</h6>
-                                <a href="/recipes/appetizers" class="btn btn-success">Discover All Recipes</a>
-                            </div>
+        </div>
+    </section>
+    <!-- Page Top Recipe Section End -->
+    <!-- ##### Top Category Area Start ##### -->
+    <section class="top-category-area section-padding-80-0">
+        <div class="container">
+            <div class="row">
+                <!-- Top Category Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-top-category">
+                        <img src="static/img/app_bagbagis.jpg" alt="Bagbagis">
+                        <!-- Content -->
+                        <div class="top-cta-content">
+                            <h3>Appetizers</h3>
+                            <h6>Satisfy your cravings with these snacks</h6>
+                            <a href="/recipes/appetizers" class="btn btn-success">Discover All Recipes</a>
                         </div>
                     </div>
-                    <!-- Top Category Area -->
-                    <div class="col-12 col-lg-6">
-                        <div class="single-top-category">
-                            <img src="static/img/main_pata.jpg" alt="Crispy Pata">
-                            <!-- Content -->
-                            <div class="top-cta-content">
-                                <h3>Main Dish</h3>
-                                <h6>Crunchy, Juicy &amp; Savory Fave</h6>
-                                <a href="/recipes/main_course" class="btn btn-success">Discover All Recipes</a>
-                            </div>
+                </div>
+                <!-- Top Category Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-top-category">
+                        <img src="static/img/main_pata.jpg" alt="Crispy Pata">
+                        <!-- Content -->
+                        <div class="top-cta-content">
+                            <h3>Main Dish</h3>
+                            <h6>Crunchy, Juicy &amp; Savory Fave</h6>
+                            <a href="/recipes/main_course" class="btn btn-success">Discover All Recipes</a>
                         </div>
                     </div>
                 </div>
@@ -151,155 +149,142 @@
         </div>
     </section>
     <!-- ##### Top Category Area End ##### -->
-    <div class="container">
-        <% if (logInUser.accountType == "admin") { %>
-            <button>admin</button>
-   
-        <% } else { %>
-            <button>client</button>
-        <% } %> 
-        
-    </div>
+    
 
 
-        <hr class="style_1">
 
-        <section class="best-recipe-area">
-            <div class="container">
+    <hr class="style_1">
+
+    <section class="best-recipe-area">
+        <div class="container">
+            <div class="col-12">
+                <div class="section-heading">
+                    <h2 class="text-center text-dark" style="font-size: 35px">The Best Recipes to Die For</h2>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid m-3 px-5">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="recipe-item">
+                        <a href="/recipes/appetizers" class="text-decoration-none"><img
+                                src="static/img/app_onion-rings.jpg" alt="Onion Rings" class="image">
+                            <h3 class="text-center font-weight-bold">Onion Rings</h3>
+                        </a>
+                        <div class="ratings text-center">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="recipe-item">
+                        <a href="/recipes/main_course" class="text-decoration-none"><img
+                                src="static/img/main_chi-estofado.jpg" alt="Chicken Estofado" class="image">
+                            <h3 class="text-center font-weight-bold">Chicken Estofado with Banana</h3>
+                        </a>
+                        <div class="ratings text-center">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="recipe-item">
+                        <a href="/recipes/desserts" class="text-decoration-none"><img
+                                src="static/img/dess_toffee-pudding.jpg" alt="Toffee Pudding" class="image">
+                            <h3 class="text-center font-weight-bold">Toffee Pudding</h3>
+                        </a>
+                        <div class="ratings text-center">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="recipe-item">
+                        <a href="/recipes/main_course" class="text-decoration-none"><img
+                                src="static/img/main_enchilada-rice-casserole.jpg" alt="Enchilada Rice Casserole"
+                                class="image">
+                            <h3 class="text-center font-weight-bold">Enchilada Rice Casserole</h3>
+                        </a>
+                        <div class="ratings text-center">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="recipe-item">
+                        <a href="/recipes/desserts" class="text-decoration-none"><img
+                                src="static/img/dess_nutella-mug-cake.jpg" alt="Nutella Mug Cake" class="image">
+                            <h3 class="text-center font-weight-bold">Nutella Mug Cake</h3>
+                        </a>
+                        <div class="ratings text-center">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="recipe-item">
+                        <a href="/recipes/appetizers" class="text-decoration-none"><img
+                                src="static/img/app_chedd-cauli.png" alt="Cheddar Cauliflower Popcorn" class="image">
+                            <h3 class="text-center font-weight-bold">Cheddar Cauliflower Popcorn</h3>
+                        </a>
+                        <div class="ratings text-center">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Best Recipe Area End ##### -->
+    <!-- ##### CTA Area Start ##### -->
+    <section class="cta-area bg-img bg-overlay" style="background-image: url(static/img/bg4.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
                 <div class="col-12">
-                    <div class="section-heading">
-                        <h2 class="text-center text-dark" style="font-size: 35px">The Best Recipes to Die For</h2>
+                    <!-- Cta Content -->
+                    <div class="cta-content text-center">
+                        <h2>Delectable Desserts</h2>
+                        <p style="font-size: 24px">When the sweet tooth comes a-knockin', dish up one these luscious
+                            dessert
+                            options. Filled with
+                            luscious mousses, creamy caramels and comforting chocolatey treats.</p>
+                        <a href="/recipes/desserts" class="btn btn-success p-3" style="font-size: 19px">Discover all the
+                            recipes</a>
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="container-fluid m-3 px-5">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="recipe-item">
-                            <a href="/recipes/appetizers" class="text-decoration-none"><img
-                                    src="static/img/app_onion-rings.jpg" alt="Onion Rings" class="image">
-                                <h3 class="text-center font-weight-bold">Onion Rings</h3>
-                            </a>
-                            <div class="ratings text-center">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="recipe-item">
-                            <a href="/recipes/main_course" class="text-decoration-none"><img
-                                    src="static/img/main_chi-estofado.jpg" alt="Chicken Estofado" class="image">
-                                <h3 class="text-center font-weight-bold">Chicken Estofado with Banana</h3>
-                            </a>
-                            <div class="ratings text-center">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="recipe-item">
-                            <a href="/recipes/desserts" class="text-decoration-none"><img
-                                    src="static/img/dess_toffee-pudding.jpg" alt="Toffee Pudding" class="image">
-                                <h3 class="text-center font-weight-bold">Toffee Pudding</h3>
-                            </a>
-                            <div class="ratings text-center">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="recipe-item">
-                            <a href="/recipes/main_course" class="text-decoration-none"><img
-                                    src="static/img/main_enchilada-rice-casserole.jpg" alt="Enchilada Rice Casserole"
-                                    class="image">
-                                <h3 class="text-center font-weight-bold">Enchilada Rice Casserole</h3>
-                            </a>
-                            <div class="ratings text-center">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="recipe-item">
-                            <a href="/recipes/desserts" class="text-decoration-none"><img
-                                    src="static/img/dess_nutella-mug-cake.jpg" alt="Nutella Mug Cake" class="image">
-                                <h3 class="text-center font-weight-bold">Nutella Mug Cake</h3>
-                            </a>
-                            <div class="ratings text-center">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="recipe-item">
-                            <a href="/recipes/appetizers" class="text-decoration-none"><img
-                                    src="static/img/app_chedd-cauli.png" alt="Cheddar Cauliflower Popcorn"
-                                    class="image">
-                                <h3 class="text-center font-weight-bold">Cheddar Cauliflower Popcorn</h3>
-                            </a>
-                            <div class="ratings text-center">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ##### Best Recipe Area End ##### -->
-        <!-- ##### CTA Area Start ##### -->
-        <section class="cta-area bg-img bg-overlay" style="background-image: url(static/img/bg4.jpg);">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-12">
-                        <!-- Cta Content -->
-                        <div class="cta-content text-center">
-                            <h2>Delectable Desserts</h2>
-                            <p style="font-size: 23px">When the sweet tooth comes a-knockin', dish up one these luscious
-                                dessert
-                                options. Filled with
-                                luscious mousses, creamy caramels and comforting chocolatey treats.</p>
-                            <a href="/recipes/desserts" class="btn btn-success p-3" style="font-size: 19px">Discover all
-                                the
-                                recipes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ##### CTA Area End ##### -->
-        <!-- Footer Section Begin -->
-        <footer>
-            <%- include('../partials/footer');%>
-        </footer>
-        <!-- Footer Section End -->
+        </div>
+    </section>
+    <!-- ##### CTA Area End ##### -->
 
-        <script src="/static/js/example.js"></script>
-        <script src="/static/js/active.js"></script>
+    <footer class="footer-section">
+        <%- include('../partials/footer');%>
+    </footer>
 </body>
 
 </html>

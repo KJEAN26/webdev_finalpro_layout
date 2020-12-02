@@ -2,16 +2,13 @@
 <html lang="en">
 
 <head>
-   
-
     <%- include('../partials/head'); %>
 </head>
 
 <body>
-    <!-- Bootstrap NavBar -->
     <header class="header-area">
         <%- include('../partials/header'); %>
-    <!-- NavBar END -->
+    </header>
     <!-- Bootstrap row -->
     <div class="row" id="body-row">
         <!-- Sidebar -->
@@ -25,13 +22,6 @@
                 </li>
                 <!-- /END Separator -->
                 <!-- Menu with submenu -->
-                
-                <a href="/home" class="bg-dark list-group-item list-group-item-action">
-                    <div class="d-flex w-100 justify-content-start align-items-center">
-                        <span class="fa fa-tasks fa-fw mr-3"></span>
-                        <span class="menu-collapsed">Home</span>
-                    </div>
-                </a>
                 <a href="/table" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fas fa-clipboard-list fa-fw mr-3"></span>
@@ -51,8 +41,6 @@
                         <span id="collapse-text" class="menu-collapsed">Collapse</span>
                     </div>
                 </a>
-
-
             </ul><!-- List Group END-->
         </div><!-- sidebar-container END -->
         <!-- MAIN -->

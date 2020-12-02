@@ -118,9 +118,11 @@ module.exports = {
     createForm(req, res) {
         res.render('pages/create', {
             title: "Create New Recipe",
+            logInUser:req.user,
             data: {
 
-                categoryText: "test"
+                categoryText: "test",
+                
             }
         })
 
@@ -168,6 +170,7 @@ module.exports = {
             console.log(result);
             res.render('pages/update', {
                 title: "Update Recipe",
+                logInUser:req.user,
                 data: {
                     categoryText: "test",
                     recipe: result

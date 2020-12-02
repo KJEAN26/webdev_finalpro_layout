@@ -93,7 +93,6 @@ const userDoLogin = async (req, res) => {
     });
     console.log(error);
   }
-
 }
 
 const getRegisteredAccnt = async (req, res) => {
