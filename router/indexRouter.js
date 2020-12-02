@@ -3,7 +3,6 @@ const authorization = require("./../middleware/authorization");
 const express = require('express');
 const router = express.Router();
 
-
 router.get('/home',authorization, directController.gotoHome);
 router.get('/recipes/:category',authorization, directController.gotoCategory);
 // router.get('/features', directController.gotoFeatures);
