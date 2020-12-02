@@ -61,9 +61,9 @@ const userDoLogin = async (req, res) => {
 
   try {
     const logInUser = await Register.findOne({ email: email });
-    if (!logInUser) return res.render('pages/login', { title: "test", message: "EMAIL DOESN'T MATCH", })
+    if (!logInUser) return res.render('pages/login', { title: "login", message: "EMAIL DOESN'T MATCH", })
     console.log(logInUser);
-    if (logInUser.password != password) return res.render('pages/login', { title: "test", message: "PASSWORD DOESN'T MATCH", })
+    if (logInUser.password != password) return res.render('pages/login', { title: "login", message: "PASSWORD DOESN'T MATCH", })
     // res.send(`Welcome ${logInUser.firstName}!`);
 
 
@@ -83,6 +83,7 @@ const userDoLogin = async (req, res) => {
 
     res.render('pages/home', {
       logInUser: logInUser,
+      title:"Home",
       data: recipes
     });
     
@@ -155,7 +156,7 @@ const addAccnt = async (req, res) => {
     console.log(result);
 
     res.status(200).render('pages/login', {
-      title: "test"
+      title: "login"
     });
   } catch (e) {
     res.status(400).json({
