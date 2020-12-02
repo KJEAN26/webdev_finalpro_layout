@@ -1,13 +1,6 @@
 const Register = require("../model/userModel")
-// const parseRequestBody = require("../utils/parseRequestBody");
-const bycrypt = require("bcrypt");
-
-
-
 const recipes = require('./../recipeMock')
 const jwt = require("jsonwebtoken");
-const { keys } = require("./../recipeMock");
-
 
 //this controller is equavalent to this router router.get('/', getLoginAccnt);
 
@@ -65,10 +58,7 @@ const userDoLogin = async (req, res) => {
     console.log(logInUser);
     if (logInUser.password != password) return res.render('pages/login', { title: "test", message: "PASSWORD DOESN'T MATCH", })
     // res.send(`Welcome ${logInUser.firstName}!`);
-
-
     // res.redirect('/home');
-
     console.log(logInUser)
     const access_token = jwt.sign({
       lastName: logInUser.lastName,

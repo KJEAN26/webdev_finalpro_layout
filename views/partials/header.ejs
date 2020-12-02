@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-md">
-                    <a href="#" target="_blank"><img src="/static/img/logo.png" style="height: 3rem;"></a>
+                    <a href="/home"><img src="/static/img/logo.png" style="height: 3rem;"></a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -47,18 +47,17 @@
                                     <a class="dropdown-item" href="/recipes/desserts">Desserts</a>
                                 </div>
                             </li>
-                           
-                                <% if (logInUser.accountType == "admin") { %>
-                                   
-                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                        <a class="nav-link" href="/extra">Dashboard</a>
-                                    </li>
-                                <% }   %>   
-                         
+
+                            <% if (logInUser.accountType == "admin") { %>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="/extra">Dashboard</a>
+                            </li>
+                            <% }   %>
+
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                 <a class="nav-link" href="/about">About</a>
                             </li>
-                            <form class="form-inline my-sm-0"  style="margin-left: 15rem;">
+                            <form class="form-inline my-sm-0" style="margin-left: 15rem;">
                                 <div class="input-group">
                                     <input class="form-control" type="text" placeholder="Search for..." id="search"
                                         aria-label="Search" aria-describedby="basic-addon2"
@@ -87,7 +86,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 </div>
@@ -105,7 +103,7 @@
                 $("#search").keyup(() => {
                     let test = $("#search").val();
                     recipes.forEach(recipe => {
-                        let name = recipe.name.toLowerCase(); 
+                        let name = recipe.name.toLowerCase();
                         if (name.includes(test.toLowerCase())) {
                             console.log(recipe);
                             // name.style.display= recipes; 
