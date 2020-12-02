@@ -17,12 +17,12 @@
                 <div class="container-fluid">
                     <div class="recipe-title">
                         <h2 class="display-4 font-weight-bold"><%- data.name %></h2>
-                            <ul class="tags">
-                                <% for(let i = 0 ; i < data.tags.length; i++){%>
-                                <li>
-                                    <%= data.tags[i] %>
-                                </li>
-                                <%}%>  
+                        <ul class="tags">
+                            <% for(let i = 0 ; i < data.tags.length; i++){%>
+                            <li>
+                                <%= data.tags[i] %>
+                            </li>
+                            <%}%>  
                             </ul>
                     </div>
                     <div class="sizer rounded mx-auto d-block">
@@ -120,7 +120,7 @@
                     </div>
                 </div>
         </section>
-      
+
         <!-- Single Recipe Section End -->
         <hr class="style_1">
         <div class="row m-5">
@@ -231,10 +231,9 @@
             </div>
         </div>
         <!-- ##### Other Recipes Area End ##### -->
-        <footer>
-            <%- include('../partials/footer'); %>
-                                        </footer>
-                                        <script src="/static/js/active.js"></script>
+        <footer class="footer-section">
+            <%- include('../partials/footer');%>
+          </footer>
+        <script src="/static/js/active.js"></script>
 </body>
 
-</>
