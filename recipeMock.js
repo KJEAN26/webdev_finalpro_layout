@@ -17,7 +17,6 @@ module.exports =  [
         prepTime : '30mins',
         cookTime : '50mins',
         yield : '4',
-        ingredientHeader: ['For the batter'],
         ingredients: [
             '2 lbs. pre-cleaned pork large intestines',
             '5 tablespoons coarse rock salt',
@@ -31,20 +30,13 @@ module.exports =  [
             'Cholesterol : 149mg',
             'Calories: 411kcal'
         ],
-        description :  [
-            'Preparing for a big event but don/\'t know what to serve? Here is a dish yourpalswill definitely love',
-            'Bagbagis is an Ilokano term that refers to intestine. Crispy bagbagis are deep fried pork intestine that are so crispy and crunchy.',
-            'Try this prized Ilocano dish and let me know what you think.'
-        ],
+        description : 'Preparing for a big event but don/\'t know what to serve? Here is a dish yourpalswill definitely love. Bagbagis is an Ilokano term that refers to intestine. Crispy bagbagis are deep fried pork intestine that are so crispy and crunchy. Try this prized Ilocano dish and let me know what you think.',
         instructions : [
             'Clean the intestines well with running water.',
             'Boil water in a large pot.',
             'Once the water starts to boil, add the intestines. Boil for 15 minutes.Discard the water. Pour a clean batch of water on the pot. Boil with the intestines for 15 to 20 minutes. Discard one more time.'
         ],
-        notes : [
-            'Make sure to clean the insides and outside walls of the intestine with running water. Wear gloves if necessary.',
-            'I usually boil it twice and throw out the water afterwards. I add salt and the other seasoning on the third boil.'
-        ]
+        notes : 'Make sure to clean the insides and outside walls of the intestine with running water. Wear gloves if necessary. I usually boil it twice and throw out the water afterwards. I add salt and the other seasoning on the third boil.'
     },
     {
         _id : 2,
@@ -75,11 +67,7 @@ module.exports =  [
             'Cholesterol : 2%',
             'Calories: 345kcal'
         ],
-        description :  [
-            'The secret ingredient will blow. your. mind.',
-            'Start those New Year/\'s resolutions with this delish cheddar cauliflower popcorn.',
-            'Try this Cheddar Cauliflower Popcorn Recipe and let me know what you think.'
-        ],
+        description : 'The secret ingredient will blow. your. mind. Start those New Year\'s resolutions with this delish cheddar cauliflower popcorn. Try this Cheddar Cauliflower Popcorn Recipe and let me know what you think.',
         instructions : [
             ' Preheat oven to 400 degrees F.',
             ' Chop head of cauliflower into small pieces.',
@@ -87,9 +75,7 @@ module.exports =  [
             ' Sprinkle packet of mac and cheese powder over cauliflower and toss.',
             ' Roast cauliflower in oven for 25 minutes. Serve.'
         ],
-        notes : [
-            'For better taste, make sure that the cauliflower you used is fresh.'
-        ]
+        notes : 'For better taste, make sure that the cauliflower you used is fresh.'
     },
     {
         _id : 3,
@@ -120,20 +106,14 @@ module.exports =  [
             'Cholesterol : 2%',
             'Calories: 345kcal'
         ],
-        description :  [
-            'These Nutella brownies only need 3 ingredients and are ready in less 30 minutes from start to finish.',
-            'Try this Chocolatey Recipe and let me know what you think.'
-        ],
+        description : 'These Nutella brownies only need 3 ingredients and are ready in less 30 minutes from start to finish. Try this Chocolatey Recipe and let me know what you think.',
         instructions : [
             'Preheat oven to 350°F. Grease a 9 inch x 9 inch metal baking pan.',
             'Add all ingredients into a large bowl and mix until batter is smooth. Pour into baking pan and smooth top with spatula.',
             'Bake for about 15 minutes until toothpick inserted comes out clean.',
             'Let brownies cool and set before cutting and serving.'
         ],
-        notes : [
-            'Be careful not to bake too long otherwise brownies will dry out.',
-            'The nutrition information provided are only estimates based on an onlinenutritional calculator. I am not a certified nutritionist. Please consult a professional nutritionist or doctor for accurate information and any dietary restrictions and concerns you may have.'
-        ]
+        notes : 'Be careful not to bake too long otherwise brownies will dry out. The nutrition information provided are only estimates based on an onlinenutritional calculator. I am not a certified nutritionist. Please consult a professional nutritionist or doctor for accurate information and any dietary restrictions and concerns you may have.'
     },
     {
         _id : 4,
@@ -173,19 +153,14 @@ module.exports =  [
             'Cholesterol : 2%',
             'Calories: 345kcal'
         ],
-        description :  [
-           'After 28 intense, sugar-filled rounds of testing, I believe I finally perfected the chocolate chip cookie. They are chewy, fudgy, filled with two types of chocolate, and rival the size of any bakeries. They are a work of art. Taking inspiration from Grandma/\'s nearly perfect cookie, these have plenty of butter and a bit of love. I/\'m certain you/\'ll need no other chocolate chip cookie recipe ever again.',
-            'Try this Recipe and let me know what you think.'
-        ],
+        description : 'After 28 intense, sugar-filled rounds of testing, I believe I finally perfected the chocolate chip cookie. They are chewy, fudgy, filled with two types of chocolate, and rival the size of any bakeries. They are a work of art. Taking inspiration from Grandma/\'s nearly perfect cookie, these have plenty of butter and a bit of love. I/\'m certain you/\'ll need no other chocolate chip cookie recipe ever again. Try this Recipe and let me know what you think.',
         instructions : [
             'Preheat oven to 325° and line 2 large baking sheets with parchment. In a small saucepan over medium heat, melt butter. Bring it to a boil and let boil one minute.',
             'Place sugars in a large bowl (or in the bowl of a stand mixer fitted with the paddle attachment), then pour hot butter over sugars. Beat with a hand mixer until combined, 1 minute. Add egg, egg yolk, and vanilla and beat until light and creamy, 2 minutes.',
             'In another large bowl, whisk together flour, baking soda, salt, and cinnamon. Add to wet ingredients and beat until dry ingredients are almost incorporated with just a few white streaks. Add chocolates and stir until just combined.',
             'Using a large cookie scoop, scoop dough (about 3 tablespoons) onto prepared pans about 3” apart and sprinkle with sea salt. Bake until edges are golden and almost set in the middle, 14 to 15 minutes. Let cool on pan for 5 minutes, then transfer to cooling rack to cool completely. Repeat with remaining dough.'
         ],
-        notes : [
-            'Cookies should still look slightly underdone to achieve the perfect golden color.'
-        ]
+        notes : 'Cookies should still look slightly underdone to achieve the perfect golden color.'
     },
     {
         _id : 5,
@@ -223,10 +198,7 @@ module.exports =  [
             'Cholesterol : 2%',
             'Calories: 345kcal'
         ],
-        description :  [
-            'Bacon Wrapped Cheese Sticks are the perfect Keto appetizer recipe for all of your upcoming parties! Low carb, delicious and easy to make low carb appetizer!',
-            'Try this Cheese Sticks Recipe and let me know what you think.'
-        ],
+        description : 'Bacon Wrapped Cheese Sticks are the perfect Keto appetizer recipe for all of your upcoming parties! Low carb, delicious and easy to make low carb appetizer! Try this Cheese Sticks Recipe and let me know what you think.',
         instructions : [
             'Fry the garlic in the oil. Discard the garlic. Fry the pancetta.',
             'Cook the spaghetti noodles.',
@@ -235,9 +207,7 @@ module.exports =  [
             'Put the cheese mix with the spaghetti off the fire. Stir in some cooking water.',
             'Serve immediately with some black pepper and nutmeg.'
         ],
-        notes : [
-            'The nutrition information provided are only estimates based on an onlinenutritional calculator. I am not a certified nutritionist. Please consult a professional nutritionist or doctor for accurate information and any dietary restrictions and concerns you may have.'
-        ]
+        notes : 'The nutrition information provided are only estimates based on an onlinenutritional calculator. I am not a certified nutritionist. Please consult a professional nutritionist or doctor for accurate information and any dietary restrictions and concerns you may have.'
     },
     {
         _id : 6,
@@ -286,10 +256,7 @@ module.exports =  [
             'Protein: 22 % (41 g)',
             'Calories: 754kcal'
         ],
-        description :  [
-            'Lasagna rocks. That enticing flavor mash-up of creamy cheese, hearty tomato sauce, and seasoned ground beef… not to mention garlic and onions.', 
-            'Wait no longer. This keto version is the ultimate comfort food.'
-        ],
+        description : 'Lasagna rocks. That enticing flavor mash-up of creamy cheese, hearty tomato sauce, and seasoned ground beef… not to mention garlic and onions. Wait no longer. This keto version is the ultimate comfort food.',
         instructions : [
             'Preheat oven to 300°F (150°C). Line a baking sheet with parchment paper.',
             'In a medium-sized bowl, whisk together the ingredients, until a smooth batter. Gradually whisk in the psyllium husk, and then set aside for a few minutes.',
@@ -303,11 +270,6 @@ module.exports =  [
             'Spread the cheese mixture on top of the pasta, and finish with the extra parmesan cheese.',
             'Bake in the oven for about 30 minutes or until the lasagna has a nicely browned surface. Serve with a green salad and your favorite dressing.'
         ],
-        notes : [
-            'You can substitute thinly sliced zucchini for the low-carb lasagna sheets. If you don/\'t want the crunchy texture you can place the slices on a baking sheet and sprinkle salt on them. This will draw liquid from the zucchini and make it softer.',
-            'Instead of ground beef you can use ground pork or poultry. It gives the dish a different but equally great flavor.',
-            'The ground beef mixture actually tastes better if you make it a day or two ahead of time. You can store it in the fridge for 3-4 days and in the freezer for up to 4 months. Take out from the freezer a day ahead and let thaw in the fridge.',
-            'The lasagna sheets need to cool completely before placing them in the fridge or freezer.'
-        ]
+        notes : 'You can substitute thinly sliced zucchini for the low-carb lasagna sheets. If you don/\'t want the crunchy texture you can place the slices on a baking sheet and sprinkle salt on them. This will draw liquid from the zucchini and make it softer. Instead of ground beef you can use ground pork or poultry. It gives the dish a different but equally great flavor. The ground beef mixture actually tastes better if you make it a day or two ahead of time. You can store it in the fridge for 3-4 days and in the freezer for up to 4 months. Take out from the freezer a day ahead and let thaw in the fridge. The lasagna sheets need to cool completely before placing them in the fridge or freezer.'
     }
 ]

@@ -9,9 +9,6 @@ $('.sidebar-colapse').click(function() {
     SidebarCollapse();
 });
 
-(function($) {
-    "use strict";
-
 function SidebarCollapse () {
     $('.menu-collapsed').toggleClass('d-none');
     $('.sidebar-submenu').toggleClass('d-none');
@@ -29,17 +26,3 @@ function SidebarCollapse () {
     // Collapse/Expand icon
     $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
 }
-
-var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
- $("#layoutSidenav_nav .sb-sidenav a.nav-link").each(function() {
-     if (this.href === path) {
-         $(this).addClass("active");
-     }
- });
-
-// Toggle the side navigation
-$("#sidebarToggle").on("click", function(e) {
- e.preventDefault();
- $("body").toggleClass("sb-sidenav-toggled");
-});
-})(jQuery);

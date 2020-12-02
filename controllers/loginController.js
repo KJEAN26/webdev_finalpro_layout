@@ -1,6 +1,8 @@
 const Register = require("../model/userModel")
 // const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
+const recipes = require('./../recipeMock')
+const jwt = require("jsonwebtoken");
 
 //this controller is equavalent to this router router.get('/', getLoginAccnt);
 const getLoginAccnt = async (req, res) => {
@@ -58,13 +60,26 @@ const userDoLogin = async (req, res) => {
     if (logInUser.password != password) return res.render('pages/login', {title: "test", message: "PASSWORD DOESN'T MATCH",  })
     // res.send(`Welcome ${logInUser.firstName}!`);
     res.redirect('/home');
+    console.log(logInUser)
+    const access_token = jwt.sign({
+      lastName : logInUser.lastName,
+      firstName : logInUser.firstName,
+      email : logInUser.email,
+      password : logInUser.password
+    }, process.env.ACCESS_TOKEN);
+    res.cookie('jwt', access_token, {
+      httpOnly : true
+    })
+    res.render('pages/home',{
+      logInUser : logInUser,
+      data:recipes 
+    });
   } catch (error) {
     res.status(400).json({
       error: error,
     });
     console.log(error);
   }
-
 }
 
 const getRegisteredAccnt = async (req, res) => {
