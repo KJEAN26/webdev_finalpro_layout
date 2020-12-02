@@ -9,11 +9,8 @@
     <header class="header-area">
         <%- include('../partials/header'); %>
     </header>
-    <!-- Bootstrap row -->
     <div class="row" id="body-row">
-        <!-- Sidebar -->
         <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">
-            <!-- Bootstrap List Group -->
             <ul class="list-group">
                 <!-- Separator with title -->
                 <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed"
@@ -21,7 +18,13 @@
                     <small>MAIN MENU</small>
                 </li>
                 <!-- /END Separator -->
-                <!-- Menu with submenu -->
+                <a href="/home" class="bg-dark list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-tasks fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Home</span>
+                    </div>
+                </a>
+
                 <a href="/table" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fas fa-clipboard-list fa-fw mr-3"></span>
@@ -51,44 +54,46 @@
             </ol>
             <div class="container">
                 <div class="row ">
-                    <form method="POST" action='/create/recipes' class="mt-5">
+                    <form method="POST" action='/create/recipes' class="my-4">
                         <a href="/create/recipes" class="btn btn-primary ">ADD</a>
                     </form>
                 </div>
-            <div class="row">
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col-sm">RECIPE NAME</th>
-                            <th scope="col-sm">CATEGORY </th>
-                            <th scope="col-sm">ACTION</th>
-
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% for (i=data.length-1;i>=0;i--) {%>
-                        <tr>
-                            <td><%=data[i].name%></td>
-                            <td><%=data[i].category%></td>
-                            <td>
-                                <form action="/delete/<%= data[i]._id%> " method="POST">
-                                    <input type="submit" value="Delete" name="" id="delete" class="btn btn-danger">
-                                    <a href="/update/recipes/<%= data[i]._id %> " class="btn btn-info ">Update</a>
-                                </form>
-                            </td>
-                        </tr>
-                        <%}%>   
-                </tbody>
-            
-            </table>
+                <div class="row">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col-sm">RECIPE NAME</th>
+                                <th scope="col-sm">CATEGORY </th>
+                                <th scope="col-sm">ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for (i=data.length-1;i>=0;i--) {%>
+                            <tr>
+                                <td><%=data[i].name%></td>
+                                <td><%=data[i].category%></td>
+                                <td>
+                                    <form action="/delete/<%= data[i]._id%> " method="POST">
+                                        <input type="submit" value="Delete" name="" id="delete" class="btn btn-danger">
+                                        <a href="/update/recipes/<%= data[i]._id %> " class="btn btn-info ">Update</a>
+                                    </form>
+                                </td>
+                            </tr>
+                            <%}%> 
+                                </tbody>
+                            </table> 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <footer class="footer-section">
+        <%- include('../partials/footer');%>
+                            </footer>
+                            <script src="/static/js/dashborad.js"></script>
+                            <script src="/static/js/stock-rep.js"></script>
 
-        <script src="/static/js/index.js"></script>
-        <script src="/static/js/navbar.js"></script>
-        <script src="/static/js/stock-rep.js"></script>
-        
 </body>
 
 </html>

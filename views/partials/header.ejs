@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-md">
-                    <a href="#" target="_blank"><img src="/static/img/logo.png" style="height: 3rem;"></a>
+                    <a href="/home"><img src="/static/img/logo.png" style="height: 3rem;"></a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -47,25 +47,19 @@
                                     <a class="dropdown-item" href="/recipes/desserts">Desserts</a>
                                 </div>
                             </li>
-                           
-                                <% if (logInUser.accountType == "admin") { %>
-                                   
-                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                                        <a class="nav-link" href="/extra">Dashboard</a>
-                                    </li>
-                                <% }   %>
-                                   
-                                
-                          
-                               
-                         
-                         
+
+                            <% if (logInUser.accountType == "admin") { %>
+                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                <a class="nav-link" href="/extra">Dashboard</a>
+                            </li>
+                            <% }   %>
+
                             <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                                 <a class="nav-link" href="/about">About</a>
                             </li>
-                            <form class="form-inline my-sm-0"  style="margin-left: 15rem;">
+                            <form class="form-inline my-sm-0" style="margin-left: 15rem;">
                                 <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Search for..."
+                                    <input class="form-control" type="text" placeholder="Search for..." id="search"
                                         aria-label="Search" aria-describedby="basic-addon2"
                                         style="border-color: black;">
                                     <div class="input-group-append">
@@ -80,9 +74,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
                                         class="fas fa-user fa-fw"></i></a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="#">Settings</a>
-                                    <a class="dropdown-item" href="#">Activity Log</a>
-                                    <div class="dropdown-divider"></div>
+                                    <!-- <div class="dropdown-divider"></div> -->
                                     <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal">
                                         Logout
                                     </a>
@@ -94,8 +86,35 @@
             </div>
         </div>
     </div>
-
 </div>
 
 </div>
-<!-- ##### Breadcumb Area End ##### -->
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(async () => {
+        let recipes = [];
+        await $.ajax({
+            type: "get",
+            url: "http://localhost:5000/get/all/recipe",
+            success: (res) => {
+                let recipes = res.res;
+                console.log(recipes);
+                $("#search").keyup(() => {
+                    let test = $("#search").val();
+                    recipes.forEach(recipe => {
+                        let name = recipe.name.toLowerCase();
+                        if (name.includes(test.toLowerCase())) {
+                            console.log(recipe);
+                            // name.style.display= recipes; 
+                        }
+                    })
+                })
+            },
+            error: (error) => {
+                console.log(error);
+            }
+        });
+
+    })
+</script>

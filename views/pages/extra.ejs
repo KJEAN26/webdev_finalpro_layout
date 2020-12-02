@@ -20,8 +20,13 @@
                     style="background-color: #333333;">
                     <small>MAIN MENU</small>
                 </li>
-              
-
+                <!-- /END Separator -->
+                <a href="/home" class="bg-dark list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-start align-items-center">
+                        <span class="fa fa-tasks fa-fw mr-3"></span>
+                        <span class="menu-collapsed">Home</span>
+                    </div>
+                </a>
                 <a href="/table" class="bg-dark list-group-item list-group-item-action">
                     <div class="d-flex w-100 justify-content-start align-items-center">
                         <span class="fas fa-clipboard-list fa-fw mr-3"></span>
@@ -41,32 +46,40 @@
                         <span id="collapse-text" class="menu-collapsed">Collapse</span>
                     </div>
                 </a>
-
-
             </ul><!-- List Group END-->
         </div><!-- sidebar-container END -->
         <!-- MAIN -->
-        <div class="col p-4 mt-5">
-            <h1 class="display-4">Dashboard</h1>
+        <div class="col p-4">
+            <h1 class="display-4 mt-5">Dashboard</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active"></li>
+                <li class="breadcrumb-item active">Dashboard</li>
             </ol>
             <div class="row">
-            </div class="container">
-           
-                <div class="col-9 mx-auto">
+                <div class="col-xl-6">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-coins mr-1"></i>
+                            Monthly Sales Report
+                        </div>
+                        <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-boxes mr-1"></i>
                             Monthly Stock Report
                         </div>
-                        <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
+                        <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
                     </div>
                 </div>
-            </div><!-- Main Col END -->
-        </div><!-- body-row END -->
+            </div>
+        </div><!-- Main Col END -->
+    </div><!-- body-row END -->
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <footer class="footer-section">
+        <%- include('../partials/footer');%>
+    </footer>
     <script src="/static/js/dashboard.js"></script>
     <script src="/static/js/sales-rep.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>

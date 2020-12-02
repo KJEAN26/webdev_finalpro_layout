@@ -8,7 +8,14 @@ module.exports = {
         res.render('pages/home', { title: "Home", data: recipes, logInUser: req.user });
     },
 
-    async gotoCategory(req, res) {
+    //get all recipe
+    async getAllRecipe(req, res){
+        
+        res.json({res: recipes});
+      
+    },
+
+    async gotoCategory  (req, res) {
         // Recipe.find({category: req.params.category},(err,result)=>{
         //     if(err){
         //        return res.send(err)
@@ -33,11 +40,6 @@ module.exports = {
             }
         );
     },
-
-    gotoFeatures(req, res) {
-        
-        res.render('pages/features', { title: "Features", logInUser: req.user });
-    },
     gotoExtra(req, res) {
     
         res.render('pages/extra', { title: "Dashboard", data: "test", logInUser: req.user });
@@ -59,18 +61,7 @@ module.exports = {
     },
 
     async show(req, res) {
-        //   Recipe.find({_id : req.params.id},(err,result)=>{
-        //         if(err){
-        //            return res.send(err)
-        //         }
-        //         console.log(result[0]);
-
-        //         res.render('pages/show',{
-        //             title: 'Show',
-        //             data: result[0]
-        //         })
-        //     })
-        const data = await Recipe.findOne({ _id: req.params.id })
+        const data = await Recipe.findOne({_id:req.params.id})
         console.log(data)
         res.render('pages/show', {
             title: 'Show',
@@ -223,13 +214,6 @@ module.exports = {
        })
 
     },
-
-
-
-    // Recipe.findOneAndDelete({ _id:req.params.id}, function (err) {
-    //     if(err) console.log(err);
-    //     console.log("Successful deletion");
-    //   });
 
 
 
