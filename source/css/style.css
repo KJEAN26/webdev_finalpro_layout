@@ -1495,6 +1495,9 @@ hr.style_1 {
   height: 9rem;
 }
 
+.container .card .card-title {
+  text-align: center;
+}
 /* ----------------------- Responsive Media Styles ------------------------*/
 
 @media only screen and (min-width: 1550px) and (max-width: 1920px) {
