@@ -1,7 +1,15 @@
 const Register = require("../model/userModel")
+// const parseRequestBody = require("../utils/parseRequestBody");
 const bycrypt = require("bcrypt");
-const recipes = require('./../recipeMock')
 
+
+
+const recipes = require('./../recipeMock')
+const jwt = require("jsonwebtoken");
+const { keys } = require("./../recipeMock");
+
+
+//this controller is equavalent to this router router.get('/', getLoginAccnt);
 
 const getLoginAccnt = async (req, res) => {
   try {
@@ -50,23 +58,42 @@ const userDoLogin = async (req, res) => {
   // console.log(req.body);
   const email = req.body.email;
   const password = req.body.password;
+
   try {
     const logInUser = await Register.findOne({ email: email });
-    if (!logInUser) return res.render('pages/login', {title: "test", message: "EMAIL DOESN'T MATCH",  })
+    if (!logInUser) return res.render('pages/login', { title: "test", message: "EMAIL DOESN'T MATCH", })
     console.log(logInUser);
-    if (logInUser.password != password) return res.render('pages/login', {title: "test", message: "PASSWORD DOESN'T MATCH",  })
+    if (logInUser.password != password) return res.render('pages/login', { title: "test", message: "PASSWORD DOESN'T MATCH", })
     // res.send(`Welcome ${logInUser.firstName}!`);
-   
-    res.render('pages/home',{
-      logInUser : logInUser,
-      data:recipes
+
+
+    // res.redirect('/home');
+
+    console.log(logInUser)
+    const access_token = jwt.sign({
+      lastName: logInUser.lastName,
+      firstName: logInUser.firstName,
+      email: logInUser.email,
+      password: logInUser.password,
+      accountType : logInUser.accountType
+    }, process.env.ACCESS_TOKEN);
+    res.cookie('jwt', access_token, {
+      httpOnly: true
+    })
+
+    res.render('pages/home', {
+      logInUser: logInUser,
+      data: recipes
     });
+    
+
   } catch (error) {
     res.status(400).json({
       error: error,
     });
+    console.log(error);
   }
-  
+
 }
 
 const getRegisteredAccnt = async (req, res) => {
@@ -115,6 +142,7 @@ const addAccnt = async (req, res) => {
       firstName: req.body.firstName,
       email: req.body.email,
       password: req.body.password,
+
       // accountType : 'client'
     }
     const newRegister = new Register(register);
@@ -137,6 +165,7 @@ const addAccnt = async (req, res) => {
   }
 };
 
+ 
 
 // const login=(req,res)=>{
 //   loginSchema.findOne({ email: req.body.email },
@@ -167,6 +196,7 @@ module.exports = {
   getRegisteredAccntById,
   addAccnt,
   getLoginAccnt,
-  userDoLogin
+  userDoLogin,
+
   // login,
 };
