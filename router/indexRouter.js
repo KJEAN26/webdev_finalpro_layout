@@ -1,11 +1,11 @@
 const directController = require('../controllers/directController');
-const authorization = require("../middleware/authorization");
+const authorization = require("./../middleware/authorization");
 const express = require('express');
 const router = express.Router();
 
 
-router.get('/home', directController.gotoHome);
-router.get('/recipes/:category', directController.gotoCategory);
+router.get('/home',authorization, directController.gotoHome);
+router.get('/recipes/:category',authorization, directController.gotoCategory);
 // router.get('/features', directController.gotoFeatures);
 router.get('/about', directController.gotoAbout);
 router.get('/create/recipes',directController.createForm)

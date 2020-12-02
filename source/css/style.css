@@ -643,8 +643,13 @@ hr.style_1 {
 }
 
 .spad {
+<<<<<<< HEAD
+	padding-top: 50px;
+	padding-bottom: 100px;
+=======
   padding-top: 100px;
   padding-bottom: 100px;
+>>>>>>> f16b0d390ddfcb4e958e039d73663e3dfe54f2b2
 }
 
 .recipe-top {
@@ -654,6 +659,9 @@ hr.style_1 {
 
 .recipe-top .recipe-title {
   text-align: center;
+<<<<<<< HEAD
+	margin-bottom: 80px;
+=======
   margin-bottom: 90px;
 }
 
@@ -661,6 +669,7 @@ hr.style_1 {
   display: inline-block;
   color: #FC0254;
   font-size: 16px;
+>>>>>>> f16b0d390ddfcb4e958e039d73663e3dfe54f2b2
 }
 
 .recipe-top .recipe-title h2 {

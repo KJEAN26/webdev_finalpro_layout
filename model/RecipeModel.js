@@ -5,6 +5,10 @@ const RecipeSchema = mongoose.Schema({
         required: true,
         type :String
     },
+    categoryText : {
+        required : true,
+        type : String
+    },
     category : {
         required : true,
         type : String,
@@ -46,7 +50,7 @@ const RecipeSchema = mongoose.Schema({
         type: [String],
     },
     description : {
-        required : true,
+        required : false,
         type : String,
     },
     instructions : {
@@ -54,7 +58,7 @@ const RecipeSchema = mongoose.Schema({
         type : [String],
     },
     notes : {
-        required: true,
+        required: false,
         type : String,
     }
   

@@ -4,11 +4,9 @@ module.exports =  [
         category : 'appetizers',
         categoryText : "Appetizers",
         tags : [
-            '~ 4 servings /',
-            'fried /', 
-            'easy /', 
-            'filipino /', 
-            'recipe'
+            'easy',
+            'fried', 
+            'appetizers'
         ],
         name : 'Crispy Bagbagis (Crispy Deep Fried Pork Intestine)',
         videoUrl : 'https://www.youtube.com/embed/cM6by-FUFwU?rel=0',
@@ -30,7 +28,7 @@ module.exports =  [
             'Cholesterol : 149mg',
             'Calories: 411kcal'
         ],
-        description : 'Preparing for a big event but don/\'t know what to serve? Here is a dish yourpalswill definitely love. Bagbagis is an Ilokano term that refers to intestine. Crispy bagbagis are deep fried pork intestine that are so crispy and crunchy. Try this prized Ilocano dish and let me know what you think.',
+        description :  'Preparing for a big event but don\'t know what to serve? Here is a dish yourpalswill definitely love. Bagbagis is an Ilokano term that refers to intestine. Crispy bagbagis are deep fried pork intestine that are so crispy and crunchy. Try this prized Ilocano dish and let me know what you think.',
         instructions : [
             'Clean the intestines well with running water.',
             'Boil water in a large pot.',
@@ -43,11 +41,9 @@ module.exports =  [
         category : 'appetizers',
         categoryText : "Appetizers",
         tags : [
-           '~ 1 serving /',
-            'snacks /' ,
-            'easy /',
-            'filipino /', 
-            'recipe'
+            'easy',
+            'fried', 
+            'appetizers'
         ],
         name : 'Cauliflower Cheddar Popcorn',
         videoUrl : 'https://www.youtube.com/embed/A4p15cfgmEM?rel=0',
@@ -56,7 +52,6 @@ module.exports =  [
         prepTime : '12 mins',
         cookTime : '5 mins',
         yield : '2',
-        ingredientHeader: [''],
         ingredients: [
             '1 head of cauliflower',
             'extra-virgin olive oil',
@@ -82,11 +77,9 @@ module.exports =  [
         category : 'desserts',
         categoryText : "Dessert",
         tags : [
-            '~ 2 servings /', 
-            'chocolate /', 
-            'medium /', 
-            'American /', 
-            'recipe'
+            'medium',
+            'bake', 
+            'desserts'
         ],
         name : 'Nutella Brownies',
         videoUrl : 'https://www.youtube.com/embed/sXWZSpr9XFo?rel=0',
@@ -95,7 +88,6 @@ module.exports =  [
         prepTime : '5mins',
         cookTime : '15mins',
         yield : '2',
-        ingredientHeader: [''],
         ingredients: [
             '1 1/4 cup Nutella',
             '2 large eggs',
@@ -120,11 +112,9 @@ module.exports =  [
         category : 'desserts',
         categoryText : "Dessert",
         tags : [
-            '~ 15 servings /', 
-            'chocolate /', 
-            'medium /', 
-            'American /', 
-            'recipe'
+            'medium',
+            'bake', 
+            'desserts'
         ],
         name : 'Chewy Chocolate Chunk Cookies',
         videoUrl : 'https://www.youtube.com/embed/iH8iTR2fIQQ?rel=0',
@@ -133,7 +123,6 @@ module.exports =  [
         prepTime : '5mins',
         cookTime : '20mins',
         yield : '15',
-        ingredientHeader: ['For the batter'],
         ingredients: [
             '1 c. (2 sticks) butter',
             '1 c. packed brown sugar',
@@ -167,11 +156,9 @@ module.exports =  [
         category : 'main_course',
         categoryText : "Main Course",
         tags : [
-            '~ 2 servings /', 
-            'buttery /', 
-            'medium /', 
-            'filipino /', 
-            'recipe'
+            'medium',
+            'bake', 
+            'main course'
         ],
         name : 'Creamy Carbonara',
         videoUrl : 'https://www.youtube.com/embed/4ZH1r2xVSgg',
@@ -180,7 +167,6 @@ module.exports =  [
         prepTime : '12mins',
         cookTime : '5mins',
         yield : '2',
-        ingredientHeader: [''],
         ingredients: [
            '1 tbsp olive oil',
            '2 garlic cloves, sliced',
@@ -214,11 +200,9 @@ module.exports =  [
         category : 'main_course',
         categoryText : "Main Course",
         tags : [
-            '~ 2 servings /', 
-            'lowcarb /', 
-            'intermediate /', 
-            'Italian /', 
-            'recipe'
+            'intermediate',
+            'bake', 
+            'main course'
         ],
         name : 'Low Carb Keto Lasagna',
         videoUrl : 'https://www.youtube.com/embed/i1zU7bW2LNs',
@@ -227,7 +211,6 @@ module.exports =  [
         prepTime : '1 hour 20 minutes',
         cookTime : '30 minutes',
         yield : '6',
-        ingredientHeader: ['Lasagna sheets', 'Meat sauce', 'Cheese topping'],
         ingredients: [
             '8 eggs, beaten',
             '10 oz. cream cheese',

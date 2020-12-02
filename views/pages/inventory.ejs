@@ -9,10 +9,6 @@
 <body>
     <header class="header-area">
         <%- include('../partials/header'); %>
-<<<<<<< HEAD
-=======
-    </header>
->>>>>>> 82387541364591bbee4ee10fbc1b218959e27d41
     <!-- Bootstrap row -->
     <div class="row" id="body-row">
         <!-- Sidebar -->
@@ -58,88 +54,24 @@
         <div class="col p-4 mt-5">
             <h1 class="display-4">Dashboard</h1>
             <ol class="breadcrumb mb-4">
-                <li class="breadcrumb-item active">Dashboard</li>
+                <li class="breadcrumb-item active"></li>
             </ol>
             <div class="row">
             </div class="container">
-            <div class="row">
-                <div class="col-xl-3 col-md-6">
-                    <div class="card bg-c-blue mb-4">
-                        <!-- <img class="card-img-top" src="../src/images/register-bg.png" alt="Card image cap">    -->
-                        <div class="card-body order-card">
-                            <h3>66</h3>
-                            <h2 class="text-right"><i class="fas fa-sitemap f-right"></i></h2>
-                            <h4 class="card-text mb-2" href="#">Total Recipes</h4>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="/products">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card bg-c-yellow mb-4">
-                        <div class="card-body order-card">
-                            <h3>50</h3>
-                            <h2 class="text-right"><i class="fas fa-cart-plus f-right"></i></h2>
-                            <h4 class="card-text mb-2">Total Orders</h4>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="/orders">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card bg-c-green mb-4">
-                        <div class="card-body order-card">
-                            <h3>232</h3>
-                            <h2 class="text-right"><i class="fas fa-coins f-right"></i></h2>
-                            <h4 class="card-text mb-2">Total Sales</h4>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="/sales-report">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6">
-                    <div class="card bg-c-pink mb-4">
-                        <div class="card-body order-card">
-                            <h3>120</h3>
-                            <h2 class="text-right"><i class="fas fa-boxes f-right"></i></h2>
-                            <h4 class="card-text">Total Stocks</h4>
-                        </div>
-                        <div class="card-footer d-flex align-items-center justify-content-between">
-                            <a class="small text-white stretched-link" href="/stock-report">View Details</a>
-                            <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-coins mr-1"></i>
-                            Monthly Sales Report
-                        </div>
-                        <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                    </div>
-                </div>
-                <div class="col-xl-6">
+           
+                <div class="col-9 mx-auto">
                     <div class="card mb-4">
                         <div class="card-header">
                             <i class="fas fa-boxes mr-1"></i>
                             Monthly Stock Report
                         </div>
-                        <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                        <div class="card-body"><canvas id="myBarChart" width="100%" height="50"></canvas></div>
                     </div>
                 </div>
             </div><!-- Main Col END -->
         </div><!-- body-row END -->
     </div>
-<<<<<<< HEAD
+
     <footer>
         <%- include('../partials/footer');%>
     </footer>
@@ -148,10 +80,65 @@
     <script src="/static/js/stock-rep.js"></script>
     <script src="/static/js/dashboard.js"></script>
 
-=======
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="/static/js/dashboard.js"></script>
-    <script src="/static/js/stock-rep.js"></script>
->>>>>>> 82387541364591bbee4ee10fbc1b218959e27d41
+    <script src="/static/js/sales-rep.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script>
+
+        var ctx = document.getElementById("myBarChart");
+
+        $.ajax({
+            url: 'dashboard/analytics',
+            type: "GET",
+            success: function (element) {
+                console.log(element)
+                var recipe = [element.recipe.desserts, element.recipe.main_course, element.recipe.appetizers];
+                var myLineChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Desserts", "Main Course", "Appetizer"],
+                        datasets: [{
+                            label: "Total",
+                            backgroundColor: ["pink","blue","cyan"],
+                            borderColor: "blue",
+                            data: recipe,
+                        }],
+                    },
+                    options: {
+                        scales: {
+                            xAxes: [{
+                                time: {
+                                    unit: 'month'
+                                },
+                                gridLines: {
+                                    display: false
+                                },
+                                ticks: {
+                                    maxTicksLimit: 6
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    min: 0,
+                                    maxTicksLimit: 5
+                                },
+                                gridLines: {
+                                    display: true
+                                }
+                            }],
+                        },
+                        legend: {
+                            display: false
+                        }
+                    }
+                });
+            },
+
+        });
+
+
+    </script>
 </body>
 
 </html>

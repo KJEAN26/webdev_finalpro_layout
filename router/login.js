@@ -17,7 +17,7 @@ router.post('/login', userDoLogin);
 router.get('/register', getRegisteredAccnt);
 router.get('/register/:id', getRegisteredAccntById);
 router.post('/add', addAccnt);
-router.get('/extra', getExtrapage);
+
 
 
 
