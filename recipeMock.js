@@ -24,9 +24,10 @@ module.exports =  [
             '3 cups cooking oil'
         ],
         nutritionFacts : [
-            'Total Fat : 10g',
-            'Cholesterol : 149mg',
-            'Calories: 411kcal'
+            '10g',
+            ' 20g',
+            '10g',
+            '411kcal'
         ],
         description :  'Preparing for a big event but don\'t know what to serve? Here is a dish yourpalswill definitely love. Bagbagis is an Ilokano term that refers to intestine. Crispy bagbagis are deep fried pork intestine that are so crispy and crunchy. Try this prized Ilocano dish and let me know what you think.',
         instructions : [
@@ -58,9 +59,10 @@ module.exports =  [
             '1 packet mac and cheese powder'
         ],
         nutritionFacts : [
-            'Total Fat : 20.4g',
-            'Cholesterol : 2%',
-            'Calories: 345kcal'
+            '10g',
+            ' 20g',
+            '10g',
+            '411kcal'
         ],
         description : 'The secret ingredient will blow. your. mind. Start those New Year\'s resolutions with this delish cheddar cauliflower popcorn. Try this Cheddar Cauliflower Popcorn Recipe and let me know what you think.',
         instructions : [
@@ -94,9 +96,10 @@ module.exports =  [
             '1/2 cup all purpose flour'
         ],
         nutritionFacts : [
-            'Total Fat : 20.4g',
-            'Cholesterol : 2%',
-            'Calories: 345kcal'
+            '10g',
+            ' 20g',
+            '10g',
+            '411kcal'
         ],
         description : 'These Nutella brownies only need 3 ingredients and are ready in less 30 minutes from start to finish. Try this Chocolatey Recipe and let me know what you think.',
         instructions : [
@@ -138,9 +141,10 @@ module.exports =  [
             'Flaky sea salt, for topping'
         ],
         nutritionFacts : [
-            'Total Fat : 20.4g',
-            'Cholesterol : 2%',
-            'Calories: 345kcal'
+            '10g',
+            ' 20g',
+            '10g',
+            '411kcal'
         ],
         description : 'After 28 intense, sugar-filled rounds of testing, I believe I finally perfected the chocolate chip cookie. They are chewy, fudgy, filled with two types of chocolate, and rival the size of any bakeries. They are a work of art. Taking inspiration from Grandma/\'s nearly perfect cookie, these have plenty of butter and a bit of love. I/\'m certain you/\'ll need no other chocolate chip cookie recipe ever again. Try this Recipe and let me know what you think.',
         instructions : [
@@ -180,9 +184,10 @@ module.exports =  [
            'Nutmeg'
         ],
         nutritionFacts : [
-            'Total Fat : 20.4g',
-            'Cholesterol : 2%',
-            'Calories: 345kcal'
+            '10g',
+            ' 20g',
+            '10g',
+            '411kcal'
         ],
         description : 'Bacon Wrapped Cheese Sticks are the perfect Keto appetizer recipe for all of your upcoming parties! Low carb, delicious and easy to make low carb appetizer! Try this Cheese Sticks Recipe and let me know what you think.',
         instructions : [
@@ -233,11 +238,10 @@ module.exports =  [
             '½ cup (1 oz.) fresh parsley, finely chopped',
         ],
         nutritionFacts : [
-            'Net carbs: 4 % (8 g)',
-            'Fiber: 8 g',
-            'Fat: 73 % (60 g)',
-            'Protein: 22 % (41 g)',
-            'Calories: 754kcal'
+            '10g',
+            ' 20g',
+            '10g',
+            '411kcal'
         ],
         description : 'Lasagna rocks. That enticing flavor mash-up of creamy cheese, hearty tomato sauce, and seasoned ground beef… not to mention garlic and onions. Wait no longer. This keto version is the ultimate comfort food.',
         instructions : [

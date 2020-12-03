@@ -26,7 +26,7 @@
     <!-- ##### Breadcumb Area End ##### -->
 
     <div class="container my-5 py-5" style="height: 100vh;">
-        <form action="/recipes/create" method="POST">
+        <form action="/recipes/create" method="POST" class="bg-color">
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-control bg-transparent border-0">
@@ -39,7 +39,6 @@
                     </div>
                     <div class="form-control bg-transparent border-0 mt-5">
                         <label for="category">Category</label>
-
                         <select name="category" class="form-control" id="category">
                             <option value="desserts">Dessert</option>
                             <option value="appetizers">Appetizers</option>
@@ -52,7 +51,7 @@
                     </div>
                     <div class="form-control bg-transparent border-0 mt-5 mb-5">
                         <label for="image">Image</label>
-                        <input type="text" class="form-control btn-sm" name="image">
+                        <input type="text" class="form-control btn-sm" name="image" placeholder="Input image address">
                     </div>
                     <div class="form-control bg-transparent border-0">
                         <label for="prepTime">Preparation Time</label>
@@ -99,11 +98,11 @@
 
                 <div class="col-md-2">
                     <div class="form-control bg-transparent border-0" id="nutriList">
-                        <label for="nutritionFacts"></label> <button type="button" class="btn btn-sm btn-primary"
+                        <label for="nutritionFacts"></label><button type="button" class="btn btn-sm btn-primary"
                             id="addBtnNutri" style="width:10rem">Add Nutrition Facts <i class="fa fa-plus"></i></button>
                     </div>
                 </div><br>
-                <div class="text-center">
+                <div class="text-center mt-5">
                     <button type="reset" class="btn btn-danger mt-5 mr-3 px-5 mb-5">Cancel</button>
                     <button class="btn btn-primary mt-5 mr-3 px-5 mb-5">Submit</button>
                 </div>
@@ -113,8 +112,33 @@
 
 <script>
     var count = 0
+    // $('#addBtnTag').click(function () {
+    //     if (count < 3) $('#tagList').append(`<input type="text" class="form-control my-3" name="tags[]" id="tags">`)
+    //     count++
+    // })
     $('#addBtnTag').click(function () {
-        if (count < 3) $('#tagList').append(`<input type="text" class="form-control my-3" name="tags[]" id="tags">`)
+        if (count < 3) $('#tagList').append(`<select name="tags[]" id="tags" class="form-control mt-2">
+                             <option value="desserts">Easy</option>
+                             <option value="appetizers">Medium</option>
+                            <option value="main_course">Intermediate</option>
+                            <option value="main_course">Fried</option>
+                            <option value="main_course">Baked</option>
+                            <option value="main_course">No-bake</option>
+                            <option value="main_course">Steam</option>
+                            <option value="main_course">Appetizers</option>
+                            <option value="main_course">Desserts</option>
+                            <option value="main_course">Main Course</option>
+                       </select>`)
+        count++
+    })
+
+    $('#addBtnNutri').click(function () {
+        if (count < 6) $('#nutriList').append(`<select name="nutritionFacts[]" class="form-control my-2" id="nutriList">
+                            <option value="desserts">Protein</option>
+                            <option value="appetizers">Carbohydrates</option>
+                            <option value="main_course">Fat</option>
+                            <option value="appetizers">Calories</option>
+                        </select><input type="text" class="form-control" placeholder="Input amount..">`)
         count++
     })
 
@@ -124,10 +148,6 @@
     })
     $('#addBtnIns').click(function () {
         if (count < 15) $('#insList').append(`<input type="text" class="form-control my-3" name="instructions[]">`)
-        count++
-    })
-    $('#addBtnNutri').click(function () {
-        if (count < 6) $('#nutriList').append(`<input type="text" class="form-control my-3" name="nutritionFacts[]">`)
         count++
     })
 

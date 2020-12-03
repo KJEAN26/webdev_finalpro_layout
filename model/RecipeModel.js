@@ -47,7 +47,7 @@ const RecipeSchema = mongoose.Schema({
     },
     nutritionFacts : {
         required: true,
-        type: [String],
+        type: [Number],
     },
     description : {
         required : false,
