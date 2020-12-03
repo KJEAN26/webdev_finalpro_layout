@@ -18,7 +18,7 @@ router.get('/table',authorization,directController.gotoTable)
 router.get('/inventory',authorization,directController.gotoInventory)
 router.post('/delete/:id',directController.deleteRecipe)
 router.get('/login',directController.gotoLogin)
-
+router.get('/pinned',authorization,directController.gotoPinned)
 router.get('/dashboard', authorization, directController.dashboard)
 router.get('/dashboard/analytics',directController.dashboardAnalytics)
 

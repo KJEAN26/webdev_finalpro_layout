@@ -25,10 +25,6 @@ const RecipeSchema = mongoose.Schema({
         required :true,
         type: String,
     },
-    // reviews : {
-    //     required :true,
-    //     type: String,
-    // },
     prepTime : {
         required :true,
         type: String,
@@ -50,7 +46,7 @@ const RecipeSchema = mongoose.Schema({
         type: [String],
     },
     description : {
-        required : false,
+        required : true,
         type : String,
     },
     instructions : {
@@ -58,8 +54,12 @@ const RecipeSchema = mongoose.Schema({
         type : [String],
     },
     notes : {
-        required: false,
+        required:true,
         type : String,
+    },
+    status:{
+        type: String,
+        required :false
     }
   
 })

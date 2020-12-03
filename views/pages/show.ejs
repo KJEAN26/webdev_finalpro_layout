@@ -49,18 +49,22 @@
                                 <div class="reviews"><%- data.reviews %></div>
                                 <div class="recipe-time">
                                     <ul>
-                                        <li>Prep time: <span><%- data.prepTime %></span></li>
+                                        <li>Prep time: <span><%-data.prepTime %></span></li>
                                         <li>Cook time: <span><%- data.cookTime %></span></li>
                                         <br>
-                                        <li>Yield: <span><%- data.yield %></span></li>
+                                        <li>Yield: <span><%= data.yield %></span></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="ingredient-list">
                                 <div class="recipe-btn font-weight-light text">
                                     <a href="#">Print Recipe</a>
-                                    <a href="#" class="black-btn">Pin Recipe</a>
+                                    <a href="/pinned" class="black-btn"name="btnRecipe">Pin Recipe</a>
                                 </div>
+
+                                <% if (("btnRecipe").clicked) { %>
+                                 <%- data.status == "pinned" %> 
+                                <% } %>
                                 <div class="list-item">
                                     <h4>Ingredients</h4>
                                     <div class="salad-list">
@@ -94,7 +98,7 @@
                                 <div class="recipe-right">
                                     <div class="recipe-desc">
                                         <h3>Description</h3>
-                                       <p><%= data.description %></p>
+                                       <p><%= data.description%></p>
                                 </div>
                                 <div class="instruction-list">
                                     <h3>Instructions</h3>
@@ -112,7 +116,7 @@
                                 <div class="notes-item">
                                     <span>i</span>
                                         <p>
-                                            <%= data.notes %>
+                                            <%= data.notes%>
                                         </p>
                                 </div>
                             </div>

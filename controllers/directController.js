@@ -60,6 +60,10 @@ module.exports = {
         res.render('pages/login', { title: "Login", data: "data" })
     },
 
+    gotoPinned(req,res){
+        res.render('pages/pinnedRecipe',{title:"Pinned Recipe",data:"data",logInUser:req.user})
+    },
+
     async show(req, res) {
         const data = await Recipe.findOne({_id:req.params.id})
         console.log(data)
@@ -75,7 +79,8 @@ module.exports = {
 
     //add recipe
     async store(req, res) {
-        console.log(req.body)
+        try {
+            console.log(req.body)
         const recipe = {
             name: req.body.name,
             categoryText: req.body.categoryText,
@@ -91,16 +96,21 @@ module.exports = {
             notes: req.body.notes,
             tags: req.body.tags,
             instructions: req.body.instructions,
-            description: req.body.description
+            description: req.body.description,
+            status:null
         }
 
-        new Recipe(recipe).save().then((recipe) => {
+        await new Recipe(recipe).save().then((recipe) => {
             console.log(recipe)
             // res.redirect('/recipes/' + recipe.category)
             res.redirect('/table')
         }).catch(err => {
             console.log(err)
         })
+        } catch (error) {
+            
+        }
+        
     },
 
 
@@ -139,6 +149,7 @@ module.exports = {
             tags: req.body.tags,
             instructions: req.body.instructions,
             description: req.body.description
+
         }
 
         Recipe.findOneAndUpdate({ _id: recipeId }, { $set: editedRecipe }, { new: true }, (error, recipe) => {
