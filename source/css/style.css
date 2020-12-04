@@ -536,8 +536,8 @@ hr.style_1 {
 }
 
 .footer-section .fs-left .logo img {
-  width: 60%;
-  height: 20%;
+  width: 70%;
+  height: 44%;
 }
 
 .footer-section .fs-left p {
@@ -657,11 +657,11 @@ hr.style_1 {
   margin-bottom: 90px;
 }
 
-.recipe-top .recipe-title span {
+/* .recipe-top .recipe-title span {
   display: inline-block;
   color: #FC0254;
   font-size: 16px;
-}
+} */
 
 .recipe-top .recipe-title h2 {
   color: #353535;
@@ -674,7 +674,8 @@ hr.style_1 {
 .recipe-top .recipe-title ul li {
   list-style: none;
   display: inline-block;
-  font-size: 15px;
+  font-family: 'Atma';
+  font-size: 16px;
   font-weight: 50;
   text-transform: capitalize;
   background: #FC0254;
@@ -777,17 +778,15 @@ hr.style_1 {
   padding: 22px 20px;
 }
 
-.ingredients-item .ingredient-list .recipe-btn {
-  margin-bottom: 38px;
-}
-
 .ingredients-item .ingredient-list .recipe-btn a {
   display: inline-block;
   background: #FC0254;
+  font-family: 'Atma';
+  font-size: 17px;
+  text-decoration: none;  
   color: #fff;
   padding: 15px 57px;
-  font-size: 16px;
-  text-decoration: none;
+  margin-bottom: 38px;
 }
 
 .ingredients-item .ingredient-list .recipe-btn a.black-btn {
@@ -903,7 +902,7 @@ hr.style_1 {
 .nutrition-fact ul li {
   list-style: none;
   display: inline-block;
-  font-size: 15px;
+  font-size: 17px;
   color: #fff;
   margin-right: 15px;
   margin-bottom: 10px;
@@ -926,6 +925,7 @@ hr.style_1 {
 
 .recipe-right .recipe-desc p {
   margin-bottom: 25px;
+  text-align: left;
 }
 
 .recipe-right .instruction-list {
@@ -950,7 +950,7 @@ hr.style_1 {
 .recipe-right .instruction-list ul li {
   list-style: none;
   color: #353535;
-  font-size: 22px;
+  font-size: 19px;
   line-height: 27px;
   margin-bottom: 32px;
   position: relative;
@@ -978,7 +978,6 @@ hr.style_1 {
   padding-top: 30px;
   padding-right: 25px;
   padding-bottom: 15px;
-  margin-bottom: 30px;
 }
 
 .recipe-right .notes .notes-item span {
@@ -996,6 +995,7 @@ hr.style_1 {
 
 .recipe-right .notes .notes-item p {
   margin-top: 10px;
+  text-align: left;
 }
 
 /* ------appetizers recipes------*/
@@ -1039,95 +1039,56 @@ hr.style_1 {
 
 /* Button */
 .delicious-btn {
-  display: inline-block;
+  float: right;
   min-width: 160px;
   height: 60px;
-  color: #ffffff;
   border: none;
-  border-left: 3px solid #1c8314;
-  border-radius: 0;
   padding: 0 30px;
   font-size: 16px;
   line-height: 58px;
   font-weight: 600;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
-  text-transform: capitalize;
-  background-color: #40ba37;
 }
 
-.delicious-btn.active,
-.delicious-btn:hover,
-.delicious-btn:focus {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: #1c8314;
-  border-color: #40ba37;
-}
-
-.delicious-btn.btn-2 {
-  background-color: #1c8314;
-  border-color: #40ba37;
-}
-
-.delicious-btn.btn-2.active,
-.delicious-btn.btn-2:hover,
-.delicious-btn.btn-2:focus {
-  background-color: #40ba37;
-  border-color: #1c8314;
-}
-
-.delicious-btn.btn-3 {
-  background-color: #474747;
-  border-color: #1c8314;
-}
-
-.delicious-btn.btn-3.active,
-.delicious-btn.btn-3:hover,
-.delicious-btn.btn-3:focus {
-  background-color: #40ba37;
-  border-color: #1c8314;
-}
-
-.delicious-btn.btn-4 {
-  background-color: transparent;
-  border: 3px solid #40ba37;
-  line-height: 53px;
-  color: #40ba37;
-}
-
-@media only screen and (max-width: 767px) {
+  .delicious-btn.active, .delicious-btn:hover, .delicious-btn:focus {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #1c8314;
+  }
+  .delicious-btn.btn-2 {
+    background-color: #1c8314;
+    border-color: #40ba37; }
+    .delicious-btn.btn-2.active, .delicious-btn.btn-2:hover, .delicious-btn.btn-2:focus {
+      background-color: #40ba37;
+      border-color: #1c8314; }
+  .delicious-btn.btn-3 {
+    background-color: #474747;
+    border-color: #1c8314; }
+    .delicious-btn.btn-3.active, .delicious-btn.btn-3:hover, .delicious-btn.btn-3:focus {
+      background-color: #40ba37;
+      border-color: #1c8314; }
   .delicious-btn.btn-4 {
-    height: 40px;
-    line-height: 33px;
-  }
-}
-
-.delicious-btn.btn-4.active,
-.delicious-btn.btn-4:hover,
-.delicious-btn.btn-4:focus {
-  line-height: 53px;
-  color: #ffffff;
-  background-color: #40ba37;
-}
-
-@media only screen and (max-width: 767px) {
-
-  .delicious-btn.btn-4.active,
-  .delicious-btn.btn-4:hover,
-  .delicious-btn.btn-4:focus {
-    height: 40px;
-    line-height: 33px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .delicious-btn {
-    height: 40px;
-    line-height: 39px;
-  }
-}
+    background-color: transparent;
+    border: 3px solid #40ba37;
+    line-height: 53px;
+    color: #40ba37; }
+    @media only screen and (max-width: 767px) {
+      .delicious-btn.btn-4 {
+        height: 40px;
+        line-height: 33px; } }
+    .delicious-btn.btn-4.active, .delicious-btn.btn-4:hover, .delicious-btn.btn-4:focus {
+      line-height: 53px;
+      color: #ffffff;
+      background-color: #40ba37; }
+      @media only screen and (max-width: 767px) {
+        .delicious-btn.btn-4.active, .delicious-btn.btn-4:hover, .delicious-btn.btn-4:focus {
+          height: 40px;
+          line-height: 33px; } }
+  @media only screen and (max-width: 767px) {
+    .delicious-btn {
+      height: 40px;
+      line-height: 39px; } }
 
 .follow-us-instagram {
   position: relative;
@@ -1135,8 +1096,9 @@ hr.style_1 {
   border-top: 1px solid #dcdcdc;
 }
 
-.follow-us-instagram h5 {
-  font-size: 18px;
+.follow-us-instagram h3 {
+  font-size: 28px;
+  font-family: 'Marcellus SC';
   padding: 35px 0;
   margin-bottom: 0;
 }

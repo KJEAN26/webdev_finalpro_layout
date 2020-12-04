@@ -39,7 +39,7 @@ const RecipeSchema = mongoose.Schema({
     },
     yield : {
         required :true,
-        type: Number,
+        type: String,
     },
     ingredients : {
         required: true,
@@ -47,10 +47,10 @@ const RecipeSchema = mongoose.Schema({
     },
     nutritionFacts : {
         required: true,
-        type: [Number],
+        type: [String],
     },
     description : {
-        required : false,
+        required : true,
         type : String,
     },
     instructions : {
@@ -58,7 +58,7 @@ const RecipeSchema = mongoose.Schema({
         type : [String],
     },
     notes : {
-        required: false,
+        required: true,
         type : String,
     }
   

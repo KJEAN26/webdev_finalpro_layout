@@ -67,11 +67,11 @@
                     </div>
                     <div class="form-control bg-transparent border-0 mt-5 mb-3" id="descList">
                         <label for="description">Description</label>
-                        <textarea class="form-control" id="description" rows="3"></textarea>
+                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
                     </div><br>
                     <div class="form-control bg-transparent border-0 mb-4 mt-5" id="notesList">
                         <label for="notes">Notes</label>
-                        <textarea class="form-control" id="notes" rows="3"></textarea>
+                        <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
                     </div>
                 </div>
 
@@ -106,8 +106,8 @@
                     <button type="reset" class="btn btn-danger mt-5 mr-3 px-5 mb-5">Cancel</button>
                     <button class="btn btn-primary mt-5 mr-3 px-5 mb-5">Submit</button>
                 </div>
-            </form>
-        </div>
+        </form>
+    </div>
 </body>
 
 <script>
@@ -118,27 +118,23 @@
     // })
     $('#addBtnTag').click(function () {
         if (count < 3) $('#tagList').append(`<select name="tags[]" id="tags" class="form-control mt-2">
-                             <option value="desserts">Easy</option>
-                             <option value="appetizers">Medium</option>
-                            <option value="main_course">Intermediate</option>
-                            <option value="main_course">Fried</option>
-                            <option value="main_course">Baked</option>
-                            <option value="main_course">No-bake</option>
-                            <option value="main_course">Steam</option>
-                            <option value="main_course">Appetizers</option>
-                            <option value="main_course">Desserts</option>
-                            <option value="main_course">Main Course</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="Fried">Fried</option>
+                             <option value="Grilled">Grilled</option>
+                            <option value="Baked">Baked</option>
+                            <option value="No-bake">No-bake</option>
+                            <option value="Steam">Steam</option>
+                            <option value="Appetizers">Appetizers</option>
+                            <option value="Dessert">Dessert</option>
+                            <option value="Main Course">Main Course</option>
                        </select>`)
         count++
     })
 
     $('#addBtnNutri').click(function () {
-        if (count < 6) $('#nutriList').append(`<select name="nutritionFacts[]" class="form-control my-2" id="nutriList">
-                            <option value="desserts">Protein</option>
-                            <option value="appetizers">Carbohydrates</option>
-                            <option value="main_course">Fat</option>
-                            <option value="appetizers">Calories</option>
-                        </select><input type="text" class="form-control" placeholder="Input amount..">`)
+        if (count < 6) $('#nutriList').append(`<input type="text" class="form-control my-3" name="nutritionFacts[]">`)
         count++
     })
 

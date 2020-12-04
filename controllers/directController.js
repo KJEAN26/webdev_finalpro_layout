@@ -1,6 +1,6 @@
 const recipes = require('./../recipeMock')
 const Recipe = require('./../model/RecipeModel')
-const Register = require("../model/userModel")
+// const Register = require("../model/userModel")
 const underscore = require("underscore");
 
 module.exports = {
