@@ -1,5 +1,4 @@
 const Register = require("../model/userModel")
-const recipes = require('./../recipeMock')
 const jwt = require("jsonwebtoken");
 
 //this controller is equavalent to this router router.get('/', getLoginAccnt);
@@ -24,31 +23,9 @@ const getLoginAccnt = async (req, res) => {
     });
   }
 };
-// const getLoginAccntById = async (req, res) => {
-//     try {
-//         const logins = await Login.find({
-//             _id: req.params.id
-//         });
-
-//         if (!logins || logins.length === 0) {
-//             return res.status(400).json({
-//                 error: "Log in Account not found!",
-//             });
-//         }
-
-//         res.status(200).json({
-//             logins: logins,
-//         });
-//     } catch (e) {
-//         return res.status(400).json({
-//             error: e,
-//         });
-//     }
-// };
 
 //login 
 const userDoLogin = async (req, res) => {
-  // console.log(req.body);
   const email = req.body.email;
   const password = req.body.password;
 
@@ -57,8 +34,6 @@ const userDoLogin = async (req, res) => {
     if (!logInUser) return res.render('pages/login', { title: "login", message: "EMAIL DOESN'T MATCH", })
     console.log(logInUser);
     if (logInUser.password != password) return res.render('pages/login', { title: "login", message: "PASSWORD DOESN'T MATCH", })
-    // res.send(`Welcome ${logInUser.firstName}!`);
-    // res.redirect('/home');
     console.log(logInUser)
     const access_token = jwt.sign({
       lastName: logInUser.lastName,
@@ -70,14 +45,7 @@ const userDoLogin = async (req, res) => {
     res.cookie('jwt', access_token, {
       httpOnly: true
     })
-
-    res.render('pages/home', {
-      logInUser: logInUser,
-      title:"Home",
-      data: recipes
-    });
-    
-
+    res.redirect('/home')
   } catch (error) {
     res.status(400).json({
       error: error,
@@ -132,8 +100,6 @@ const addAccnt = async (req, res) => {
       firstName: req.body.firstName,
       email: req.body.email,
       password: req.body.password,
-
-      // accountType : 'client'
     }
     const newRegister = new Register(register);
     const result = await newRegister.save();
@@ -156,13 +122,10 @@ const addAccnt = async (req, res) => {
 };
 
  
-
 module.exports = {
   getRegisteredAccnt,
   getRegisteredAccntById,
   addAccnt,
   getLoginAccnt,
   userDoLogin,
-
-  // login,
 };

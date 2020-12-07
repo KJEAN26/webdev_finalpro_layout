@@ -33,7 +33,7 @@
 
         <div class="container my-5 py-5" style="height: 100vh;">
 
-            <form action="/update/<%= data.recipe._id %>  " method="POST">
+            <form action="/update/<%= data.recipe._id %>" method="POST" class="bg-color">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-control bg-transparent border-0">
@@ -123,13 +123,9 @@
                                 Nutrition Facts <i class="fa fa-plus"></i></button>
                         </div>
                     </div>
-                    <br>
-                    <div class="text-center mt-5">
+                    <div class="text-center my-5 ml-4">
                         <button type="reset" class="btn btn-danger mt-5 mr-3 px-5">Cancel</button>
-
                         <button class="btn btn-primary mt-5 mr-3 px-5" type="submit">Submit</button>
-
-
                     </div>
             </form>
         </div><br>
@@ -170,13 +166,4 @@
         if (count < 15) $('#insList').append(`<input type="text" class="form-control my-3" name="instructions[]">`)
         count++
     })
-    // $('#addBtnDesc').click(function () {
-    //     $('#descList').append(`<input type="text" class="form-control my-3" name="description[]">`)
-    // })
-    // $('#addBtnNotes').click(function () {
-    //     $('#notesList').append(`<input type="text" class="form-control my-3" name="notes[]">`)
-    // })
-
-
-
 </script>

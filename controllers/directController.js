@@ -1,34 +1,14 @@
-const recipes = require('./../recipeMock')
 const Recipe = require('./../model/RecipeModel')
-// const Register = require("../model/userModel")
 const underscore = require("underscore");
 
 module.exports = {
     gotoHome(req, res) {
-        res.render('pages/home', { title: "Home", data: recipes, logInUser: req.user });
+        Recipe.find({}  , (err , data)=>{
+            res.render('pages/home', { title: "Home", data: err? [] :data, logInUser: req.user });
+        })
     },
 
-    //get all recipe
-    async getAllRecipe(req, res){
-        
-        res.json({res: recipes});
-      
-    },
-
-    async gotoCategory  (req, res) {
-        // Recipe.find({category: req.params.category},(err,result)=>{
-        //     if(err){
-        //        return res.send(err)
-        //     }
-        //     console.log(result);
-
-        //     res.render('pages/appetizers', 
-        //     {
-        //         title: "Appetizers",
-        //         data : result
-        //      }
-        //     );
-        // })
+    async gotoCategory  (req, res) { 
         const data = await Recipe.find({ category: req.params.category })
         console.log(data)
         res.render('pages/category',
@@ -36,7 +16,6 @@ module.exports = {
                 title: req.params.category,
                 data: data,
                 logInUser: req.user
-
             }
         );
     },
@@ -60,10 +39,6 @@ module.exports = {
         res.render('pages/login', { title: "Login", data: "data" })
     },
 
-    gotoPinned(req,res){
-        res.render('pages/pinnedRecipe',{title:"Pinned Recipe",data:"data",logInUser:req.user})
-    },
-
     async show(req, res) {
         const data = await Recipe.findOne({_id:req.params.id})
         console.log(data)
@@ -73,8 +48,6 @@ module.exports = {
             logInUser: req.user
 
         })
-
-
     },
 
     //add recipe
@@ -102,7 +75,6 @@ module.exports = {
 
         await new Recipe(recipe).save().then((recipe) => {
             console.log(recipe)
-            // res.redirect('/recipes/' + recipe.category)
             res.redirect('/table')
         }).catch(err => {
             console.log(err)
@@ -112,9 +84,6 @@ module.exports = {
         }
         
     },
-
-
-
 
     createForm(req, res) {
         res.render('pages/create', {
@@ -131,8 +100,6 @@ module.exports = {
     //update Recipe
     recipeUpdate(req, res) {
         const recipeId = req.params.id
-
-
         const editedRecipe = {
             name: req.body.name,
             categoryText: req.body.categoryText,
@@ -155,13 +122,11 @@ module.exports = {
         Recipe.findOneAndUpdate({ _id: recipeId }, { $set: editedRecipe }, { new: true }, (error, recipe) => {
             if (error) return console.log(error);
             console.log(recipe);
-            // res.redirect('/recipes/' + recipe.category);
             res.redirect('/table')
 
         })
 
     },
-
 
     //go to update recipe
     updateRecipe(req, res) {
@@ -193,7 +158,6 @@ module.exports = {
         }
     },
 
-
     async dashboard(req, res) {
         try {
             const data = await Recipe.find();
@@ -212,8 +176,6 @@ module.exports = {
         }
     },
 
-
-
     async dashboardAnalytics(req, res) {
         const data = await Recipe.find();
         const recipe = underscore.countBy(data, function (result) {
@@ -225,7 +187,4 @@ module.exports = {
        })
 
     },
-
-
-
 }

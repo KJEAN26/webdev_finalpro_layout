@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.get('/home',authorization, directController.gotoHome);
 router.get('/recipes/:category',authorization, directController.gotoCategory);
-// router.get('/features', directController.gotoFeatures);
 router.get('/about',authorization, directController.gotoAbout);
 router.get('/create/recipes',authorization,directController.createForm)
 router.get('/recipes/:category/:id',authorization,directController.show)
@@ -18,15 +17,8 @@ router.get('/table',authorization,directController.gotoTable)
 router.get('/inventory',authorization,directController.gotoInventory)
 router.post('/delete/:id',directController.deleteRecipe)
 router.get('/login',directController.gotoLogin)
-<<<<<<< HEAD
-router.get('/pinned',authorization,directController.gotoPinned)
-=======
->>>>>>> 71d1520b720708313b2b228692453127f5a9e03f
 router.get('/dashboard', authorization, directController.dashboard)
 router.get('/dashboard/analytics',directController.dashboardAnalytics)
-
-
-
 
 module.exports = router;
 

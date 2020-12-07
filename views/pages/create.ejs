@@ -101,10 +101,10 @@
                         <label for="nutritionFacts"></label><button type="button" class="btn btn-sm btn-primary"
                             id="addBtnNutri" style="width:10rem">Add Nutrition Facts <i class="fa fa-plus"></i></button>
                     </div>
-                </div><br>
-                <div class="text-center mt-5">
-                    <button type="reset" class="btn btn-danger mt-5 mr-3 px-5 mb-5">Cancel</button>
-                    <button class="btn btn-primary mt-5 mr-3 px-5 mb-5">Submit</button>
+                </div>
+                <div class="text-center my-5 ml-4">
+                    <button type="reset" class="btn btn-danger mt-5 mr-3 px-5 mb-3">Cancel</button>
+                    <button class="btn btn-primary mt-5 mr-3 px-5 mb-3">Submit</button>
                 </div>
         </form>
     </div>
@@ -112,10 +112,6 @@
 
 <script>
     var count = 0
-    // $('#addBtnTag').click(function () {
-    //     if (count < 3) $('#tagList').append(`<input type="text" class="form-control my-3" name="tags[]" id="tags">`)
-    //     count++
-    // })
     $('#addBtnTag').click(function () {
         if (count < 3) $('#tagList').append(`<select name="tags[]" id="tags" class="form-control mt-2">
                             <option value="Easy">Easy</option>

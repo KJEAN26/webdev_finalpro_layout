@@ -23,56 +23,53 @@
                             <%= data.tags[i] %>
                         </li>
                         <%}%>  
-                            </ul>
+                    </ul>
+                </div>
+                <div class="sizer rounded mx-auto d-block">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="<%= data.videoUrl %>" allowfullscreen></iframe>
                     </div>
-                    <div class="sizer rounded mx-auto d-block">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="<%= data.videoUrl %>" allowfullscreen></iframe>
                 </div>
             </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="ingredients-item">
-                            <div class="intro-item">
-                                <img src="<%= data.image %>" alt="Crispy Bagbagis">
-                                <h2 class="" style="font-size: 28px;"><%- data.name %></h2>
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="reviews"><%- data.reviews %></div>
-                                <div class="recipe-time">
-                                    <ul>
-                                        <li>Prep time: <span><%-data.prepTime %></span></li>
-                                        <li>Cook time: <span><%- data.cookTime %></span></li>
-                                        <br>
-                                        <li>Yield: <span><%= data.yield %></span></li>
-                                    </ul>
-                                </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="ingredients-item">
+                        <div class="intro-item">
+                            <img src="<%= data.image %>" alt="Crispy Bagbagis">
+                            <h2 class="" style="font-size: 28px;"><%- data.name %></h2>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
                             </div>
-                            <div class="ingredient-list">
-                                <div class="recipe-btn font-weight-light text">
-                                    <a href="#">Print Recipe</a>
-                                    <a href="/pinned" class="black-btn"name="btnRecipe">Pin Recipe</a>
-                                </div>
-
-                                <% if (("btnRecipe").clicked) { %>
-                                 <%- data.status == "pinned" %> 
-                                <% } %>
-                                <div class="list-item">
-                                    <h4>Ingredients</h4>
-                                    <div class="salad-list">
-                                        <ul>
-                                            <% for(let i = 0 ; i < data.ingredients.length;i++){%>
-                                            <li>
-                                                <%= data.ingredients[i] %>
-                                            </li>
-                                            <%}%>
+                            <div class="reviews"><%- data.reviews %></div>
+                            <div class="recipe-time">
+                                <ul>
+                                    <li>Prep time: <span><%-data.prepTime %></span></li>
+                                    <li>Cook time: <span><%- data.cookTime %></span></li>
+                                    <br>
+                                    <li>Yield: <span><%= data.yield %></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ingredient-list">
+                            <div class="recipe-btn font-weight-light text">
+                                <a href="#">Print Recipe</a>
+                                <a href="#" class="black-btn" name="btnRecipe">Pin Recipe</a>
+                            </div>
+                            <div class="list-item">
+                                <h4>Ingredients</h4>
+                                <div class="salad-list">
+                                    <ul>
+                                        <% for(let i = 0 ; i < data.ingredients.length;i++){%>
+                                        <li>
+                                            <%= data.ingredients[i] %>
+                                        </li>
+                                        <%}%>
                                         </ul>
                                     </div>
                                 </div>
@@ -98,39 +95,28 @@
                                     <div class="recipe-desc">
                                         <h3>Description</h3>
                                        <p><%= data.description%></p>
-                                </div>
-                                <div class="instruction-list">
-                                    <h3>Instructions</h3>
-                                    <ul>
-                                        <% for(let i = 0 ; i < data.instructions.length;i++){%>
-                                        <li>
-                                            <span>0<%= i + 1 %>.</span>
-                                            <%= data.instructions[i] %>
-                                        </li>
-                                        <%}%>
-                                </ul>
                             </div>
                             <div class="instruction-list">
                                 <h3>Instructions</h3>
                                 <ul>
                                     <% for(let i = 0 ; i < data.instructions.length;i++){%>
                                     <li>
-                                        <span>0<%= i + 1 %>.</span>
+                                        <span><%= i + 1 %>.</span>
                                         <%= data.instructions[i] %>
                                     </li>
                                     <%}%>
                                 </ul>
-                            </div><br>
+                            </div>
+                            <br>
                             <div class="notes">
                                 <h3>Notes</h3>
                                 <div class="notes-item">
                                     <span>i</span>
-                                        <p>
-                                            <%= data.notes%>
-                                        </p>
+                                    <p>
+                                        <%= data.notes%>
+                                    </p>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -192,7 +178,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="/static/img/app_french-fries.jpg" alt="">
+                <img src="/static/img/app_fries.jpg" alt="">
                 <!-- Icon -->
                 <div class="plus-icon">
                     <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -201,16 +187,7 @@
 
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
-                <img src="/static/img/app_fried-siomai.jpg" alt="">
-                <!-- Icon -->
-                <div class="plus-icon">
-                    <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <!-- Single Insta Feeds -->
-            <div class="single-insta-feeds">
-                <img src="/static/img/app_onion-rings.jpg" alt="">
+                <img src="/static/img/app_siomai.jpg" alt="">
                 <!-- Icon -->
                 <div class="plus-icon">
                     <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -220,6 +197,15 @@
             <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="/static/img/app_cauli-bites.jpg" alt="">
+                <!-- Icon -->
+                <div class="plus-icon">
+                    <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+            <!-- Single Insta Feeds -->
+            <div class="single-insta-feeds">
+                <img src="/static/img/app_bagbagis.jpg" alt="">
                 <!-- Icon -->
                 <div class="plus-icon">
                     <a href="/recipes/appetizers"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -249,5 +235,4 @@
     <footer class="footer-section">
         <%- include('../partials/footer');%>
     </footer>
-    <script src="/static/js/active.js"></script>
 </body>
